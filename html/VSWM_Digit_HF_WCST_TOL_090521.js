@@ -337,9 +337,6 @@ var WelcomeClock;
 var text_12;
 var text_13;
 var key_resp_8;
-var x3;
-var x2;
-var x1;
 var end_experiment;
 var timer;
 var timer_exp;
@@ -1391,16 +1388,16 @@ function experimentInit() {
   
   key_resp_8 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  x3 = expInfo["Enter participant ID"];
-  console.log(x3)
-  x2 = parseInt(x3.substr(-2));
-  console.log(x2)
-  x1 = parseInt(x2%5);
-  console.log(x1)
+  //x3 = expInfo["Enter participant ID"];
+  //console.log(x3)
+  //x2 = parseInt(x3.substr(-2));
+  //console.log(x2)
+  //x1 = parseInt(x2%5);
+  //console.log(x1)
   
-  if (isNaN(x1)) {
-    psychoJS.quit()
-  } 
+  //if (isNaN(x1)) {
+  //  psychoJS.quit()
+  //} 
   
   end_experiment = 0;
   timer = new util.Clock();
