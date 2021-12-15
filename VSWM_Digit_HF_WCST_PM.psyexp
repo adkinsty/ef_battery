@@ -11727,7 +11727,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Let’s practice!&amp;#10;When you the square, it means that the task is about to start." valType="str"/>
+        <Param name="text" updates="constant" val="Let’s practice!&amp;#10;When you see the square, it means that the task is about to start." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -21626,7 +21626,6 @@
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="pm_trial"/>
-    <Routine name="pm_feedback"/>
     <LoopTerminator name="pm_test_loop"/>
     <Routine name="End_2"/>
   </Flow>
