@@ -20347,15 +20347,15 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="textAdd = '';&amp;#10;frame_n = 0;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Code Type" updates="None" val="JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});&amp;#10;if (theseKeys.length &gt; 0) {  // at least one key was pressed&amp;#10;  textAdd = theseKeys[theseKeys.length-1]; &amp;#10;  }&amp;#10;if (frame_n &lt; 1){&amp;#10;    textAdd = '';&amp;#10;}&amp;#10;if (textAdd === 'return') {&amp;#10;    textAdd = '';  // Add nothing&amp;#10;    continueRoutine = false;  // End routine (if that is what you want)&amp;#10;} else if (textAdd === 'backspace') {&amp;#10;    pm_trial_resp_text.text = pm_trial_resp_text.text.slice(0, -1);&amp;#10;    textAdd = undefined;&amp;#10;} else if (textAdd !== undefined) {&amp;#10;    pm_trial_resp_text.text = pm_trial_resp_text.text + textAdd&amp;#10;    textAdd = undefined;&amp;#10;}&amp;#10;frame_n = frame_n + 1;&amp;#10;current_resp = pm_trial_resp_text.text" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="if ((pm_trial_key_resp.corr &gt; 0)) {&amp;#10;    pm_feedback_color = &quot;green&quot;;&amp;#10;    pm_feedback_message = &quot;Correct!&quot;;&amp;#10;} else {&amp;#10;    pm_feedback_color = &quot;red&quot;;&amp;#10;    pm_feedback_message = &quot;Incorrect.&quot;;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="if pm_trial_key_resp.corr &gt; 0:&amp;#10;    pm_feedback_color = 'green'&amp;#10;    pm_feedback_message = 'Correct!'&amp;#10;else:&amp;#10;    pm_feedback_color = 'red'&amp;#10;    pm_feedback_message = 'Incorrect.'&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="if (Number(current_resp) === pm_correct) {&amp;#10;    pm_feedback_message = &quot;Correct&quot;;&amp;#10;} else {&amp;#10;    pm_feedback_message = &quot;Incorrect&quot;;&amp;#10;}&amp;#10;//psychoJS.experiment.addData(&quot;response&quot;, current_resp);&amp;#10;pm_trial_resp_txt.text = '';" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="pm_trial_code" valType="code"/>
       </CodeComponent>
@@ -20395,7 +20395,7 @@
         <Param name="name" updates="None" val="pm_trial_txt_num" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, .1)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-.05, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -20419,7 +20419,7 @@
         <Param name="name" updates="None" val="pm_trial_txt_sym" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(.05, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -20449,6 +20449,30 @@
         <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="pm_trial_txt_resp">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="pm_trial_txt_resp" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -.15)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="pm_feedback">
       <TextComponent name="pm_feedback_txt">

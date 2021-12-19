@@ -1200,6 +1200,7 @@ var pm_trial_fixation;
 var pm_trial_txt_num;
 var pm_trial_txt_sym;
 var pm_trial_key_resp;
+var pm_trial_txt_resp;
 var pm_feedbackClock;
 var pm_feedback_txt;
 var plus_test_startClock;
@@ -5347,7 +5348,7 @@ function experimentInit() {
   text_6 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_6',
-    text: 'Let’s practice!\nWhen you the square, it means that the task is about to start.',
+    text: 'Let’s practice!\nWhen you see the square, it means that the task is about to start.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -7710,7 +7711,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.1], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.05), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
@@ -7721,12 +7722,23 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.05, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -3.0 
   });
   
   pm_trial_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  pm_trial_txt_resp = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'pm_trial_txt_resp',
+    text: '',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.15)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -5.0 
+  });
   
   // Initialize components for Routine "pm_feedback"
   pm_feedbackClock = new util.Clock();
@@ -7775,7 +7787,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.1], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.05), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
@@ -7786,12 +7798,23 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.05, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -3.0 
   });
   
   pm_trial_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  pm_trial_txt_resp = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'pm_trial_txt_resp',
+    text: '',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.15)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -5.0 
+  });
   
   // Initialize components for Routine "minus_intro"
   minus_introClock = new util.Clock();
@@ -7949,7 +7972,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.1], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.05), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
@@ -7960,12 +7983,23 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.05, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -3.0 
   });
   
   pm_trial_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  pm_trial_txt_resp = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'pm_trial_txt_resp',
+    text: '',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.15)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -5.0 
+  });
   
   // Initialize components for Routine "pm_feedback"
   pm_feedbackClock = new util.Clock();
@@ -8014,7 +8048,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.1], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.05), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
@@ -8025,12 +8059,23 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.05, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -3.0 
   });
   
   pm_trial_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  pm_trial_txt_resp = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'pm_trial_txt_resp',
+    text: '',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.15)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -5.0 
+  });
   
   // Initialize components for Routine "pm_intro"
   pm_introClock = new util.Clock();
@@ -8188,7 +8233,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.1], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.05), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
@@ -8199,12 +8244,23 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.05, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -3.0 
   });
   
   pm_trial_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  pm_trial_txt_resp = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'pm_trial_txt_resp',
+    text: '',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.15)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -5.0 
+  });
   
   // Initialize components for Routine "pm_feedback"
   pm_feedbackClock = new util.Clock();
@@ -8253,7 +8309,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.1], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.05), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
@@ -8264,24 +8320,22 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.05, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -3.0 
   });
   
   pm_trial_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  // Initialize components for Routine "pm_feedback"
-  pm_feedbackClock = new util.Clock();
-  pm_feedback_txt = new visual.TextStim({
+  pm_trial_txt_resp = new visual.TextStim({
     win: psychoJS.window,
-    name: 'pm_feedback_txt',
-    text: 'default text',
+    name: 'pm_trial_txt_resp',
+    text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.15)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -5.0 
   });
   
   // Initialize components for Routine "End_2"
@@ -12447,9 +12501,6 @@ function pm_test_loopLoopBegin(pm_test_loopLoopScheduler) {
     pm_test_loopLoopScheduler.add(pm_trialRoutineBegin(snapshot));
     pm_test_loopLoopScheduler.add(pm_trialRoutineEachFrame(snapshot));
     pm_test_loopLoopScheduler.add(pm_trialRoutineEnd(snapshot));
-    pm_test_loopLoopScheduler.add(pm_feedbackRoutineBegin(snapshot));
-    pm_test_loopLoopScheduler.add(pm_feedbackRoutineEachFrame(snapshot));
-    pm_test_loopLoopScheduler.add(pm_feedbackRoutineEnd(snapshot));
     pm_test_loopLoopScheduler.add(endLoopIteration(pm_test_loopLoopScheduler, snapshot));
   }
 
@@ -29210,6 +29261,7 @@ function pm_train_startRoutineEnd(snapshot) {
 }
 
 
+var frame_n;
 var _pm_trial_key_resp_allKeys;
 var pm_trialComponents;
 function pm_trialRoutineBegin(snapshot) {
@@ -29219,6 +29271,8 @@ function pm_trialRoutineBegin(snapshot) {
     pm_trialClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    textAdd = '';
+    frame_n = 0;
     pm_trial_txt_num.setText(pm_number);
     pm_trial_txt_sym.setText(pm_symbol);
     pm_trial_key_resp.keys = undefined;
@@ -29230,6 +29284,7 @@ function pm_trialRoutineBegin(snapshot) {
     pm_trialComponents.push(pm_trial_txt_num);
     pm_trialComponents.push(pm_trial_txt_sym);
     pm_trialComponents.push(pm_trial_key_resp);
+    pm_trialComponents.push(pm_trial_txt_resp);
     
     for (const thisComponent of pm_trialComponents)
       if ('status' in thisComponent)
@@ -29250,6 +29305,25 @@ function pm_trialRoutineEachFrame(snapshot) {
     t = pm_trialClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});
+    if (theseKeys.length > 0) {  // at least one key was pressed
+      textAdd = theseKeys[theseKeys.length-1]; 
+      }
+    if (frame_n < 1){
+        textAdd = '';
+    }
+    if (textAdd === 'return') {
+        textAdd = '';  // Add nothing
+        continueRoutine = false;  // End routine (if that is what you want)
+    } else if (textAdd === 'backspace') {
+        pm_trial_resp_text.text = pm_trial_resp_text.text.slice(0, -1);
+        textAdd = undefined;
+    } else if (textAdd !== undefined) {
+        pm_trial_resp_text.text = pm_trial_resp_text.text + textAdd
+        textAdd = undefined;
+    }
+    frame_n = frame_n + 1;
+    current_resp = pm_trial_resp_text.text
     
     // *pm_trial_fixation* updates
     if (t >= 0.0 && pm_trial_fixation.status === PsychoJS.Status.NOT_STARTED) {
@@ -29314,6 +29388,16 @@ function pm_trialRoutineEachFrame(snapshot) {
       }
     }
     
+    
+    // *pm_trial_txt_resp* updates
+    if (t >= 1 && pm_trial_txt_resp.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      pm_trial_txt_resp.tStart = t;  // (not accounting for frame time here)
+      pm_trial_txt_resp.frameNStart = frameN;  // exact frame index
+      
+      pm_trial_txt_resp.setAutoDraw(true);
+    }
+
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -29341,7 +29425,6 @@ function pm_trialRoutineEachFrame(snapshot) {
 }
 
 
-var pm_feedback_color;
 var pm_feedback_message;
 function pm_trialRoutineEnd(snapshot) {
   return function () {
@@ -29351,14 +29434,13 @@ function pm_trialRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    if ((pm_trial_key_resp.corr > 0)) {
-        pm_feedback_color = "green";
-        pm_feedback_message = "Correct!";
+    if (Number(current_resp) === pm_correct) {
+        pm_feedback_message = "Correct";
     } else {
-        pm_feedback_color = "red";
-        pm_feedback_message = "Incorrect.";
+        pm_feedback_message = "Incorrect";
     }
-    
+    //psychoJS.experiment.addData("response", current_resp);
+    pm_trial_resp_txt.text = '';
     // was no response the correct answer?!
     if (pm_trial_key_resp.keys === undefined) {
       if (['None','none',undefined].includes(pm_correct)) {
