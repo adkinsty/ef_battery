@@ -1186,12 +1186,14 @@ var plus_eg1_txt_num;
 var plus_eg1_txt_sym;
 var plus_eg1_txt_bot;
 var plus_eg1_key_resp;
+var plus_eg1_resp_txt;
 var plus_eg2Clock;
 var plus_eg2_txt_top;
 var plus_eg2_txt_num;
 var plus_eg2_txt_sym;
 var plus_eg2_txt_bot;
 var plus_eg2_key_resp;
+var plus_eg2_resp_txt;
 var pm_train_startClock;
 var pm_train_start_txt;
 var pm_train_start_key_resp;
@@ -1200,7 +1202,7 @@ var pm_trial_fixation;
 var pm_trial_txt_num;
 var pm_trial_txt_sym;
 var pm_trial_key_resp;
-var pm_trial_txt_resp;
+var pm_trial_resp_txt;
 var pm_feedbackClock;
 var pm_feedback_txt;
 var plus_test_startClock;
@@ -1216,12 +1218,14 @@ var minus_eg1_txt_num;
 var minus_eg1_txt_sym;
 var minus_eg1_txt_bot;
 var minus_eg1_key_resp;
+var minus_eg1_resp_txt;
 var minus_eg2Clock;
 var minus_eg2_txt_top;
 var minus_eg2_txt_num;
 var minus_eg2_txt_sym;
 var minus_eg2_txt_bot;
 var minus_eg2_key_resp;
+var minus_eg2_resp_txt;
 var minus_test_startClock;
 var minus_test_start_txt;
 var minus_test_start_key_resp;
@@ -1235,12 +1239,14 @@ var pm_eg1_txt_num;
 var pm_eg1_txt_sym;
 var pm_eg1_txt_bot;
 var pm_eg1_key_resp;
+var pm_eg1_resp_txt;
 var pm_eg2Clock;
 var pm_eg2_txt_top;
 var pm_eg2_txt_num;
 var pm_eg2_txt_sym;
 var pm_eg2_txt_bot;
 var pm_eg2_key_resp;
+var pm_eg2_resp_txt;
 var pm_test_startClock;
 var pm_test_start_txt;
 var pm_test_start_key_resp;
@@ -7586,23 +7592,23 @@ function experimentInit() {
   plus_eg1_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'plus_eg1_txt_top',
-    text: 'In this example, the number is 3. Your job is to add 3 to this number.',
+    text: 'In this example, the number is 25. Your job is to add 3 to this number.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   plus_eg1_txt_num = new visual.TextStim({
     win: psychoJS.window,
     name: 'plus_eg1_txt_num',
-    text: '3',
+    text: '25',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.1], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.1), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -1.0 
+    depth: -2.0 
   });
   
   plus_eg1_txt_sym = new visual.TextStim({
@@ -7611,46 +7617,57 @@ function experimentInit() {
     text: '+',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.1, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -2.0 
+    depth: -3.0 
   });
   
   plus_eg1_txt_bot = new visual.TextStim({
     win: psychoJS.window,
     name: 'plus_eg1_txt_bot',
-    text: 'Press 6',
+    text: 'Type 28 and press enter.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -3.0 
+    depth: -4.0 
   });
   
   plus_eg1_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  plus_eg1_resp_txt = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'plus_eg1_resp_txt',
+    text: '',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.15)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -6.0 
+  });
   
   // Initialize components for Routine "plus_eg2"
   plus_eg2Clock = new util.Clock();
   plus_eg2_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'plus_eg2_txt_top',
-    text: 'In this example, the number is 5. Your job is to add 3 to this number.',
+    text: 'In this example, the number is 13. Your job is to add 3 to this number.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   plus_eg2_txt_num = new visual.TextStim({
     win: psychoJS.window,
     name: 'plus_eg2_txt_num',
-    text: '5',
+    text: '13',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.1], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.1), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -1.0 
+    depth: -2.0 
   });
   
   plus_eg2_txt_sym = new visual.TextStim({
@@ -7659,23 +7676,34 @@ function experimentInit() {
     text: '+',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.1, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -2.0 
+    depth: -3.0 
   });
   
   plus_eg2_txt_bot = new visual.TextStim({
     win: psychoJS.window,
     name: 'plus_eg2_txt_bot',
-    text: 'Press 8',
+    text: 'Type 16 and press enter.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -3.0 
+    depth: -4.0 
   });
   
   plus_eg2_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  plus_eg2_resp_txt = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'plus_eg2_resp_txt',
+    text: '',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.15)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -6.0 
+  });
   
   // Initialize components for Routine "pm_train_start"
   pm_train_startClock = new util.Clock();
@@ -7711,7 +7739,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [(- 0.05), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.1), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
@@ -7722,16 +7750,16 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0.05, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.1, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -3.0 
   });
   
   pm_trial_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  pm_trial_txt_resp = new visual.TextStim({
+  pm_trial_resp_txt = new visual.TextStim({
     win: psychoJS.window,
-    name: 'pm_trial_txt_resp',
+    name: 'pm_trial_resp_txt',
     text: '',
     font: 'Arial',
     units: undefined, 
@@ -7787,7 +7815,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [(- 0.05), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.1), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
@@ -7798,16 +7826,16 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0.05, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.1, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -3.0 
   });
   
   pm_trial_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  pm_trial_txt_resp = new visual.TextStim({
+  pm_trial_resp_txt = new visual.TextStim({
     win: psychoJS.window,
-    name: 'pm_trial_txt_resp',
+    name: 'pm_trial_resp_txt',
     text: '',
     font: 'Arial',
     units: undefined, 
@@ -7847,23 +7875,23 @@ function experimentInit() {
   minus_eg1_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'minus_eg1_txt_top',
-    text: 'In this example, the number is 3. Your job is to subtract 3 from this number.',
+    text: 'In this example, the number is 25. Your job is to subtract 3 from this number.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   minus_eg1_txt_num = new visual.TextStim({
     win: psychoJS.window,
     name: 'minus_eg1_txt_num',
-    text: '3',
+    text: '25',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.1], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.1), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -1.0 
+    depth: -2.0 
   });
   
   minus_eg1_txt_sym = new visual.TextStim({
@@ -7872,46 +7900,57 @@ function experimentInit() {
     text: '-',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.1, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -2.0 
+    depth: -3.0 
   });
   
   minus_eg1_txt_bot = new visual.TextStim({
     win: psychoJS.window,
     name: 'minus_eg1_txt_bot',
-    text: 'Press 0',
+    text: 'Type 22 and press enter.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -3.0 
+    depth: -4.0 
   });
   
   minus_eg1_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  minus_eg1_resp_txt = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'minus_eg1_resp_txt',
+    text: '',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.15)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -6.0 
+  });
   
   // Initialize components for Routine "minus_eg2"
   minus_eg2Clock = new util.Clock();
   minus_eg2_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'minus_eg2_txt_top',
-    text: 'In this example, the number is 5. Your job is to subtract 3 from this number.',
+    text: 'In this example, the number is 13. Your job is to subtract 3 from this number.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   minus_eg2_txt_num = new visual.TextStim({
     win: psychoJS.window,
     name: 'minus_eg2_txt_num',
-    text: '5',
+    text: '13',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.1], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.1), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -1.0 
+    depth: -2.0 
   });
   
   minus_eg2_txt_sym = new visual.TextStim({
@@ -7920,23 +7959,34 @@ function experimentInit() {
     text: '-',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.1, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -2.0 
+    depth: -3.0 
   });
   
   minus_eg2_txt_bot = new visual.TextStim({
     win: psychoJS.window,
     name: 'minus_eg2_txt_bot',
-    text: 'Press 2',
+    text: 'Type 10 and press enter.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -3.0 
+    depth: -4.0 
   });
   
   minus_eg2_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  minus_eg2_resp_txt = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'minus_eg2_resp_txt',
+    text: '',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.15)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -6.0 
+  });
   
   // Initialize components for Routine "pm_train_start"
   pm_train_startClock = new util.Clock();
@@ -7972,7 +8022,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [(- 0.05), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.1), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
@@ -7983,16 +8033,16 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0.05, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.1, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -3.0 
   });
   
   pm_trial_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  pm_trial_txt_resp = new visual.TextStim({
+  pm_trial_resp_txt = new visual.TextStim({
     win: psychoJS.window,
-    name: 'pm_trial_txt_resp',
+    name: 'pm_trial_resp_txt',
     text: '',
     font: 'Arial',
     units: undefined, 
@@ -8048,7 +8098,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [(- 0.05), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.1), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
@@ -8059,16 +8109,16 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0.05, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.1, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -3.0 
   });
   
   pm_trial_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  pm_trial_txt_resp = new visual.TextStim({
+  pm_trial_resp_txt = new visual.TextStim({
     win: psychoJS.window,
-    name: 'pm_trial_txt_resp',
+    name: 'pm_trial_resp_txt',
     text: '',
     font: 'Arial',
     units: undefined, 
@@ -8108,23 +8158,23 @@ function experimentInit() {
   pm_eg1_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'pm_eg1_txt_top',
-    text: 'In this example, the number is 3 and there is a minus sign. Your job is to subtract 3 from this number.',
+    text: 'In this example, the number is 25 and there is a minus sign. Your job is to subtract 3 from this number.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   pm_eg1_txt_num = new visual.TextStim({
     win: psychoJS.window,
     name: 'pm_eg1_txt_num',
-    text: '3',
+    text: '25',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.1], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.1), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -1.0 
+    depth: -2.0 
   });
   
   pm_eg1_txt_sym = new visual.TextStim({
@@ -8133,46 +8183,57 @@ function experimentInit() {
     text: '-',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.1, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -2.0 
+    depth: -3.0 
   });
   
   pm_eg1_txt_bot = new visual.TextStim({
     win: psychoJS.window,
     name: 'pm_eg1_txt_bot',
-    text: 'Press 0',
+    text: 'Please type 22 and press enter.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -3.0 
+    depth: -4.0 
   });
   
   pm_eg1_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  pm_eg1_resp_txt = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'pm_eg1_resp_txt',
+    text: '',
+    font: 'Arial',
+    units: undefined, 
+    pos: [(- 0.1), 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -6.0 
+  });
   
   // Initialize components for Routine "pm_eg2"
   pm_eg2Clock = new util.Clock();
   pm_eg2_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'pm_eg2_txt_top',
-    text: 'In this example, the number is 3 but there is a plus sign. Your job is to add 3 to this number.',
+    text: 'In this example, the number is 13 but there is a plus sign. Your job is to add 3 to this number.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   pm_eg2_txt_num = new visual.TextStim({
     win: psychoJS.window,
     name: 'pm_eg2_txt_num',
-    text: '3',
+    text: '13',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.1], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.1), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -1.0 
+    depth: -2.0 
   });
   
   pm_eg2_txt_sym = new visual.TextStim({
@@ -8181,23 +8242,34 @@ function experimentInit() {
     text: '+',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.1, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -2.0 
+    depth: -3.0 
   });
   
   pm_eg2_txt_bot = new visual.TextStim({
     win: psychoJS.window,
     name: 'pm_eg2_txt_bot',
-    text: 'Press 6',
+    text: 'Type 16 and press enter. ',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: -3.0 
+    depth: -4.0 
   });
   
   pm_eg2_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  pm_eg2_resp_txt = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'pm_eg2_resp_txt',
+    text: '',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.1)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -6.0 
+  });
   
   // Initialize components for Routine "pm_train_start"
   pm_train_startClock = new util.Clock();
@@ -8233,7 +8305,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [(- 0.05), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.1), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
@@ -8244,16 +8316,16 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0.05, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.1, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -3.0 
   });
   
   pm_trial_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  pm_trial_txt_resp = new visual.TextStim({
+  pm_trial_resp_txt = new visual.TextStim({
     win: psychoJS.window,
-    name: 'pm_trial_txt_resp',
+    name: 'pm_trial_resp_txt',
     text: '',
     font: 'Arial',
     units: undefined, 
@@ -8309,7 +8381,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [(- 0.05), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.1), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
@@ -8320,16 +8392,16 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0.05, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.1, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -3.0 
   });
   
   pm_trial_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  pm_trial_txt_resp = new visual.TextStim({
+  pm_trial_resp_txt = new visual.TextStim({
     win: psychoJS.window,
-    name: 'pm_trial_txt_resp',
+    name: 'pm_trial_resp_txt',
     text: '',
     font: 'Arial',
     units: undefined, 
@@ -12309,7 +12381,7 @@ function plus_train_loopLoopBegin(plus_train_loopLoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'plus_train_input.csv',
+    trialList: 'plus_input.csv',
     seed: undefined, name: 'plus_train_loop'
   });
   psychoJS.experiment.addLoop(plus_train_loop); // add the loop to the experiment
@@ -12344,9 +12416,9 @@ function plus_test_loopLoopBegin(plus_test_loopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   plus_test_loop = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 3, method: TrialHandler.Method.RANDOM,
+    nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'plus_test_input.csv',
+    trialList: 'plus_input.csv',
     seed: undefined, name: 'plus_test_loop'
   });
   psychoJS.experiment.addLoop(plus_test_loop); // add the loop to the experiment
@@ -12380,7 +12452,7 @@ function minus_train_loopLoopBegin(minus_train_loopLoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'minus_train_input.csv',
+    trialList: 'minus_input.csv',
     seed: undefined, name: 'minus_train_loop'
   });
   psychoJS.experiment.addLoop(minus_train_loop); // add the loop to the experiment
@@ -12415,9 +12487,9 @@ function minus_test_loopLoopBegin(minus_test_loopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   minus_test_loop = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 3, method: TrialHandler.Method.RANDOM,
+    nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'minus_test_input.csv',
+    trialList: 'minus_input.csv',
     seed: undefined, name: 'minus_test_loop'
   });
   psychoJS.experiment.addLoop(minus_test_loop); // add the loop to the experiment
@@ -12451,7 +12523,7 @@ function pm_train_loopLoopBegin(pm_train_loopLoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'pm_train_input.csv',
+    trialList: 'pm_input.csv',
     seed: undefined, name: 'pm_train_loop'
   });
   psychoJS.experiment.addLoop(pm_train_loop); // add the loop to the experiment
@@ -12486,9 +12558,9 @@ function pm_test_loopLoopBegin(pm_test_loopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   pm_test_loop = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 3, method: TrialHandler.Method.RANDOM,
+    nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'pm_test_input.csv',
+    trialList: 'pm_input.csv',
     seed: undefined, name: 'pm_test_loop'
   });
   psychoJS.experiment.addLoop(pm_test_loop); // add the loop to the experiment
@@ -28856,6 +28928,7 @@ function plus_introRoutineEnd(snapshot) {
 }
 
 
+var frame_n;
 var _plus_eg1_key_resp_allKeys;
 var plus_eg1Components;
 function plus_eg1RoutineBegin(snapshot) {
@@ -28865,6 +28938,8 @@ function plus_eg1RoutineBegin(snapshot) {
     plus_eg1Clock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    frame_n = 0;
+    textAdd = '';
     plus_eg1_key_resp.keys = undefined;
     plus_eg1_key_resp.rt = undefined;
     _plus_eg1_key_resp_allKeys = [];
@@ -28875,6 +28950,7 @@ function plus_eg1RoutineBegin(snapshot) {
     plus_eg1Components.push(plus_eg1_txt_sym);
     plus_eg1Components.push(plus_eg1_txt_bot);
     plus_eg1Components.push(plus_eg1_key_resp);
+    plus_eg1Components.push(plus_eg1_resp_txt);
     
     for (const thisComponent of plus_eg1Components)
       if ('status' in thisComponent)
@@ -28895,6 +28971,27 @@ function plus_eg1RoutineEachFrame(snapshot) {
     t = plus_eg1Clock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    
+    let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});
+    if (theseKeys.length > 0) {  // at least one key was pressed
+      textAdd = theseKeys[theseKeys.length-1]; 
+      }
+    if (frame_n < 1){
+        textAdd = '';
+    }
+    if (textAdd === 'return') {
+        textAdd = '';  // Add nothing
+        continueRoutine = false;  // End routine (if that is what you want)
+    } else if (textAdd === 'backspace') {
+        plus_eg1_resp_txt.text = plus_eg1_resp_txt.text.slice(0, -1);
+        textAdd = undefined;
+    } else if (textAdd !== undefined) {
+        plus_eg1_resp_txt.text = plus_eg1_resp_txt.text + textAdd
+        textAdd = undefined;
+    }
+    
+    frame_n = frame_n + 1;
+    current_resp = plus_eg1_resp_txt.text
     
     // *plus_eg1_txt_top* updates
     if (t >= 0.0 && plus_eg1_txt_top.status === PsychoJS.Status.NOT_STARTED) {
@@ -28949,16 +29046,24 @@ function plus_eg1RoutineEachFrame(snapshot) {
     }
 
     if (plus_eg1_key_resp.status === PsychoJS.Status.STARTED) {
-      let theseKeys = plus_eg1_key_resp.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'], waitRelease: false});
+      let theseKeys = plus_eg1_key_resp.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace', 'return'], waitRelease: false});
       _plus_eg1_key_resp_allKeys = _plus_eg1_key_resp_allKeys.concat(theseKeys);
       if (_plus_eg1_key_resp_allKeys.length > 0) {
-        plus_eg1_key_resp.keys = _plus_eg1_key_resp_allKeys[_plus_eg1_key_resp_allKeys.length - 1].name;  // just the last key pressed
-        plus_eg1_key_resp.rt = _plus_eg1_key_resp_allKeys[_plus_eg1_key_resp_allKeys.length - 1].rt;
-        // a response ends the routine
-        continueRoutine = false;
+        plus_eg1_key_resp.keys = _plus_eg1_key_resp_allKeys.map((key) => key.name);  // storing all keys
+        plus_eg1_key_resp.rt = _plus_eg1_key_resp_allKeys.map((key) => key.rt);
       }
     }
     
+    
+    // *plus_eg1_resp_txt* updates
+    if (t >= 0.0 && plus_eg1_resp_txt.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      plus_eg1_resp_txt.tStart = t;  // (not accounting for frame time here)
+      plus_eg1_resp_txt.frameNStart = frameN;  // exact frame index
+      
+      plus_eg1_resp_txt.setAutoDraw(true);
+    }
+
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -28994,6 +29099,12 @@ function plus_eg1RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
+    psychoJS.experiment.addData('plus_eg1_key_resp.keys', plus_eg1_key_resp.keys);
+    if (typeof plus_eg1_key_resp.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('plus_eg1_key_resp.rt', plus_eg1_key_resp.rt);
+        }
+    
+    plus_eg1_key_resp.stop();
     // the Routine "plus_eg1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -29011,6 +29122,8 @@ function plus_eg2RoutineBegin(snapshot) {
     plus_eg2Clock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    frame_n = 0;
+    textAdd = '';
     plus_eg2_key_resp.keys = undefined;
     plus_eg2_key_resp.rt = undefined;
     _plus_eg2_key_resp_allKeys = [];
@@ -29021,6 +29134,7 @@ function plus_eg2RoutineBegin(snapshot) {
     plus_eg2Components.push(plus_eg2_txt_sym);
     plus_eg2Components.push(plus_eg2_txt_bot);
     plus_eg2Components.push(plus_eg2_key_resp);
+    plus_eg2Components.push(plus_eg2_resp_txt);
     
     for (const thisComponent of plus_eg2Components)
       if ('status' in thisComponent)
@@ -29041,6 +29155,26 @@ function plus_eg2RoutineEachFrame(snapshot) {
     t = plus_eg2Clock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});
+    if (theseKeys.length > 0) {  // at least one key was pressed
+      textAdd = theseKeys[theseKeys.length-1]; 
+      }
+    if (frame_n < 1){
+        textAdd = '';
+    }
+    if (textAdd === 'return') {
+        textAdd = '';  // Add nothing
+        continueRoutine = false;  // End routine (if that is what you want)
+    } else if (textAdd === 'backspace') {
+        plus_eg2_resp_txt.text = plus_eg2_resp_txt.text.slice(0, -1);
+        textAdd = undefined;
+    } else if (textAdd !== undefined) {
+        plus_eg2_resp_txt.text = plus_eg2_resp_txt.text + textAdd
+        textAdd = undefined;
+    }
+    
+    frame_n = frame_n + 1;
+    current_resp = plus_eg2_resp_txt.text
     
     // *plus_eg2_txt_top* updates
     if (t >= 0.0 && plus_eg2_txt_top.status === PsychoJS.Status.NOT_STARTED) {
@@ -29095,16 +29229,24 @@ function plus_eg2RoutineEachFrame(snapshot) {
     }
 
     if (plus_eg2_key_resp.status === PsychoJS.Status.STARTED) {
-      let theseKeys = plus_eg2_key_resp.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'], waitRelease: false});
+      let theseKeys = plus_eg2_key_resp.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace', 'return'], waitRelease: false});
       _plus_eg2_key_resp_allKeys = _plus_eg2_key_resp_allKeys.concat(theseKeys);
       if (_plus_eg2_key_resp_allKeys.length > 0) {
         plus_eg2_key_resp.keys = _plus_eg2_key_resp_allKeys[_plus_eg2_key_resp_allKeys.length - 1].name;  // just the last key pressed
         plus_eg2_key_resp.rt = _plus_eg2_key_resp_allKeys[_plus_eg2_key_resp_allKeys.length - 1].rt;
-        // a response ends the routine
-        continueRoutine = false;
       }
     }
     
+    
+    // *plus_eg2_resp_txt* updates
+    if (t >= 0.0 && plus_eg2_resp_txt.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      plus_eg2_resp_txt.tStart = t;  // (not accounting for frame time here)
+      plus_eg2_resp_txt.frameNStart = frameN;  // exact frame index
+      
+      plus_eg2_resp_txt.setAutoDraw(true);
+    }
+
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -29245,6 +29387,7 @@ function pm_train_startRoutineEachFrame(snapshot) {
 }
 
 
+var pm_timer;
 function pm_train_startRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pm_train_start'-------
@@ -29253,6 +29396,7 @@ function pm_train_startRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
+    pm_timer = util.CountdownTimer(60);
     // the Routine "pm_train_start" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -29261,7 +29405,6 @@ function pm_train_startRoutineEnd(snapshot) {
 }
 
 
-var frame_n;
 var _pm_trial_key_resp_allKeys;
 var pm_trialComponents;
 function pm_trialRoutineBegin(snapshot) {
@@ -29284,7 +29427,7 @@ function pm_trialRoutineBegin(snapshot) {
     pm_trialComponents.push(pm_trial_txt_num);
     pm_trialComponents.push(pm_trial_txt_sym);
     pm_trialComponents.push(pm_trial_key_resp);
-    pm_trialComponents.push(pm_trial_txt_resp);
+    pm_trialComponents.push(pm_trial_resp_txt);
     
     for (const thisComponent of pm_trialComponents)
       if ('status' in thisComponent)
@@ -29305,6 +29448,11 @@ function pm_trialRoutineEachFrame(snapshot) {
     t = pm_trialClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    if (pm_timer.getTime() <= 0) {
+        currentLoop.finished = true;
+    }
+    
+    
     let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});
     if (theseKeys.length > 0) {  // at least one key was pressed
       textAdd = theseKeys[theseKeys.length-1]; 
@@ -29316,14 +29464,14 @@ function pm_trialRoutineEachFrame(snapshot) {
         textAdd = '';  // Add nothing
         continueRoutine = false;  // End routine (if that is what you want)
     } else if (textAdd === 'backspace') {
-        pm_trial_resp_text.text = pm_trial_resp_text.text.slice(0, -1);
+        pm_trial_resp_txt.text = pm_trial_resp_txt.text.slice(0, -1);
         textAdd = undefined;
     } else if (textAdd !== undefined) {
-        pm_trial_resp_text.text = pm_trial_resp_text.text + textAdd
+        pm_trial_resp_txt.text = pm_trial_resp_txt.text + textAdd
         textAdd = undefined;
     }
     frame_n = frame_n + 1;
-    current_resp = pm_trial_resp_text.text
+    current_resp = pm_trial_resp_txt.text
     
     // *pm_trial_fixation* updates
     if (t >= 0.0 && pm_trial_fixation.status === PsychoJS.Status.NOT_STARTED) {
@@ -29372,30 +29520,22 @@ function pm_trialRoutineEachFrame(snapshot) {
     }
 
     if (pm_trial_key_resp.status === PsychoJS.Status.STARTED) {
-      let theseKeys = pm_trial_key_resp.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'], waitRelease: false});
+      let theseKeys = pm_trial_key_resp.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace', 'return'], waitRelease: false});
       _pm_trial_key_resp_allKeys = _pm_trial_key_resp_allKeys.concat(theseKeys);
       if (_pm_trial_key_resp_allKeys.length > 0) {
-        pm_trial_key_resp.keys = _pm_trial_key_resp_allKeys[_pm_trial_key_resp_allKeys.length - 1].name;  // just the last key pressed
-        pm_trial_key_resp.rt = _pm_trial_key_resp_allKeys[_pm_trial_key_resp_allKeys.length - 1].rt;
-        // was this correct?
-        if (pm_trial_key_resp.keys == pm_correct) {
-            pm_trial_key_resp.corr = 1;
-        } else {
-            pm_trial_key_resp.corr = 0;
-        }
-        // a response ends the routine
-        continueRoutine = false;
+        pm_trial_key_resp.keys = _pm_trial_key_resp_allKeys.map((key) => key.name);  // storing all keys
+        pm_trial_key_resp.rt = _pm_trial_key_resp_allKeys.map((key) => key.rt);
       }
     }
     
     
-    // *pm_trial_txt_resp* updates
-    if (t >= 1 && pm_trial_txt_resp.status === PsychoJS.Status.NOT_STARTED) {
+    // *pm_trial_resp_txt* updates
+    if (t >= 1 && pm_trial_resp_txt.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      pm_trial_txt_resp.tStart = t;  // (not accounting for frame time here)
-      pm_trial_txt_resp.frameNStart = frameN;  // exact frame index
+      pm_trial_resp_txt.tStart = t;  // (not accounting for frame time here)
+      pm_trial_resp_txt.frameNStart = frameN;  // exact frame index
       
-      pm_trial_txt_resp.setAutoDraw(true);
+      pm_trial_resp_txt.setAutoDraw(true);
     }
 
     // check for quit (typically the Esc key)
@@ -29441,20 +29581,9 @@ function pm_trialRoutineEnd(snapshot) {
     }
     //psychoJS.experiment.addData("response", current_resp);
     pm_trial_resp_txt.text = '';
-    // was no response the correct answer?!
-    if (pm_trial_key_resp.keys === undefined) {
-      if (['None','none',undefined].includes(pm_correct)) {
-         pm_trial_key_resp.corr = 1;  // correct non-response
-      } else {
-         pm_trial_key_resp.corr = 0;  // failed to respond (incorrectly)
-      }
-    }
-    // store data for thisExp (ExperimentHandler)
     psychoJS.experiment.addData('pm_trial_key_resp.keys', pm_trial_key_resp.keys);
-    psychoJS.experiment.addData('pm_trial_key_resp.corr', pm_trial_key_resp.corr);
     if (typeof pm_trial_key_resp.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('pm_trial_key_resp.rt', pm_trial_key_resp.rt);
-        routineTimer.reset();
         }
     
     pm_trial_key_resp.stop();
@@ -29475,7 +29604,7 @@ function pm_feedbackRoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(1.000000);
     // update component parameters for each repeat
-    pm_feedback_txt.setColor(new util.Color(pm_feedback_color));
+    pm_feedback_txt.setColor(new util.Color('white'));
     pm_feedback_txt.setText(pm_feedback_message);
     // keep track of which components have finished
     pm_feedbackComponents = [];
@@ -29659,6 +29788,7 @@ function plus_test_startRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
+    pm_timer = util.CountdownTimer(120);
     // the Routine "plus_test_start" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -29800,6 +29930,8 @@ function minus_eg1RoutineBegin(snapshot) {
     minus_eg1Clock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    frame_n = 0;
+    textAdd = '';
     minus_eg1_key_resp.keys = undefined;
     minus_eg1_key_resp.rt = undefined;
     _minus_eg1_key_resp_allKeys = [];
@@ -29810,6 +29942,7 @@ function minus_eg1RoutineBegin(snapshot) {
     minus_eg1Components.push(minus_eg1_txt_sym);
     minus_eg1Components.push(minus_eg1_txt_bot);
     minus_eg1Components.push(minus_eg1_key_resp);
+    minus_eg1Components.push(minus_eg1_resp_txt);
     
     for (const thisComponent of minus_eg1Components)
       if ('status' in thisComponent)
@@ -29830,6 +29963,26 @@ function minus_eg1RoutineEachFrame(snapshot) {
     t = minus_eg1Clock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});
+    if (theseKeys.length > 0) {  // at least one key was pressed
+      textAdd = theseKeys[theseKeys.length-1]; 
+      }
+    if (frame_n < 1){
+        textAdd = '';
+    }
+    if (textAdd === 'return') {
+        textAdd = '';  // Add nothing
+        continueRoutine = false;  // End routine (if that is what you want)
+    } else if (textAdd === 'backspace') {
+        minus_eg1_resp_txt.text = minus_eg1_resp_txt.text.slice(0, -1);
+        textAdd = undefined;
+    } else if (textAdd !== undefined) {
+        minus_eg1_resp_txt.text = minus_eg1_resp_txt.text + textAdd
+        textAdd = undefined;
+    }
+    
+    frame_n = frame_n + 1;
+    current_resp = minus_eg1_resp_txt.text
     
     // *minus_eg1_txt_top* updates
     if (t >= 0.0 && minus_eg1_txt_top.status === PsychoJS.Status.NOT_STARTED) {
@@ -29884,16 +30037,24 @@ function minus_eg1RoutineEachFrame(snapshot) {
     }
 
     if (minus_eg1_key_resp.status === PsychoJS.Status.STARTED) {
-      let theseKeys = minus_eg1_key_resp.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'], waitRelease: false});
+      let theseKeys = minus_eg1_key_resp.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace', 'return'], waitRelease: false});
       _minus_eg1_key_resp_allKeys = _minus_eg1_key_resp_allKeys.concat(theseKeys);
       if (_minus_eg1_key_resp_allKeys.length > 0) {
-        minus_eg1_key_resp.keys = _minus_eg1_key_resp_allKeys[_minus_eg1_key_resp_allKeys.length - 1].name;  // just the last key pressed
-        minus_eg1_key_resp.rt = _minus_eg1_key_resp_allKeys[_minus_eg1_key_resp_allKeys.length - 1].rt;
-        // a response ends the routine
-        continueRoutine = false;
+        minus_eg1_key_resp.keys = _minus_eg1_key_resp_allKeys.map((key) => key.name);  // storing all keys
+        minus_eg1_key_resp.rt = _minus_eg1_key_resp_allKeys.map((key) => key.rt);
       }
     }
     
+    
+    // *minus_eg1_resp_txt* updates
+    if (t >= 0.0 && minus_eg1_resp_txt.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      minus_eg1_resp_txt.tStart = t;  // (not accounting for frame time here)
+      minus_eg1_resp_txt.frameNStart = frameN;  // exact frame index
+      
+      minus_eg1_resp_txt.setAutoDraw(true);
+    }
+
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -29929,6 +30090,12 @@ function minus_eg1RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
+    psychoJS.experiment.addData('minus_eg1_key_resp.keys', minus_eg1_key_resp.keys);
+    if (typeof minus_eg1_key_resp.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('minus_eg1_key_resp.rt', minus_eg1_key_resp.rt);
+        }
+    
+    minus_eg1_key_resp.stop();
     // the Routine "minus_eg1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -29946,6 +30113,8 @@ function minus_eg2RoutineBegin(snapshot) {
     minus_eg2Clock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    frame_n = 0;
+    textAdd = '';
     minus_eg2_key_resp.keys = undefined;
     minus_eg2_key_resp.rt = undefined;
     _minus_eg2_key_resp_allKeys = [];
@@ -29956,6 +30125,7 @@ function minus_eg2RoutineBegin(snapshot) {
     minus_eg2Components.push(minus_eg2_txt_sym);
     minus_eg2Components.push(minus_eg2_txt_bot);
     minus_eg2Components.push(minus_eg2_key_resp);
+    minus_eg2Components.push(minus_eg2_resp_txt);
     
     for (const thisComponent of minus_eg2Components)
       if ('status' in thisComponent)
@@ -29976,6 +30146,26 @@ function minus_eg2RoutineEachFrame(snapshot) {
     t = minus_eg2Clock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});
+    if (theseKeys.length > 0) {  // at least one key was pressed
+      textAdd = theseKeys[theseKeys.length-1]; 
+      }
+    if (frame_n < 1){
+        textAdd = '';
+    }
+    if (textAdd === 'return') {
+        textAdd = '';  // Add nothing
+        continueRoutine = false;  // End routine (if that is what you want)
+    } else if (textAdd === 'backspace') {
+        minus_eg2_resp_txt.text = minus_eg2_resp_txt.text.slice(0, -1);
+        textAdd = undefined;
+    } else if (textAdd !== undefined) {
+        minus_eg2_resp_txt.text = minus_eg2_resp_txt.text + textAdd
+        textAdd = undefined;
+    }
+    
+    frame_n = frame_n + 1;
+    current_resp = minus_eg2_resp_txt.text
     
     // *minus_eg2_txt_top* updates
     if (t >= 0.0 && minus_eg2_txt_top.status === PsychoJS.Status.NOT_STARTED) {
@@ -30030,16 +30220,24 @@ function minus_eg2RoutineEachFrame(snapshot) {
     }
 
     if (minus_eg2_key_resp.status === PsychoJS.Status.STARTED) {
-      let theseKeys = minus_eg2_key_resp.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'], waitRelease: false});
+      let theseKeys = minus_eg2_key_resp.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace', 'return'], waitRelease: false});
       _minus_eg2_key_resp_allKeys = _minus_eg2_key_resp_allKeys.concat(theseKeys);
       if (_minus_eg2_key_resp_allKeys.length > 0) {
-        minus_eg2_key_resp.keys = _minus_eg2_key_resp_allKeys[_minus_eg2_key_resp_allKeys.length - 1].name;  // just the last key pressed
-        minus_eg2_key_resp.rt = _minus_eg2_key_resp_allKeys[_minus_eg2_key_resp_allKeys.length - 1].rt;
-        // a response ends the routine
-        continueRoutine = false;
+        minus_eg2_key_resp.keys = _minus_eg2_key_resp_allKeys.map((key) => key.name);  // storing all keys
+        minus_eg2_key_resp.rt = _minus_eg2_key_resp_allKeys.map((key) => key.rt);
       }
     }
     
+    
+    // *minus_eg2_resp_txt* updates
+    if (t >= 0.0 && minus_eg2_resp_txt.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      minus_eg2_resp_txt.tStart = t;  // (not accounting for frame time here)
+      minus_eg2_resp_txt.frameNStart = frameN;  // exact frame index
+      
+      minus_eg2_resp_txt.setAutoDraw(true);
+    }
+
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -30075,6 +30273,12 @@ function minus_eg2RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
+    psychoJS.experiment.addData('minus_eg2_key_resp.keys', minus_eg2_key_resp.keys);
+    if (typeof minus_eg2_key_resp.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('minus_eg2_key_resp.rt', minus_eg2_key_resp.rt);
+        }
+    
+    minus_eg2_key_resp.stop();
     // the Routine "minus_eg2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -30188,6 +30392,7 @@ function minus_test_startRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
+    pm_timer = util.CountdownTimer(120);
     // the Routine "minus_test_start" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -30329,6 +30534,8 @@ function pm_eg1RoutineBegin(snapshot) {
     pm_eg1Clock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    frame_n = 0;
+    textAdd = '';
     pm_eg1_key_resp.keys = undefined;
     pm_eg1_key_resp.rt = undefined;
     _pm_eg1_key_resp_allKeys = [];
@@ -30339,6 +30546,7 @@ function pm_eg1RoutineBegin(snapshot) {
     pm_eg1Components.push(pm_eg1_txt_sym);
     pm_eg1Components.push(pm_eg1_txt_bot);
     pm_eg1Components.push(pm_eg1_key_resp);
+    pm_eg1Components.push(pm_eg1_resp_txt);
     
     for (const thisComponent of pm_eg1Components)
       if ('status' in thisComponent)
@@ -30359,6 +30567,26 @@ function pm_eg1RoutineEachFrame(snapshot) {
     t = pm_eg1Clock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});
+    if (theseKeys.length > 0) {  // at least one key was pressed
+      textAdd = theseKeys[theseKeys.length-1]; 
+      }
+    if (frame_n < 1){
+        textAdd = '';
+    }
+    if (textAdd === 'return') {
+        textAdd = '';  // Add nothing
+        continueRoutine = false;  // End routine (if that is what you want)
+    } else if (textAdd === 'backspace') {
+        pm_eg1_resp_txt.text = pm_eg1_resp_txt.text.slice(0, -1);
+        textAdd = undefined;
+    } else if (textAdd !== undefined) {
+        pm_eg1_resp_txt.text = pm_eg1_resp_txt.text + textAdd
+        textAdd = undefined;
+    }
+    
+    frame_n = frame_n + 1;
+    current_resp = pm_eg1_resp_txt.text
     
     // *pm_eg1_txt_top* updates
     if (t >= 0.0 && pm_eg1_txt_top.status === PsychoJS.Status.NOT_STARTED) {
@@ -30413,16 +30641,24 @@ function pm_eg1RoutineEachFrame(snapshot) {
     }
 
     if (pm_eg1_key_resp.status === PsychoJS.Status.STARTED) {
-      let theseKeys = pm_eg1_key_resp.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'], waitRelease: false});
+      let theseKeys = pm_eg1_key_resp.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace', 'return'], waitRelease: false});
       _pm_eg1_key_resp_allKeys = _pm_eg1_key_resp_allKeys.concat(theseKeys);
       if (_pm_eg1_key_resp_allKeys.length > 0) {
         pm_eg1_key_resp.keys = _pm_eg1_key_resp_allKeys[_pm_eg1_key_resp_allKeys.length - 1].name;  // just the last key pressed
         pm_eg1_key_resp.rt = _pm_eg1_key_resp_allKeys[_pm_eg1_key_resp_allKeys.length - 1].rt;
-        // a response ends the routine
-        continueRoutine = false;
       }
     }
     
+    
+    // *pm_eg1_resp_txt* updates
+    if (t >= 0.0 && pm_eg1_resp_txt.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      pm_eg1_resp_txt.tStart = t;  // (not accounting for frame time here)
+      pm_eg1_resp_txt.frameNStart = frameN;  // exact frame index
+      
+      pm_eg1_resp_txt.setAutoDraw(true);
+    }
+
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -30475,6 +30711,8 @@ function pm_eg2RoutineBegin(snapshot) {
     pm_eg2Clock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    frame_n = 0;
+    textAdd = '';
     pm_eg2_key_resp.keys = undefined;
     pm_eg2_key_resp.rt = undefined;
     _pm_eg2_key_resp_allKeys = [];
@@ -30485,6 +30723,7 @@ function pm_eg2RoutineBegin(snapshot) {
     pm_eg2Components.push(pm_eg2_txt_sym);
     pm_eg2Components.push(pm_eg2_txt_bot);
     pm_eg2Components.push(pm_eg2_key_resp);
+    pm_eg2Components.push(pm_eg2_resp_txt);
     
     for (const thisComponent of pm_eg2Components)
       if ('status' in thisComponent)
@@ -30505,6 +30744,26 @@ function pm_eg2RoutineEachFrame(snapshot) {
     t = pm_eg2Clock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});
+    if (theseKeys.length > 0) {  // at least one key was pressed
+      textAdd = theseKeys[theseKeys.length-1]; 
+      }
+    if (frame_n < 1){
+        textAdd = '';
+    }
+    if (textAdd === 'return') {
+        textAdd = '';  // Add nothing
+        continueRoutine = false;  // End routine (if that is what you want)
+    } else if (textAdd === 'backspace') {
+        pm_eg2_resp_txt.text = pm_eg2_resp_txt.text.slice(0, -1);
+        textAdd = undefined;
+    } else if (textAdd !== undefined) {
+        pm_eg2_resp_txt.text = pm_eg2_resp_txt.text + textAdd
+        textAdd = undefined;
+    }
+    
+    frame_n = frame_n + 1;
+    current_resp = pm_eg2_resp_txt.text
     
     // *pm_eg2_txt_top* updates
     if (t >= 0.0 && pm_eg2_txt_top.status === PsychoJS.Status.NOT_STARTED) {
@@ -30559,16 +30818,24 @@ function pm_eg2RoutineEachFrame(snapshot) {
     }
 
     if (pm_eg2_key_resp.status === PsychoJS.Status.STARTED) {
-      let theseKeys = pm_eg2_key_resp.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'], waitRelease: false});
+      let theseKeys = pm_eg2_key_resp.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace', 'return'], waitRelease: false});
       _pm_eg2_key_resp_allKeys = _pm_eg2_key_resp_allKeys.concat(theseKeys);
       if (_pm_eg2_key_resp_allKeys.length > 0) {
         pm_eg2_key_resp.keys = _pm_eg2_key_resp_allKeys[_pm_eg2_key_resp_allKeys.length - 1].name;  // just the last key pressed
         pm_eg2_key_resp.rt = _pm_eg2_key_resp_allKeys[_pm_eg2_key_resp_allKeys.length - 1].rt;
-        // a response ends the routine
-        continueRoutine = false;
       }
     }
     
+    
+    // *pm_eg2_resp_txt* updates
+    if (t >= 0.0 && pm_eg2_resp_txt.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      pm_eg2_resp_txt.tStart = t;  // (not accounting for frame time here)
+      pm_eg2_resp_txt.frameNStart = frameN;  // exact frame index
+      
+      pm_eg2_resp_txt.setAutoDraw(true);
+    }
+
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -30717,6 +30984,7 @@ function pm_test_startRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
+    pm_timer = util.CountdownTimer(120);
     // the Routine "pm_test_start" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -30881,6 +31149,26 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   

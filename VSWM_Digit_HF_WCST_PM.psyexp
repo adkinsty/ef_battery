@@ -20066,6 +20066,23 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="plus_eg1">
+      <CodeComponent name="plus_eg1_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="frame_n = 0;&amp;#10;textAdd = '';" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="&amp;#10;let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});&amp;#10;if (theseKeys.length &gt; 0) {  // at least one key was pressed&amp;#10;  textAdd = theseKeys[theseKeys.length-1]; &amp;#10;  }&amp;#10;if (frame_n &lt; 1){&amp;#10;    textAdd = '';&amp;#10;}&amp;#10;if (textAdd === 'return') {&amp;#10;    textAdd = '';  // Add nothing&amp;#10;    continueRoutine = false;  // End routine (if that is what you want)&amp;#10;} else if (textAdd === 'backspace') {&amp;#10;    plus_eg1_resp_txt.text = plus_eg1_resp_txt.text.slice(0, -1);&amp;#10;    textAdd = undefined;&amp;#10;} else if (textAdd !== undefined) {&amp;#10;    plus_eg1_resp_txt.text = plus_eg1_resp_txt.text + textAdd&amp;#10;    textAdd = undefined;&amp;#10;}&amp;#10;&amp;#10;frame_n = frame_n + 1;&amp;#10;current_resp = plus_eg1_resp_txt.text" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="plus_eg1_code" valType="code"/>
+      </CodeComponent>
       <TextComponent name="plus_eg1_txt_top">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -20086,7 +20103,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this example, the number is 3. Your job is to add 3 to this number." valType="str"/>
+        <Param name="text" updates="constant" val="In this example, the number is 25. Your job is to add 3 to this number." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20102,7 +20119,7 @@
         <Param name="name" updates="None" val="plus_eg1_txt_num" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, .1)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-.1, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -20110,7 +20127,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="3" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="25" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20126,7 +20143,7 @@
         <Param name="name" updates="None" val="plus_eg1_txt_sym" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(.1, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -20158,17 +20175,17 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press 6" valType="str"/>
+        <Param name="text" updates="constant" val="Type 28 and press enter." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="plus_eg1_key_resp">
-        <Param name="allowedKeys" updates="constant" val="'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace', 'return'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="name" updates="None" val="plus_eg1_key_resp" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -20176,12 +20193,53 @@
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="store" updates="constant" val="all keys" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="plus_eg1_resp_txt">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="plus_eg1_resp_txt" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -.15)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="plus_eg2">
+      <CodeComponent name="plus_eg2_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="frame_n = 0;&amp;#10;textAdd = '';" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});&amp;#10;if (theseKeys.length &gt; 0) {  // at least one key was pressed&amp;#10;  textAdd = theseKeys[theseKeys.length-1]; &amp;#10;  }&amp;#10;if (frame_n &lt; 1){&amp;#10;    textAdd = '';&amp;#10;}&amp;#10;if (textAdd === 'return') {&amp;#10;    textAdd = '';  // Add nothing&amp;#10;    continueRoutine = false;  // End routine (if that is what you want)&amp;#10;} else if (textAdd === 'backspace') {&amp;#10;    plus_eg2_resp_txt.text = plus_eg2_resp_txt.text.slice(0, -1);&amp;#10;    textAdd = undefined;&amp;#10;} else if (textAdd !== undefined) {&amp;#10;    plus_eg2_resp_txt.text = plus_eg2_resp_txt.text + textAdd&amp;#10;    textAdd = undefined;&amp;#10;}&amp;#10;&amp;#10;frame_n = frame_n + 1;&amp;#10;current_resp = plus_eg2_resp_txt.text" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="plus_eg2_code" valType="code"/>
+      </CodeComponent>
       <TextComponent name="plus_eg2_txt_top">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -20202,7 +20260,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this example, the number is 5. Your job is to add 3 to this number." valType="str"/>
+        <Param name="text" updates="constant" val="In this example, the number is 13. Your job is to add 3 to this number." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20218,7 +20276,7 @@
         <Param name="name" updates="None" val="plus_eg2_txt_num" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, .1)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-.1, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -20226,7 +20284,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="5" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="13" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20242,7 +20300,7 @@
         <Param name="name" updates="None" val="plus_eg2_txt_sym" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(.1, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -20274,17 +20332,17 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press 8" valType="str"/>
+        <Param name="text" updates="constant" val="Type 16 and press enter." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="plus_eg2_key_resp">
-        <Param name="allowedKeys" updates="constant" val="'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace', 'return'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="name" updates="None" val="plus_eg2_key_resp" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -20296,6 +20354,30 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="plus_eg2_resp_txt">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="plus_eg2_resp_txt" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -.15)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="pm_train_start">
       <TextComponent name="pm_train_start_txt">
@@ -20340,6 +20422,23 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="pm_train_start_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="pm_timer = util.CountdownTimer(60);" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="pm_train_start_code" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="pm_trial">
       <CodeComponent name="pm_trial_code">
@@ -20351,7 +20450,7 @@
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});&amp;#10;if (theseKeys.length &gt; 0) {  // at least one key was pressed&amp;#10;  textAdd = theseKeys[theseKeys.length-1]; &amp;#10;  }&amp;#10;if (frame_n &lt; 1){&amp;#10;    textAdd = '';&amp;#10;}&amp;#10;if (textAdd === 'return') {&amp;#10;    textAdd = '';  // Add nothing&amp;#10;    continueRoutine = false;  // End routine (if that is what you want)&amp;#10;} else if (textAdd === 'backspace') {&amp;#10;    pm_trial_resp_text.text = pm_trial_resp_text.text.slice(0, -1);&amp;#10;    textAdd = undefined;&amp;#10;} else if (textAdd !== undefined) {&amp;#10;    pm_trial_resp_text.text = pm_trial_resp_text.text + textAdd&amp;#10;    textAdd = undefined;&amp;#10;}&amp;#10;frame_n = frame_n + 1;&amp;#10;current_resp = pm_trial_resp_text.text" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if (pm_timer.getTime() &lt;= 0) {&amp;#10;    currentLoop.finished = true;&amp;#10;}&amp;#10;&amp;#10;&amp;#10;let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});&amp;#10;if (theseKeys.length &gt; 0) {  // at least one key was pressed&amp;#10;  textAdd = theseKeys[theseKeys.length-1]; &amp;#10;  }&amp;#10;if (frame_n &lt; 1){&amp;#10;    textAdd = '';&amp;#10;}&amp;#10;if (textAdd === 'return') {&amp;#10;    textAdd = '';  // Add nothing&amp;#10;    continueRoutine = false;  // End routine (if that is what you want)&amp;#10;} else if (textAdd === 'backspace') {&amp;#10;    pm_trial_resp_txt.text = pm_trial_resp_txt.text.slice(0, -1);&amp;#10;    textAdd = undefined;&amp;#10;} else if (textAdd !== undefined) {&amp;#10;    pm_trial_resp_txt.text = pm_trial_resp_txt.text + textAdd&amp;#10;    textAdd = undefined;&amp;#10;}&amp;#10;frame_n = frame_n + 1;&amp;#10;current_resp = pm_trial_resp_txt.text" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="if (Number(current_resp) === pm_correct) {&amp;#10;    pm_feedback_message = &quot;Correct&quot;;&amp;#10;} else {&amp;#10;    pm_feedback_message = &quot;Incorrect&quot;;&amp;#10;}&amp;#10;//psychoJS.experiment.addData(&quot;response&quot;, current_resp);&amp;#10;pm_trial_resp_txt.text = '';" valType="extendedCode"/>
@@ -20395,7 +20494,7 @@
         <Param name="name" updates="None" val="pm_trial_txt_num" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-.05, 0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-.1, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -20419,7 +20518,7 @@
         <Param name="name" updates="None" val="pm_trial_txt_sym" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(.05, 0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(.1, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -20432,12 +20531,12 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="pm_trial_key_resp">
-        <Param name="allowedKeys" updates="constant" val="'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace', 'return'" valType="code"/>
         <Param name="correctAns" updates="constant" val="$pm_correct" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="name" updates="None" val="pm_trial_key_resp" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -20445,11 +20544,11 @@
         <Param name="startVal" updates="None" val="1" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
+        <Param name="store" updates="constant" val="all keys" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
-      <TextComponent name="pm_trial_txt_resp">
+      <TextComponent name="pm_trial_resp_txt">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -20458,7 +20557,7 @@
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
-        <Param name="name" updates="None" val="pm_trial_txt_resp" valType="code"/>
+        <Param name="name" updates="None" val="pm_trial_resp_txt" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -.15)" valType="code"/>
@@ -20476,7 +20575,7 @@
     </Routine>
     <Routine name="pm_feedback">
       <TextComponent name="pm_feedback_txt">
-        <Param name="color" updates="set every repeat" val="$pm_feedback_color" valType="str"/>
+        <Param name="color" updates="set every repeat" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -20543,6 +20642,23 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="plus_test_start_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="pm_timer = util.CountdownTimer(120);" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="plus_test_start_code" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="minus_intro">
       <TextComponent name="minus_intro_txt_top">
@@ -20613,6 +20729,23 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="minus_eg1">
+      <CodeComponent name="minus_eg1_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="frame_n = 0;&amp;#10;textAdd = '';" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});&amp;#10;if (theseKeys.length &gt; 0) {  // at least one key was pressed&amp;#10;  textAdd = theseKeys[theseKeys.length-1]; &amp;#10;  }&amp;#10;if (frame_n &lt; 1){&amp;#10;    textAdd = '';&amp;#10;}&amp;#10;if (textAdd === 'return') {&amp;#10;    textAdd = '';  // Add nothing&amp;#10;    continueRoutine = false;  // End routine (if that is what you want)&amp;#10;} else if (textAdd === 'backspace') {&amp;#10;    minus_eg1_resp_txt.text = minus_eg1_resp_txt.text.slice(0, -1);&amp;#10;    textAdd = undefined;&amp;#10;} else if (textAdd !== undefined) {&amp;#10;    minus_eg1_resp_txt.text = minus_eg1_resp_txt.text + textAdd&amp;#10;    textAdd = undefined;&amp;#10;}&amp;#10;&amp;#10;frame_n = frame_n + 1;&amp;#10;current_resp = minus_eg1_resp_txt.text" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="minus_eg1_code" valType="code"/>
+      </CodeComponent>
       <TextComponent name="minus_eg1_txt_top">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -20633,7 +20766,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this example, the number is 3. Your job is to subtract 3 from this number." valType="str"/>
+        <Param name="text" updates="constant" val="In this example, the number is 25. Your job is to subtract 3 from this number." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20649,7 +20782,7 @@
         <Param name="name" updates="None" val="minus_eg1_txt_num" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, .1)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-.1, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -20657,7 +20790,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="3" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="25" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20673,7 +20806,7 @@
         <Param name="name" updates="None" val="minus_eg1_txt_sym" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(.1, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -20705,17 +20838,17 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press 0" valType="str"/>
+        <Param name="text" updates="constant" val="Type 22 and press enter." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="minus_eg1_key_resp">
-        <Param name="allowedKeys" updates="constant" val="'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace', 'return'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="name" updates="None" val="minus_eg1_key_resp" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -20723,12 +20856,53 @@
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="store" updates="constant" val="all keys" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="minus_eg1_resp_txt">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="minus_eg1_resp_txt" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -.15)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="minus_eg2">
+      <CodeComponent name="minus_eg2_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="frame_n = 0;&amp;#10;textAdd = '';" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});&amp;#10;if (theseKeys.length &gt; 0) {  // at least one key was pressed&amp;#10;  textAdd = theseKeys[theseKeys.length-1]; &amp;#10;  }&amp;#10;if (frame_n &lt; 1){&amp;#10;    textAdd = '';&amp;#10;}&amp;#10;if (textAdd === 'return') {&amp;#10;    textAdd = '';  // Add nothing&amp;#10;    continueRoutine = false;  // End routine (if that is what you want)&amp;#10;} else if (textAdd === 'backspace') {&amp;#10;    minus_eg2_resp_txt.text = minus_eg2_resp_txt.text.slice(0, -1);&amp;#10;    textAdd = undefined;&amp;#10;} else if (textAdd !== undefined) {&amp;#10;    minus_eg2_resp_txt.text = minus_eg2_resp_txt.text + textAdd&amp;#10;    textAdd = undefined;&amp;#10;}&amp;#10;&amp;#10;frame_n = frame_n + 1;&amp;#10;current_resp = minus_eg2_resp_txt.text" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="minus_eg2_code" valType="code"/>
+      </CodeComponent>
       <TextComponent name="minus_eg2_txt_top">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -20749,7 +20923,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this example, the number is 5. Your job is to subtract 3 from this number." valType="str"/>
+        <Param name="text" updates="constant" val="In this example, the number is 13. Your job is to subtract 3 from this number." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20765,7 +20939,7 @@
         <Param name="name" updates="None" val="minus_eg2_txt_num" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, .1)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-.1, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -20773,7 +20947,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="5" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="13" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20789,7 +20963,7 @@
         <Param name="name" updates="None" val="minus_eg2_txt_sym" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(.1, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -20821,17 +20995,17 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press 2" valType="str"/>
+        <Param name="text" updates="constant" val="Type 10 and press enter." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="minus_eg2_key_resp">
-        <Param name="allowedKeys" updates="constant" val="'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace', 'return'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="name" updates="None" val="minus_eg2_key_resp" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -20839,10 +21013,34 @@
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="store" updates="constant" val="all keys" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="minus_eg2_resp_txt">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="minus_eg2_resp_txt" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -.15)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="minus_test_start">
       <TextComponent name="minus_test_start_txt">
@@ -20887,6 +21085,23 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="minus_test_start_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="pm_timer = util.CountdownTimer(120);" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="minus_test_start_code" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="pm_intro">
       <TextComponent name="pm_intro_txt_top">
@@ -20957,6 +21172,23 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="pm_eg1">
+      <CodeComponent name="pm_eg1_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="frame_n = 0;&amp;#10;textAdd = '';" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});&amp;#10;if (theseKeys.length &gt; 0) {  // at least one key was pressed&amp;#10;  textAdd = theseKeys[theseKeys.length-1]; &amp;#10;  }&amp;#10;if (frame_n &lt; 1){&amp;#10;    textAdd = '';&amp;#10;}&amp;#10;if (textAdd === 'return') {&amp;#10;    textAdd = '';  // Add nothing&amp;#10;    continueRoutine = false;  // End routine (if that is what you want)&amp;#10;} else if (textAdd === 'backspace') {&amp;#10;    pm_eg1_resp_txt.text = pm_eg1_resp_txt.text.slice(0, -1);&amp;#10;    textAdd = undefined;&amp;#10;} else if (textAdd !== undefined) {&amp;#10;    pm_eg1_resp_txt.text = pm_eg1_resp_txt.text + textAdd&amp;#10;    textAdd = undefined;&amp;#10;}&amp;#10;&amp;#10;frame_n = frame_n + 1;&amp;#10;current_resp = pm_eg1_resp_txt.text" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="pm_eg1_code" valType="code"/>
+      </CodeComponent>
       <TextComponent name="pm_eg1_txt_top">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -20977,7 +21209,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this example, the number is 3 and there is a minus sign. Your job is to subtract 3 from this number." valType="str"/>
+        <Param name="text" updates="constant" val="In this example, the number is 25 and there is a minus sign. Your job is to subtract 3 from this number." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20993,7 +21225,7 @@
         <Param name="name" updates="None" val="pm_eg1_txt_num" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, .1)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-.1, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -21001,7 +21233,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="3" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="25" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -21017,7 +21249,7 @@
         <Param name="name" updates="None" val="pm_eg1_txt_sym" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(.1, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -21049,17 +21281,17 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press 0" valType="str"/>
+        <Param name="text" updates="constant" val="Please type 22 and press enter." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="pm_eg1_key_resp">
-        <Param name="allowedKeys" updates="constant" val="'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace', 'return'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="name" updates="None" val="pm_eg1_key_resp" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -21071,8 +21303,49 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="pm_eg1_resp_txt">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="pm_eg1_resp_txt" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-.1, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="pm_eg2">
+      <CodeComponent name="pm_eg2_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="frame_n = 0;&amp;#10;textAdd = '';" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="frame_n = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});&amp;#10;if (theseKeys.length &gt; 0) {  // at least one key was pressed&amp;#10;  textAdd = theseKeys[theseKeys.length-1]; &amp;#10;  }&amp;#10;if (frame_n &lt; 1){&amp;#10;    textAdd = '';&amp;#10;}&amp;#10;if (textAdd === 'return') {&amp;#10;    textAdd = '';  // Add nothing&amp;#10;    continueRoutine = false;  // End routine (if that is what you want)&amp;#10;} else if (textAdd === 'backspace') {&amp;#10;    pm_eg2_resp_txt.text = pm_eg2_resp_txt.text.slice(0, -1);&amp;#10;    textAdd = undefined;&amp;#10;} else if (textAdd !== undefined) {&amp;#10;    pm_eg2_resp_txt.text = pm_eg2_resp_txt.text + textAdd&amp;#10;    textAdd = undefined;&amp;#10;}&amp;#10;&amp;#10;frame_n = frame_n + 1;&amp;#10;current_resp = pm_eg2_resp_txt.text" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="pm_eg2_code" valType="code"/>
+      </CodeComponent>
       <TextComponent name="pm_eg2_txt_top">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -21093,7 +21366,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this example, the number is 3 but there is a plus sign. Your job is to add 3 to this number." valType="str"/>
+        <Param name="text" updates="constant" val="In this example, the number is 13 but there is a plus sign. Your job is to add 3 to this number." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -21109,7 +21382,7 @@
         <Param name="name" updates="None" val="pm_eg2_txt_num" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, .1)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-.1, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -21117,7 +21390,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="3" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="13" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -21133,7 +21406,7 @@
         <Param name="name" updates="None" val="pm_eg2_txt_sym" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(.1, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -21165,17 +21438,17 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press 6" valType="str"/>
+        <Param name="text" updates="constant" val="Type 16 and press enter. " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="pm_eg2_key_resp">
-        <Param name="allowedKeys" updates="constant" val="'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace', 'return'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="name" updates="None" val="pm_eg2_key_resp" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -21187,6 +21460,30 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="pm_eg2_resp_txt">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="pm_eg2_resp_txt" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -.1)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="pm_test_start">
       <TextComponent name="pm_test_start_txt">
@@ -21231,6 +21528,23 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="pm_test_start_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="pm_timer = util.CountdownTimer(120);" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="pm_test_start_code" valType="code"/>
+      </CodeComponent>
     </Routine>
   </Routines>
   <Flow>
@@ -21561,8 +21875,8 @@
     <Routine name="pm_train_start"/>
     <LoopInitiator loopType="TrialHandler" name="plus_train_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('pm_number', 3), ('pm_symbol', '+'), ('pm_correct', 6)]), OrderedDict([('pm_number', 4), ('pm_symbol', '+'), ('pm_correct', 7)]), OrderedDict([('pm_number', 5), ('pm_symbol', '+'), ('pm_correct', 8)]), OrderedDict([('pm_number', 6), ('pm_symbol', '+'), ('pm_correct', 9)])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="plus_train_input.csv" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('pm_number', 13), ('pm_symbol', '+'), ('pm_correct', 16)]), OrderedDict([('pm_number', 14), ('pm_symbol', '+'), ('pm_correct', 17)]), OrderedDict([('pm_number', 15), ('pm_symbol', '+'), ('pm_correct', 18)]), OrderedDict([('pm_number', 16), ('pm_symbol', '+'), ('pm_correct', 19)]), OrderedDict([('pm_number', 17), ('pm_symbol', '+'), ('pm_correct', 20)]), OrderedDict([('pm_number', 18), ('pm_symbol', '+'), ('pm_correct', 21)]), OrderedDict([('pm_number', 19), ('pm_symbol', '+'), ('pm_correct', 22)]), OrderedDict([('pm_number', 20), ('pm_symbol', '+'), ('pm_correct', 23)]), OrderedDict([('pm_number', 21), ('pm_symbol', '+'), ('pm_correct', 24)]), OrderedDict([('pm_number', 22), ('pm_symbol', '+'), ('pm_correct', 25)]), OrderedDict([('pm_number', 23), ('pm_symbol', '+'), ('pm_correct', 26)]), OrderedDict([('pm_number', 24), ('pm_symbol', '+'), ('pm_correct', 27)]), OrderedDict([('pm_number', 25), ('pm_symbol', '+'), ('pm_correct', 28)]), OrderedDict([('pm_number', 26), ('pm_symbol', '+'), ('pm_correct', 29)]), OrderedDict([('pm_number', 27), ('pm_symbol', '+'), ('pm_correct', 30)]), OrderedDict([('pm_number', 28), ('pm_symbol', '+'), ('pm_correct', 31)]), OrderedDict([('pm_number', 29), ('pm_symbol', '+'), ('pm_correct', 32)]), OrderedDict([('pm_number', 30), ('pm_symbol', '+'), ('pm_correct', 33)]), OrderedDict([('pm_number', 31), ('pm_symbol', '+'), ('pm_correct', 34)]), OrderedDict([('pm_number', 32), ('pm_symbol', '+'), ('pm_correct', 35)]), OrderedDict([('pm_number', 33), ('pm_symbol', '+'), ('pm_correct', 36)]), OrderedDict([('pm_number', 34), ('pm_symbol', '+'), ('pm_correct', 37)]), OrderedDict([('pm_number', 35), ('pm_symbol', '+'), ('pm_correct', 38)]), OrderedDict([('pm_number', 36), ('pm_symbol', '+'), ('pm_correct', 39)]), OrderedDict([('pm_number', 37), ('pm_symbol', '+'), ('pm_correct', 40)]), OrderedDict([('pm_number', 38), ('pm_symbol', '+'), ('pm_correct', 41)]), OrderedDict([('pm_number', 39), ('pm_symbol', '+'), ('pm_correct', 42)]), OrderedDict([('pm_number', 40), ('pm_symbol', '+'), ('pm_correct', 43)]), OrderedDict([('pm_number', 41), ('pm_symbol', '+'), ('pm_correct', 44)]), OrderedDict([('pm_number', 42), ('pm_symbol', '+'), ('pm_correct', 45)]), OrderedDict([('pm_number', 43), ('pm_symbol', '+'), ('pm_correct', 46)]), OrderedDict([('pm_number', 44), ('pm_symbol', '+'), ('pm_correct', 47)]), OrderedDict([('pm_number', 45), ('pm_symbol', '+'), ('pm_correct', 48)]), OrderedDict([('pm_number', 46), ('pm_symbol', '+'), ('pm_correct', 49)]), OrderedDict([('pm_number', 47), ('pm_symbol', '+'), ('pm_correct', 50)]), OrderedDict([('pm_number', 48), ('pm_symbol', '+'), ('pm_correct', 51)]), OrderedDict([('pm_number', 49), ('pm_symbol', '+'), ('pm_correct', 52)]), OrderedDict([('pm_number', 50), ('pm_symbol', '+'), ('pm_correct', 53)]), OrderedDict([('pm_number', 51), ('pm_symbol', '+'), ('pm_correct', 54)]), OrderedDict([('pm_number', 52), ('pm_symbol', '+'), ('pm_correct', 55)]), OrderedDict([('pm_number', 53), ('pm_symbol', '+'), ('pm_correct', 56)]), OrderedDict([('pm_number', 54), ('pm_symbol', '+'), ('pm_correct', 57)]), OrderedDict([('pm_number', 55), ('pm_symbol', '+'), ('pm_correct', 58)]), OrderedDict([('pm_number', 56), ('pm_symbol', '+'), ('pm_correct', 59)]), OrderedDict([('pm_number', 57), ('pm_symbol', '+'), ('pm_correct', 60)]), OrderedDict([('pm_number', 58), ('pm_symbol', '+'), ('pm_correct', 61)]), OrderedDict([('pm_number', 59), ('pm_symbol', '+'), ('pm_correct', 62)]), OrderedDict([('pm_number', 60), ('pm_symbol', '+'), ('pm_correct', 63)]), OrderedDict([('pm_number', 61), ('pm_symbol', '+'), ('pm_correct', 64)]), OrderedDict([('pm_number', 62), ('pm_symbol', '+'), ('pm_correct', 65)]), OrderedDict([('pm_number', 63), ('pm_symbol', '+'), ('pm_correct', 66)]), OrderedDict([('pm_number', 64), ('pm_symbol', '+'), ('pm_correct', 67)]), OrderedDict([('pm_number', 65), ('pm_symbol', '+'), ('pm_correct', 68)]), OrderedDict([('pm_number', 66), ('pm_symbol', '+'), ('pm_correct', 69)]), OrderedDict([('pm_number', 67), ('pm_symbol', '+'), ('pm_correct', 70)]), OrderedDict([('pm_number', 68), ('pm_symbol', '+'), ('pm_correct', 71)]), OrderedDict([('pm_number', 69), ('pm_symbol', '+'), ('pm_correct', 72)]), OrderedDict([('pm_number', 70), ('pm_symbol', '+'), ('pm_correct', 73)]), OrderedDict([('pm_number', 71), ('pm_symbol', '+'), ('pm_correct', 74)]), OrderedDict([('pm_number', 72), ('pm_symbol', '+'), ('pm_correct', 75)]), OrderedDict([('pm_number', 73), ('pm_symbol', '+'), ('pm_correct', 76)]), OrderedDict([('pm_number', 74), ('pm_symbol', '+'), ('pm_correct', 77)]), OrderedDict([('pm_number', 75), ('pm_symbol', '+'), ('pm_correct', 78)]), OrderedDict([('pm_number', 76), ('pm_symbol', '+'), ('pm_correct', 79)]), OrderedDict([('pm_number', 77), ('pm_symbol', '+'), ('pm_correct', 80)]), OrderedDict([('pm_number', 78), ('pm_symbol', '+'), ('pm_correct', 81)]), OrderedDict([('pm_number', 79), ('pm_symbol', '+'), ('pm_correct', 82)]), OrderedDict([('pm_number', 80), ('pm_symbol', '+'), ('pm_correct', 83)]), OrderedDict([('pm_number', 81), ('pm_symbol', '+'), ('pm_correct', 84)]), OrderedDict([('pm_number', 82), ('pm_symbol', '+'), ('pm_correct', 85)]), OrderedDict([('pm_number', 83), ('pm_symbol', '+'), ('pm_correct', 86)]), OrderedDict([('pm_number', 84), ('pm_symbol', '+'), ('pm_correct', 87)]), OrderedDict([('pm_number', 85), ('pm_symbol', '+'), ('pm_correct', 88)]), OrderedDict([('pm_number', 86), ('pm_symbol', '+'), ('pm_correct', 89)]), OrderedDict([('pm_number', 87), ('pm_symbol', '+'), ('pm_correct', 90)]), OrderedDict([('pm_number', 88), ('pm_symbol', '+'), ('pm_correct', 91)]), OrderedDict([('pm_number', 89), ('pm_symbol', '+'), ('pm_correct', 92)]), OrderedDict([('pm_number', 90), ('pm_symbol', '+'), ('pm_correct', 93)]), OrderedDict([('pm_number', 91), ('pm_symbol', '+'), ('pm_correct', 94)]), OrderedDict([('pm_number', 92), ('pm_symbol', '+'), ('pm_correct', 95)]), OrderedDict([('pm_number', 93), ('pm_symbol', '+'), ('pm_correct', 96)]), OrderedDict([('pm_number', 94), ('pm_symbol', '+'), ('pm_correct', 97)]), OrderedDict([('pm_number', 95), ('pm_symbol', '+'), ('pm_correct', 98)]), OrderedDict([('pm_number', 96), ('pm_symbol', '+'), ('pm_correct', 99)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="plus_input.csv" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
@@ -21576,12 +21890,12 @@
     <Routine name="plus_test_start"/>
     <LoopInitiator loopType="TrialHandler" name="plus_test_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('pm_number', 3), ('pm_symbol', '+'), ('pm_correct', 6)]), OrderedDict([('pm_number', 4), ('pm_symbol', '+'), ('pm_correct', 7)]), OrderedDict([('pm_number', 5), ('pm_symbol', '+'), ('pm_correct', 8)]), OrderedDict([('pm_number', 6), ('pm_symbol', '+'), ('pm_correct', 9)])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="plus_test_input.csv" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('pm_number', 13), ('pm_symbol', '+'), ('pm_correct', 16)]), OrderedDict([('pm_number', 14), ('pm_symbol', '+'), ('pm_correct', 17)]), OrderedDict([('pm_number', 15), ('pm_symbol', '+'), ('pm_correct', 18)]), OrderedDict([('pm_number', 16), ('pm_symbol', '+'), ('pm_correct', 19)]), OrderedDict([('pm_number', 17), ('pm_symbol', '+'), ('pm_correct', 20)]), OrderedDict([('pm_number', 18), ('pm_symbol', '+'), ('pm_correct', 21)]), OrderedDict([('pm_number', 19), ('pm_symbol', '+'), ('pm_correct', 22)]), OrderedDict([('pm_number', 20), ('pm_symbol', '+'), ('pm_correct', 23)]), OrderedDict([('pm_number', 21), ('pm_symbol', '+'), ('pm_correct', 24)]), OrderedDict([('pm_number', 22), ('pm_symbol', '+'), ('pm_correct', 25)]), OrderedDict([('pm_number', 23), ('pm_symbol', '+'), ('pm_correct', 26)]), OrderedDict([('pm_number', 24), ('pm_symbol', '+'), ('pm_correct', 27)]), OrderedDict([('pm_number', 25), ('pm_symbol', '+'), ('pm_correct', 28)]), OrderedDict([('pm_number', 26), ('pm_symbol', '+'), ('pm_correct', 29)]), OrderedDict([('pm_number', 27), ('pm_symbol', '+'), ('pm_correct', 30)]), OrderedDict([('pm_number', 28), ('pm_symbol', '+'), ('pm_correct', 31)]), OrderedDict([('pm_number', 29), ('pm_symbol', '+'), ('pm_correct', 32)]), OrderedDict([('pm_number', 30), ('pm_symbol', '+'), ('pm_correct', 33)]), OrderedDict([('pm_number', 31), ('pm_symbol', '+'), ('pm_correct', 34)]), OrderedDict([('pm_number', 32), ('pm_symbol', '+'), ('pm_correct', 35)]), OrderedDict([('pm_number', 33), ('pm_symbol', '+'), ('pm_correct', 36)]), OrderedDict([('pm_number', 34), ('pm_symbol', '+'), ('pm_correct', 37)]), OrderedDict([('pm_number', 35), ('pm_symbol', '+'), ('pm_correct', 38)]), OrderedDict([('pm_number', 36), ('pm_symbol', '+'), ('pm_correct', 39)]), OrderedDict([('pm_number', 37), ('pm_symbol', '+'), ('pm_correct', 40)]), OrderedDict([('pm_number', 38), ('pm_symbol', '+'), ('pm_correct', 41)]), OrderedDict([('pm_number', 39), ('pm_symbol', '+'), ('pm_correct', 42)]), OrderedDict([('pm_number', 40), ('pm_symbol', '+'), ('pm_correct', 43)]), OrderedDict([('pm_number', 41), ('pm_symbol', '+'), ('pm_correct', 44)]), OrderedDict([('pm_number', 42), ('pm_symbol', '+'), ('pm_correct', 45)]), OrderedDict([('pm_number', 43), ('pm_symbol', '+'), ('pm_correct', 46)]), OrderedDict([('pm_number', 44), ('pm_symbol', '+'), ('pm_correct', 47)]), OrderedDict([('pm_number', 45), ('pm_symbol', '+'), ('pm_correct', 48)]), OrderedDict([('pm_number', 46), ('pm_symbol', '+'), ('pm_correct', 49)]), OrderedDict([('pm_number', 47), ('pm_symbol', '+'), ('pm_correct', 50)]), OrderedDict([('pm_number', 48), ('pm_symbol', '+'), ('pm_correct', 51)]), OrderedDict([('pm_number', 49), ('pm_symbol', '+'), ('pm_correct', 52)]), OrderedDict([('pm_number', 50), ('pm_symbol', '+'), ('pm_correct', 53)]), OrderedDict([('pm_number', 51), ('pm_symbol', '+'), ('pm_correct', 54)]), OrderedDict([('pm_number', 52), ('pm_symbol', '+'), ('pm_correct', 55)]), OrderedDict([('pm_number', 53), ('pm_symbol', '+'), ('pm_correct', 56)]), OrderedDict([('pm_number', 54), ('pm_symbol', '+'), ('pm_correct', 57)]), OrderedDict([('pm_number', 55), ('pm_symbol', '+'), ('pm_correct', 58)]), OrderedDict([('pm_number', 56), ('pm_symbol', '+'), ('pm_correct', 59)]), OrderedDict([('pm_number', 57), ('pm_symbol', '+'), ('pm_correct', 60)]), OrderedDict([('pm_number', 58), ('pm_symbol', '+'), ('pm_correct', 61)]), OrderedDict([('pm_number', 59), ('pm_symbol', '+'), ('pm_correct', 62)]), OrderedDict([('pm_number', 60), ('pm_symbol', '+'), ('pm_correct', 63)]), OrderedDict([('pm_number', 61), ('pm_symbol', '+'), ('pm_correct', 64)]), OrderedDict([('pm_number', 62), ('pm_symbol', '+'), ('pm_correct', 65)]), OrderedDict([('pm_number', 63), ('pm_symbol', '+'), ('pm_correct', 66)]), OrderedDict([('pm_number', 64), ('pm_symbol', '+'), ('pm_correct', 67)]), OrderedDict([('pm_number', 65), ('pm_symbol', '+'), ('pm_correct', 68)]), OrderedDict([('pm_number', 66), ('pm_symbol', '+'), ('pm_correct', 69)]), OrderedDict([('pm_number', 67), ('pm_symbol', '+'), ('pm_correct', 70)]), OrderedDict([('pm_number', 68), ('pm_symbol', '+'), ('pm_correct', 71)]), OrderedDict([('pm_number', 69), ('pm_symbol', '+'), ('pm_correct', 72)]), OrderedDict([('pm_number', 70), ('pm_symbol', '+'), ('pm_correct', 73)]), OrderedDict([('pm_number', 71), ('pm_symbol', '+'), ('pm_correct', 74)]), OrderedDict([('pm_number', 72), ('pm_symbol', '+'), ('pm_correct', 75)]), OrderedDict([('pm_number', 73), ('pm_symbol', '+'), ('pm_correct', 76)]), OrderedDict([('pm_number', 74), ('pm_symbol', '+'), ('pm_correct', 77)]), OrderedDict([('pm_number', 75), ('pm_symbol', '+'), ('pm_correct', 78)]), OrderedDict([('pm_number', 76), ('pm_symbol', '+'), ('pm_correct', 79)]), OrderedDict([('pm_number', 77), ('pm_symbol', '+'), ('pm_correct', 80)]), OrderedDict([('pm_number', 78), ('pm_symbol', '+'), ('pm_correct', 81)]), OrderedDict([('pm_number', 79), ('pm_symbol', '+'), ('pm_correct', 82)]), OrderedDict([('pm_number', 80), ('pm_symbol', '+'), ('pm_correct', 83)]), OrderedDict([('pm_number', 81), ('pm_symbol', '+'), ('pm_correct', 84)]), OrderedDict([('pm_number', 82), ('pm_symbol', '+'), ('pm_correct', 85)]), OrderedDict([('pm_number', 83), ('pm_symbol', '+'), ('pm_correct', 86)]), OrderedDict([('pm_number', 84), ('pm_symbol', '+'), ('pm_correct', 87)]), OrderedDict([('pm_number', 85), ('pm_symbol', '+'), ('pm_correct', 88)]), OrderedDict([('pm_number', 86), ('pm_symbol', '+'), ('pm_correct', 89)]), OrderedDict([('pm_number', 87), ('pm_symbol', '+'), ('pm_correct', 90)]), OrderedDict([('pm_number', 88), ('pm_symbol', '+'), ('pm_correct', 91)]), OrderedDict([('pm_number', 89), ('pm_symbol', '+'), ('pm_correct', 92)]), OrderedDict([('pm_number', 90), ('pm_symbol', '+'), ('pm_correct', 93)]), OrderedDict([('pm_number', 91), ('pm_symbol', '+'), ('pm_correct', 94)]), OrderedDict([('pm_number', 92), ('pm_symbol', '+'), ('pm_correct', 95)]), OrderedDict([('pm_number', 93), ('pm_symbol', '+'), ('pm_correct', 96)]), OrderedDict([('pm_number', 94), ('pm_symbol', '+'), ('pm_correct', 97)]), OrderedDict([('pm_number', 95), ('pm_symbol', '+'), ('pm_correct', 98)]), OrderedDict([('pm_number', 96), ('pm_symbol', '+'), ('pm_correct', 99)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="plus_input.csv" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="3" valType="code"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
       <Param name="name" updates="None" val="plus_test_loop" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
@@ -21593,8 +21907,8 @@
     <Routine name="pm_train_start"/>
     <LoopInitiator loopType="TrialHandler" name="minus_train_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('pm_number', 3), ('pm_symbol', '-'), ('pm_correct', 0)]), OrderedDict([('pm_number', 4), ('pm_symbol', '-'), ('pm_correct', 1)]), OrderedDict([('pm_number', 5), ('pm_symbol', '-'), ('pm_correct', 2)]), OrderedDict([('pm_number', 6), ('pm_symbol', '-'), ('pm_correct', 3)])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="minus_train_input.csv" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('pm_number', 13), ('pm_symbol', '-'), ('pm_correct', 10)]), OrderedDict([('pm_number', 14), ('pm_symbol', '-'), ('pm_correct', 11)]), OrderedDict([('pm_number', 15), ('pm_symbol', '-'), ('pm_correct', 12)]), OrderedDict([('pm_number', 16), ('pm_symbol', '-'), ('pm_correct', 13)]), OrderedDict([('pm_number', 17), ('pm_symbol', '-'), ('pm_correct', 14)]), OrderedDict([('pm_number', 18), ('pm_symbol', '-'), ('pm_correct', 15)]), OrderedDict([('pm_number', 19), ('pm_symbol', '-'), ('pm_correct', 16)]), OrderedDict([('pm_number', 20), ('pm_symbol', '-'), ('pm_correct', 17)]), OrderedDict([('pm_number', 21), ('pm_symbol', '-'), ('pm_correct', 18)]), OrderedDict([('pm_number', 22), ('pm_symbol', '-'), ('pm_correct', 19)]), OrderedDict([('pm_number', 23), ('pm_symbol', '-'), ('pm_correct', 20)]), OrderedDict([('pm_number', 24), ('pm_symbol', '-'), ('pm_correct', 21)]), OrderedDict([('pm_number', 25), ('pm_symbol', '-'), ('pm_correct', 22)]), OrderedDict([('pm_number', 26), ('pm_symbol', '-'), ('pm_correct', 23)]), OrderedDict([('pm_number', 27), ('pm_symbol', '-'), ('pm_correct', 24)]), OrderedDict([('pm_number', 28), ('pm_symbol', '-'), ('pm_correct', 25)]), OrderedDict([('pm_number', 29), ('pm_symbol', '-'), ('pm_correct', 26)]), OrderedDict([('pm_number', 30), ('pm_symbol', '-'), ('pm_correct', 27)]), OrderedDict([('pm_number', 31), ('pm_symbol', '-'), ('pm_correct', 28)]), OrderedDict([('pm_number', 32), ('pm_symbol', '-'), ('pm_correct', 29)]), OrderedDict([('pm_number', 33), ('pm_symbol', '-'), ('pm_correct', 30)]), OrderedDict([('pm_number', 34), ('pm_symbol', '-'), ('pm_correct', 31)]), OrderedDict([('pm_number', 35), ('pm_symbol', '-'), ('pm_correct', 32)]), OrderedDict([('pm_number', 36), ('pm_symbol', '-'), ('pm_correct', 33)]), OrderedDict([('pm_number', 37), ('pm_symbol', '-'), ('pm_correct', 34)]), OrderedDict([('pm_number', 38), ('pm_symbol', '-'), ('pm_correct', 35)]), OrderedDict([('pm_number', 39), ('pm_symbol', '-'), ('pm_correct', 36)]), OrderedDict([('pm_number', 40), ('pm_symbol', '-'), ('pm_correct', 37)]), OrderedDict([('pm_number', 41), ('pm_symbol', '-'), ('pm_correct', 38)]), OrderedDict([('pm_number', 42), ('pm_symbol', '-'), ('pm_correct', 39)]), OrderedDict([('pm_number', 43), ('pm_symbol', '-'), ('pm_correct', 40)]), OrderedDict([('pm_number', 44), ('pm_symbol', '-'), ('pm_correct', 41)]), OrderedDict([('pm_number', 45), ('pm_symbol', '-'), ('pm_correct', 42)]), OrderedDict([('pm_number', 46), ('pm_symbol', '-'), ('pm_correct', 43)]), OrderedDict([('pm_number', 47), ('pm_symbol', '-'), ('pm_correct', 44)]), OrderedDict([('pm_number', 48), ('pm_symbol', '-'), ('pm_correct', 45)]), OrderedDict([('pm_number', 49), ('pm_symbol', '-'), ('pm_correct', 46)]), OrderedDict([('pm_number', 50), ('pm_symbol', '-'), ('pm_correct', 47)]), OrderedDict([('pm_number', 51), ('pm_symbol', '-'), ('pm_correct', 48)]), OrderedDict([('pm_number', 52), ('pm_symbol', '-'), ('pm_correct', 49)]), OrderedDict([('pm_number', 53), ('pm_symbol', '-'), ('pm_correct', 50)]), OrderedDict([('pm_number', 54), ('pm_symbol', '-'), ('pm_correct', 51)]), OrderedDict([('pm_number', 55), ('pm_symbol', '-'), ('pm_correct', 52)]), OrderedDict([('pm_number', 56), ('pm_symbol', '-'), ('pm_correct', 53)]), OrderedDict([('pm_number', 57), ('pm_symbol', '-'), ('pm_correct', 54)]), OrderedDict([('pm_number', 58), ('pm_symbol', '-'), ('pm_correct', 55)]), OrderedDict([('pm_number', 59), ('pm_symbol', '-'), ('pm_correct', 56)]), OrderedDict([('pm_number', 60), ('pm_symbol', '-'), ('pm_correct', 57)]), OrderedDict([('pm_number', 61), ('pm_symbol', '-'), ('pm_correct', 58)]), OrderedDict([('pm_number', 62), ('pm_symbol', '-'), ('pm_correct', 59)]), OrderedDict([('pm_number', 63), ('pm_symbol', '-'), ('pm_correct', 60)]), OrderedDict([('pm_number', 64), ('pm_symbol', '-'), ('pm_correct', 61)]), OrderedDict([('pm_number', 65), ('pm_symbol', '-'), ('pm_correct', 62)]), OrderedDict([('pm_number', 66), ('pm_symbol', '-'), ('pm_correct', 63)]), OrderedDict([('pm_number', 67), ('pm_symbol', '-'), ('pm_correct', 64)]), OrderedDict([('pm_number', 68), ('pm_symbol', '-'), ('pm_correct', 65)]), OrderedDict([('pm_number', 69), ('pm_symbol', '-'), ('pm_correct', 66)]), OrderedDict([('pm_number', 70), ('pm_symbol', '-'), ('pm_correct', 67)]), OrderedDict([('pm_number', 71), ('pm_symbol', '-'), ('pm_correct', 68)]), OrderedDict([('pm_number', 72), ('pm_symbol', '-'), ('pm_correct', 69)]), OrderedDict([('pm_number', 73), ('pm_symbol', '-'), ('pm_correct', 70)]), OrderedDict([('pm_number', 74), ('pm_symbol', '-'), ('pm_correct', 71)]), OrderedDict([('pm_number', 75), ('pm_symbol', '-'), ('pm_correct', 72)]), OrderedDict([('pm_number', 76), ('pm_symbol', '-'), ('pm_correct', 73)]), OrderedDict([('pm_number', 77), ('pm_symbol', '-'), ('pm_correct', 74)]), OrderedDict([('pm_number', 78), ('pm_symbol', '-'), ('pm_correct', 75)]), OrderedDict([('pm_number', 79), ('pm_symbol', '-'), ('pm_correct', 76)]), OrderedDict([('pm_number', 80), ('pm_symbol', '-'), ('pm_correct', 77)]), OrderedDict([('pm_number', 81), ('pm_symbol', '-'), ('pm_correct', 78)]), OrderedDict([('pm_number', 82), ('pm_symbol', '-'), ('pm_correct', 79)]), OrderedDict([('pm_number', 83), ('pm_symbol', '-'), ('pm_correct', 80)]), OrderedDict([('pm_number', 84), ('pm_symbol', '-'), ('pm_correct', 81)]), OrderedDict([('pm_number', 85), ('pm_symbol', '-'), ('pm_correct', 82)]), OrderedDict([('pm_number', 86), ('pm_symbol', '-'), ('pm_correct', 83)]), OrderedDict([('pm_number', 87), ('pm_symbol', '-'), ('pm_correct', 84)]), OrderedDict([('pm_number', 88), ('pm_symbol', '-'), ('pm_correct', 85)]), OrderedDict([('pm_number', 89), ('pm_symbol', '-'), ('pm_correct', 86)]), OrderedDict([('pm_number', 90), ('pm_symbol', '-'), ('pm_correct', 87)]), OrderedDict([('pm_number', 91), ('pm_symbol', '-'), ('pm_correct', 88)]), OrderedDict([('pm_number', 92), ('pm_symbol', '-'), ('pm_correct', 89)]), OrderedDict([('pm_number', 93), ('pm_symbol', '-'), ('pm_correct', 90)]), OrderedDict([('pm_number', 94), ('pm_symbol', '-'), ('pm_correct', 91)]), OrderedDict([('pm_number', 95), ('pm_symbol', '-'), ('pm_correct', 92)]), OrderedDict([('pm_number', 96), ('pm_symbol', '-'), ('pm_correct', 93)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="minus_input.csv" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
@@ -21608,12 +21922,12 @@
     <Routine name="minus_test_start"/>
     <LoopInitiator loopType="TrialHandler" name="minus_test_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('pm_number', 3), ('pm_symbol', '-'), ('pm_correct', 0)]), OrderedDict([('pm_number', 4), ('pm_symbol', '-'), ('pm_correct', 1)]), OrderedDict([('pm_number', 5), ('pm_symbol', '-'), ('pm_correct', 2)]), OrderedDict([('pm_number', 6), ('pm_symbol', '-'), ('pm_correct', 3)])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="minus_test_input.csv" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('pm_number', 13), ('pm_symbol', '-'), ('pm_correct', 10)]), OrderedDict([('pm_number', 14), ('pm_symbol', '-'), ('pm_correct', 11)]), OrderedDict([('pm_number', 15), ('pm_symbol', '-'), ('pm_correct', 12)]), OrderedDict([('pm_number', 16), ('pm_symbol', '-'), ('pm_correct', 13)]), OrderedDict([('pm_number', 17), ('pm_symbol', '-'), ('pm_correct', 14)]), OrderedDict([('pm_number', 18), ('pm_symbol', '-'), ('pm_correct', 15)]), OrderedDict([('pm_number', 19), ('pm_symbol', '-'), ('pm_correct', 16)]), OrderedDict([('pm_number', 20), ('pm_symbol', '-'), ('pm_correct', 17)]), OrderedDict([('pm_number', 21), ('pm_symbol', '-'), ('pm_correct', 18)]), OrderedDict([('pm_number', 22), ('pm_symbol', '-'), ('pm_correct', 19)]), OrderedDict([('pm_number', 23), ('pm_symbol', '-'), ('pm_correct', 20)]), OrderedDict([('pm_number', 24), ('pm_symbol', '-'), ('pm_correct', 21)]), OrderedDict([('pm_number', 25), ('pm_symbol', '-'), ('pm_correct', 22)]), OrderedDict([('pm_number', 26), ('pm_symbol', '-'), ('pm_correct', 23)]), OrderedDict([('pm_number', 27), ('pm_symbol', '-'), ('pm_correct', 24)]), OrderedDict([('pm_number', 28), ('pm_symbol', '-'), ('pm_correct', 25)]), OrderedDict([('pm_number', 29), ('pm_symbol', '-'), ('pm_correct', 26)]), OrderedDict([('pm_number', 30), ('pm_symbol', '-'), ('pm_correct', 27)]), OrderedDict([('pm_number', 31), ('pm_symbol', '-'), ('pm_correct', 28)]), OrderedDict([('pm_number', 32), ('pm_symbol', '-'), ('pm_correct', 29)]), OrderedDict([('pm_number', 33), ('pm_symbol', '-'), ('pm_correct', 30)]), OrderedDict([('pm_number', 34), ('pm_symbol', '-'), ('pm_correct', 31)]), OrderedDict([('pm_number', 35), ('pm_symbol', '-'), ('pm_correct', 32)]), OrderedDict([('pm_number', 36), ('pm_symbol', '-'), ('pm_correct', 33)]), OrderedDict([('pm_number', 37), ('pm_symbol', '-'), ('pm_correct', 34)]), OrderedDict([('pm_number', 38), ('pm_symbol', '-'), ('pm_correct', 35)]), OrderedDict([('pm_number', 39), ('pm_symbol', '-'), ('pm_correct', 36)]), OrderedDict([('pm_number', 40), ('pm_symbol', '-'), ('pm_correct', 37)]), OrderedDict([('pm_number', 41), ('pm_symbol', '-'), ('pm_correct', 38)]), OrderedDict([('pm_number', 42), ('pm_symbol', '-'), ('pm_correct', 39)]), OrderedDict([('pm_number', 43), ('pm_symbol', '-'), ('pm_correct', 40)]), OrderedDict([('pm_number', 44), ('pm_symbol', '-'), ('pm_correct', 41)]), OrderedDict([('pm_number', 45), ('pm_symbol', '-'), ('pm_correct', 42)]), OrderedDict([('pm_number', 46), ('pm_symbol', '-'), ('pm_correct', 43)]), OrderedDict([('pm_number', 47), ('pm_symbol', '-'), ('pm_correct', 44)]), OrderedDict([('pm_number', 48), ('pm_symbol', '-'), ('pm_correct', 45)]), OrderedDict([('pm_number', 49), ('pm_symbol', '-'), ('pm_correct', 46)]), OrderedDict([('pm_number', 50), ('pm_symbol', '-'), ('pm_correct', 47)]), OrderedDict([('pm_number', 51), ('pm_symbol', '-'), ('pm_correct', 48)]), OrderedDict([('pm_number', 52), ('pm_symbol', '-'), ('pm_correct', 49)]), OrderedDict([('pm_number', 53), ('pm_symbol', '-'), ('pm_correct', 50)]), OrderedDict([('pm_number', 54), ('pm_symbol', '-'), ('pm_correct', 51)]), OrderedDict([('pm_number', 55), ('pm_symbol', '-'), ('pm_correct', 52)]), OrderedDict([('pm_number', 56), ('pm_symbol', '-'), ('pm_correct', 53)]), OrderedDict([('pm_number', 57), ('pm_symbol', '-'), ('pm_correct', 54)]), OrderedDict([('pm_number', 58), ('pm_symbol', '-'), ('pm_correct', 55)]), OrderedDict([('pm_number', 59), ('pm_symbol', '-'), ('pm_correct', 56)]), OrderedDict([('pm_number', 60), ('pm_symbol', '-'), ('pm_correct', 57)]), OrderedDict([('pm_number', 61), ('pm_symbol', '-'), ('pm_correct', 58)]), OrderedDict([('pm_number', 62), ('pm_symbol', '-'), ('pm_correct', 59)]), OrderedDict([('pm_number', 63), ('pm_symbol', '-'), ('pm_correct', 60)]), OrderedDict([('pm_number', 64), ('pm_symbol', '-'), ('pm_correct', 61)]), OrderedDict([('pm_number', 65), ('pm_symbol', '-'), ('pm_correct', 62)]), OrderedDict([('pm_number', 66), ('pm_symbol', '-'), ('pm_correct', 63)]), OrderedDict([('pm_number', 67), ('pm_symbol', '-'), ('pm_correct', 64)]), OrderedDict([('pm_number', 68), ('pm_symbol', '-'), ('pm_correct', 65)]), OrderedDict([('pm_number', 69), ('pm_symbol', '-'), ('pm_correct', 66)]), OrderedDict([('pm_number', 70), ('pm_symbol', '-'), ('pm_correct', 67)]), OrderedDict([('pm_number', 71), ('pm_symbol', '-'), ('pm_correct', 68)]), OrderedDict([('pm_number', 72), ('pm_symbol', '-'), ('pm_correct', 69)]), OrderedDict([('pm_number', 73), ('pm_symbol', '-'), ('pm_correct', 70)]), OrderedDict([('pm_number', 74), ('pm_symbol', '-'), ('pm_correct', 71)]), OrderedDict([('pm_number', 75), ('pm_symbol', '-'), ('pm_correct', 72)]), OrderedDict([('pm_number', 76), ('pm_symbol', '-'), ('pm_correct', 73)]), OrderedDict([('pm_number', 77), ('pm_symbol', '-'), ('pm_correct', 74)]), OrderedDict([('pm_number', 78), ('pm_symbol', '-'), ('pm_correct', 75)]), OrderedDict([('pm_number', 79), ('pm_symbol', '-'), ('pm_correct', 76)]), OrderedDict([('pm_number', 80), ('pm_symbol', '-'), ('pm_correct', 77)]), OrderedDict([('pm_number', 81), ('pm_symbol', '-'), ('pm_correct', 78)]), OrderedDict([('pm_number', 82), ('pm_symbol', '-'), ('pm_correct', 79)]), OrderedDict([('pm_number', 83), ('pm_symbol', '-'), ('pm_correct', 80)]), OrderedDict([('pm_number', 84), ('pm_symbol', '-'), ('pm_correct', 81)]), OrderedDict([('pm_number', 85), ('pm_symbol', '-'), ('pm_correct', 82)]), OrderedDict([('pm_number', 86), ('pm_symbol', '-'), ('pm_correct', 83)]), OrderedDict([('pm_number', 87), ('pm_symbol', '-'), ('pm_correct', 84)]), OrderedDict([('pm_number', 88), ('pm_symbol', '-'), ('pm_correct', 85)]), OrderedDict([('pm_number', 89), ('pm_symbol', '-'), ('pm_correct', 86)]), OrderedDict([('pm_number', 90), ('pm_symbol', '-'), ('pm_correct', 87)]), OrderedDict([('pm_number', 91), ('pm_symbol', '-'), ('pm_correct', 88)]), OrderedDict([('pm_number', 92), ('pm_symbol', '-'), ('pm_correct', 89)]), OrderedDict([('pm_number', 93), ('pm_symbol', '-'), ('pm_correct', 90)]), OrderedDict([('pm_number', 94), ('pm_symbol', '-'), ('pm_correct', 91)]), OrderedDict([('pm_number', 95), ('pm_symbol', '-'), ('pm_correct', 92)]), OrderedDict([('pm_number', 96), ('pm_symbol', '-'), ('pm_correct', 93)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="minus_input.csv" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="3" valType="code"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
       <Param name="name" updates="None" val="minus_test_loop" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
@@ -21625,8 +21939,8 @@
     <Routine name="pm_train_start"/>
     <LoopInitiator loopType="TrialHandler" name="pm_train_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('pm_number', 3), ('pm_symbol', '-'), ('pm_correct', 0)]), OrderedDict([('pm_number', 4), ('pm_symbol', '-'), ('pm_correct', 1)]), OrderedDict([('pm_number', 5), ('pm_symbol', '-'), ('pm_correct', 2)]), OrderedDict([('pm_number', 6), ('pm_symbol', '-'), ('pm_correct', 3)]), OrderedDict([('pm_number', 3), ('pm_symbol', '+'), ('pm_correct', 6)]), OrderedDict([('pm_number', 4), ('pm_symbol', '+'), ('pm_correct', 7)]), OrderedDict([('pm_number', 5), ('pm_symbol', '+'), ('pm_correct', 8)]), OrderedDict([('pm_number', 6), ('pm_symbol', '+'), ('pm_correct', 9)])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="pm_train_input.csv" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('pm_number', 13), ('pm_symbol', '+'), ('pm_correct', 16)]), OrderedDict([('pm_number', 14), ('pm_symbol', '+'), ('pm_correct', 17)]), OrderedDict([('pm_number', 15), ('pm_symbol', '+'), ('pm_correct', 18)]), OrderedDict([('pm_number', 16), ('pm_symbol', '+'), ('pm_correct', 19)]), OrderedDict([('pm_number', 17), ('pm_symbol', '+'), ('pm_correct', 20)]), OrderedDict([('pm_number', 18), ('pm_symbol', '+'), ('pm_correct', 21)]), OrderedDict([('pm_number', 19), ('pm_symbol', '+'), ('pm_correct', 22)]), OrderedDict([('pm_number', 20), ('pm_symbol', '+'), ('pm_correct', 23)]), OrderedDict([('pm_number', 21), ('pm_symbol', '+'), ('pm_correct', 24)]), OrderedDict([('pm_number', 22), ('pm_symbol', '+'), ('pm_correct', 25)]), OrderedDict([('pm_number', 23), ('pm_symbol', '+'), ('pm_correct', 26)]), OrderedDict([('pm_number', 24), ('pm_symbol', '+'), ('pm_correct', 27)]), OrderedDict([('pm_number', 25), ('pm_symbol', '+'), ('pm_correct', 28)]), OrderedDict([('pm_number', 26), ('pm_symbol', '+'), ('pm_correct', 29)]), OrderedDict([('pm_number', 27), ('pm_symbol', '+'), ('pm_correct', 30)]), OrderedDict([('pm_number', 28), ('pm_symbol', '+'), ('pm_correct', 31)]), OrderedDict([('pm_number', 29), ('pm_symbol', '+'), ('pm_correct', 32)]), OrderedDict([('pm_number', 30), ('pm_symbol', '+'), ('pm_correct', 33)]), OrderedDict([('pm_number', 31), ('pm_symbol', '+'), ('pm_correct', 34)]), OrderedDict([('pm_number', 32), ('pm_symbol', '+'), ('pm_correct', 35)]), OrderedDict([('pm_number', 33), ('pm_symbol', '+'), ('pm_correct', 36)]), OrderedDict([('pm_number', 34), ('pm_symbol', '+'), ('pm_correct', 37)]), OrderedDict([('pm_number', 35), ('pm_symbol', '+'), ('pm_correct', 38)]), OrderedDict([('pm_number', 36), ('pm_symbol', '+'), ('pm_correct', 39)]), OrderedDict([('pm_number', 37), ('pm_symbol', '+'), ('pm_correct', 40)]), OrderedDict([('pm_number', 38), ('pm_symbol', '+'), ('pm_correct', 41)]), OrderedDict([('pm_number', 39), ('pm_symbol', '+'), ('pm_correct', 42)]), OrderedDict([('pm_number', 40), ('pm_symbol', '+'), ('pm_correct', 43)]), OrderedDict([('pm_number', 41), ('pm_symbol', '+'), ('pm_correct', 44)]), OrderedDict([('pm_number', 42), ('pm_symbol', '+'), ('pm_correct', 45)]), OrderedDict([('pm_number', 43), ('pm_symbol', '+'), ('pm_correct', 46)]), OrderedDict([('pm_number', 44), ('pm_symbol', '+'), ('pm_correct', 47)]), OrderedDict([('pm_number', 45), ('pm_symbol', '+'), ('pm_correct', 48)]), OrderedDict([('pm_number', 46), ('pm_symbol', '+'), ('pm_correct', 49)]), OrderedDict([('pm_number', 47), ('pm_symbol', '+'), ('pm_correct', 50)]), OrderedDict([('pm_number', 48), ('pm_symbol', '+'), ('pm_correct', 51)]), OrderedDict([('pm_number', 49), ('pm_symbol', '+'), ('pm_correct', 52)]), OrderedDict([('pm_number', 50), ('pm_symbol', '+'), ('pm_correct', 53)]), OrderedDict([('pm_number', 51), ('pm_symbol', '+'), ('pm_correct', 54)]), OrderedDict([('pm_number', 52), ('pm_symbol', '+'), ('pm_correct', 55)]), OrderedDict([('pm_number', 53), ('pm_symbol', '+'), ('pm_correct', 56)]), OrderedDict([('pm_number', 54), ('pm_symbol', '+'), ('pm_correct', 57)]), OrderedDict([('pm_number', 55), ('pm_symbol', '+'), ('pm_correct', 58)]), OrderedDict([('pm_number', 56), ('pm_symbol', '+'), ('pm_correct', 59)]), OrderedDict([('pm_number', 57), ('pm_symbol', '+'), ('pm_correct', 60)]), OrderedDict([('pm_number', 58), ('pm_symbol', '+'), ('pm_correct', 61)]), OrderedDict([('pm_number', 59), ('pm_symbol', '+'), ('pm_correct', 62)]), OrderedDict([('pm_number', 60), ('pm_symbol', '+'), ('pm_correct', 63)]), OrderedDict([('pm_number', 61), ('pm_symbol', '+'), ('pm_correct', 64)]), OrderedDict([('pm_number', 62), ('pm_symbol', '+'), ('pm_correct', 65)]), OrderedDict([('pm_number', 63), ('pm_symbol', '+'), ('pm_correct', 66)]), OrderedDict([('pm_number', 64), ('pm_symbol', '+'), ('pm_correct', 67)]), OrderedDict([('pm_number', 65), ('pm_symbol', '+'), ('pm_correct', 68)]), OrderedDict([('pm_number', 66), ('pm_symbol', '+'), ('pm_correct', 69)]), OrderedDict([('pm_number', 67), ('pm_symbol', '+'), ('pm_correct', 70)]), OrderedDict([('pm_number', 68), ('pm_symbol', '+'), ('pm_correct', 71)]), OrderedDict([('pm_number', 69), ('pm_symbol', '+'), ('pm_correct', 72)]), OrderedDict([('pm_number', 70), ('pm_symbol', '+'), ('pm_correct', 73)]), OrderedDict([('pm_number', 71), ('pm_symbol', '+'), ('pm_correct', 74)]), OrderedDict([('pm_number', 72), ('pm_symbol', '+'), ('pm_correct', 75)]), OrderedDict([('pm_number', 73), ('pm_symbol', '+'), ('pm_correct', 76)]), OrderedDict([('pm_number', 74), ('pm_symbol', '+'), ('pm_correct', 77)]), OrderedDict([('pm_number', 75), ('pm_symbol', '+'), ('pm_correct', 78)]), OrderedDict([('pm_number', 76), ('pm_symbol', '+'), ('pm_correct', 79)]), OrderedDict([('pm_number', 77), ('pm_symbol', '+'), ('pm_correct', 80)]), OrderedDict([('pm_number', 78), ('pm_symbol', '+'), ('pm_correct', 81)]), OrderedDict([('pm_number', 79), ('pm_symbol', '+'), ('pm_correct', 82)]), OrderedDict([('pm_number', 80), ('pm_symbol', '+'), ('pm_correct', 83)]), OrderedDict([('pm_number', 81), ('pm_symbol', '+'), ('pm_correct', 84)]), OrderedDict([('pm_number', 82), ('pm_symbol', '+'), ('pm_correct', 85)]), OrderedDict([('pm_number', 83), ('pm_symbol', '+'), ('pm_correct', 86)]), OrderedDict([('pm_number', 84), ('pm_symbol', '+'), ('pm_correct', 87)]), OrderedDict([('pm_number', 85), ('pm_symbol', '+'), ('pm_correct', 88)]), OrderedDict([('pm_number', 86), ('pm_symbol', '+'), ('pm_correct', 89)]), OrderedDict([('pm_number', 87), ('pm_symbol', '+'), ('pm_correct', 90)]), OrderedDict([('pm_number', 88), ('pm_symbol', '+'), ('pm_correct', 91)]), OrderedDict([('pm_number', 89), ('pm_symbol', '+'), ('pm_correct', 92)]), OrderedDict([('pm_number', 90), ('pm_symbol', '+'), ('pm_correct', 93)]), OrderedDict([('pm_number', 91), ('pm_symbol', '+'), ('pm_correct', 94)]), OrderedDict([('pm_number', 92), ('pm_symbol', '+'), ('pm_correct', 95)]), OrderedDict([('pm_number', 93), ('pm_symbol', '+'), ('pm_correct', 96)]), OrderedDict([('pm_number', 94), ('pm_symbol', '+'), ('pm_correct', 97)]), OrderedDict([('pm_number', 95), ('pm_symbol', '+'), ('pm_correct', 98)]), OrderedDict([('pm_number', 96), ('pm_symbol', '+'), ('pm_correct', 99)]), OrderedDict([('pm_number', 13), ('pm_symbol', '-'), ('pm_correct', 10)]), OrderedDict([('pm_number', 14), ('pm_symbol', '-'), ('pm_correct', 11)]), OrderedDict([('pm_number', 15), ('pm_symbol', '-'), ('pm_correct', 12)]), OrderedDict([('pm_number', 16), ('pm_symbol', '-'), ('pm_correct', 13)]), OrderedDict([('pm_number', 17), ('pm_symbol', '-'), ('pm_correct', 14)]), OrderedDict([('pm_number', 18), ('pm_symbol', '-'), ('pm_correct', 15)]), OrderedDict([('pm_number', 19), ('pm_symbol', '-'), ('pm_correct', 16)]), OrderedDict([('pm_number', 20), ('pm_symbol', '-'), ('pm_correct', 17)]), OrderedDict([('pm_number', 21), ('pm_symbol', '-'), ('pm_correct', 18)]), OrderedDict([('pm_number', 22), ('pm_symbol', '-'), ('pm_correct', 19)]), OrderedDict([('pm_number', 23), ('pm_symbol', '-'), ('pm_correct', 20)]), OrderedDict([('pm_number', 24), ('pm_symbol', '-'), ('pm_correct', 21)]), OrderedDict([('pm_number', 25), ('pm_symbol', '-'), ('pm_correct', 22)]), OrderedDict([('pm_number', 26), ('pm_symbol', '-'), ('pm_correct', 23)]), OrderedDict([('pm_number', 27), ('pm_symbol', '-'), ('pm_correct', 24)]), OrderedDict([('pm_number', 28), ('pm_symbol', '-'), ('pm_correct', 25)]), OrderedDict([('pm_number', 29), ('pm_symbol', '-'), ('pm_correct', 26)]), OrderedDict([('pm_number', 30), ('pm_symbol', '-'), ('pm_correct', 27)]), OrderedDict([('pm_number', 31), ('pm_symbol', '-'), ('pm_correct', 28)]), OrderedDict([('pm_number', 32), ('pm_symbol', '-'), ('pm_correct', 29)]), OrderedDict([('pm_number', 33), ('pm_symbol', '-'), ('pm_correct', 30)]), OrderedDict([('pm_number', 34), ('pm_symbol', '-'), ('pm_correct', 31)]), OrderedDict([('pm_number', 35), ('pm_symbol', '-'), ('pm_correct', 32)]), OrderedDict([('pm_number', 36), ('pm_symbol', '-'), ('pm_correct', 33)]), OrderedDict([('pm_number', 37), ('pm_symbol', '-'), ('pm_correct', 34)]), OrderedDict([('pm_number', 38), ('pm_symbol', '-'), ('pm_correct', 35)]), OrderedDict([('pm_number', 39), ('pm_symbol', '-'), ('pm_correct', 36)]), OrderedDict([('pm_number', 40), ('pm_symbol', '-'), ('pm_correct', 37)]), OrderedDict([('pm_number', 41), ('pm_symbol', '-'), ('pm_correct', 38)]), OrderedDict([('pm_number', 42), ('pm_symbol', '-'), ('pm_correct', 39)]), OrderedDict([('pm_number', 43), ('pm_symbol', '-'), ('pm_correct', 40)]), OrderedDict([('pm_number', 44), ('pm_symbol', '-'), ('pm_correct', 41)]), OrderedDict([('pm_number', 45), ('pm_symbol', '-'), ('pm_correct', 42)]), OrderedDict([('pm_number', 46), ('pm_symbol', '-'), ('pm_correct', 43)]), OrderedDict([('pm_number', 47), ('pm_symbol', '-'), ('pm_correct', 44)]), OrderedDict([('pm_number', 48), ('pm_symbol', '-'), ('pm_correct', 45)]), OrderedDict([('pm_number', 49), ('pm_symbol', '-'), ('pm_correct', 46)]), OrderedDict([('pm_number', 50), ('pm_symbol', '-'), ('pm_correct', 47)]), OrderedDict([('pm_number', 51), ('pm_symbol', '-'), ('pm_correct', 48)]), OrderedDict([('pm_number', 52), ('pm_symbol', '-'), ('pm_correct', 49)]), OrderedDict([('pm_number', 53), ('pm_symbol', '-'), ('pm_correct', 50)]), OrderedDict([('pm_number', 54), ('pm_symbol', '-'), ('pm_correct', 51)]), OrderedDict([('pm_number', 55), ('pm_symbol', '-'), ('pm_correct', 52)]), OrderedDict([('pm_number', 56), ('pm_symbol', '-'), ('pm_correct', 53)]), OrderedDict([('pm_number', 57), ('pm_symbol', '-'), ('pm_correct', 54)]), OrderedDict([('pm_number', 58), ('pm_symbol', '-'), ('pm_correct', 55)]), OrderedDict([('pm_number', 59), ('pm_symbol', '-'), ('pm_correct', 56)]), OrderedDict([('pm_number', 60), ('pm_symbol', '-'), ('pm_correct', 57)]), OrderedDict([('pm_number', 61), ('pm_symbol', '-'), ('pm_correct', 58)]), OrderedDict([('pm_number', 62), ('pm_symbol', '-'), ('pm_correct', 59)]), OrderedDict([('pm_number', 63), ('pm_symbol', '-'), ('pm_correct', 60)]), OrderedDict([('pm_number', 64), ('pm_symbol', '-'), ('pm_correct', 61)]), OrderedDict([('pm_number', 65), ('pm_symbol', '-'), ('pm_correct', 62)]), OrderedDict([('pm_number', 66), ('pm_symbol', '-'), ('pm_correct', 63)]), OrderedDict([('pm_number', 67), ('pm_symbol', '-'), ('pm_correct', 64)]), OrderedDict([('pm_number', 68), ('pm_symbol', '-'), ('pm_correct', 65)]), OrderedDict([('pm_number', 69), ('pm_symbol', '-'), ('pm_correct', 66)]), OrderedDict([('pm_number', 70), ('pm_symbol', '-'), ('pm_correct', 67)]), OrderedDict([('pm_number', 71), ('pm_symbol', '-'), ('pm_correct', 68)]), OrderedDict([('pm_number', 72), ('pm_symbol', '-'), ('pm_correct', 69)]), OrderedDict([('pm_number', 73), ('pm_symbol', '-'), ('pm_correct', 70)]), OrderedDict([('pm_number', 74), ('pm_symbol', '-'), ('pm_correct', 71)]), OrderedDict([('pm_number', 75), ('pm_symbol', '-'), ('pm_correct', 72)]), OrderedDict([('pm_number', 76), ('pm_symbol', '-'), ('pm_correct', 73)]), OrderedDict([('pm_number', 77), ('pm_symbol', '-'), ('pm_correct', 74)]), OrderedDict([('pm_number', 78), ('pm_symbol', '-'), ('pm_correct', 75)]), OrderedDict([('pm_number', 79), ('pm_symbol', '-'), ('pm_correct', 76)]), OrderedDict([('pm_number', 80), ('pm_symbol', '-'), ('pm_correct', 77)]), OrderedDict([('pm_number', 81), ('pm_symbol', '-'), ('pm_correct', 78)]), OrderedDict([('pm_number', 82), ('pm_symbol', '-'), ('pm_correct', 79)]), OrderedDict([('pm_number', 83), ('pm_symbol', '-'), ('pm_correct', 80)]), OrderedDict([('pm_number', 84), ('pm_symbol', '-'), ('pm_correct', 81)]), OrderedDict([('pm_number', 85), ('pm_symbol', '-'), ('pm_correct', 82)]), OrderedDict([('pm_number', 86), ('pm_symbol', '-'), ('pm_correct', 83)]), OrderedDict([('pm_number', 87), ('pm_symbol', '-'), ('pm_correct', 84)]), OrderedDict([('pm_number', 88), ('pm_symbol', '-'), ('pm_correct', 85)]), OrderedDict([('pm_number', 89), ('pm_symbol', '-'), ('pm_correct', 86)]), OrderedDict([('pm_number', 90), ('pm_symbol', '-'), ('pm_correct', 87)]), OrderedDict([('pm_number', 91), ('pm_symbol', '-'), ('pm_correct', 88)]), OrderedDict([('pm_number', 92), ('pm_symbol', '-'), ('pm_correct', 89)]), OrderedDict([('pm_number', 93), ('pm_symbol', '-'), ('pm_correct', 90)]), OrderedDict([('pm_number', 94), ('pm_symbol', '-'), ('pm_correct', 91)]), OrderedDict([('pm_number', 95), ('pm_symbol', '-'), ('pm_correct', 92)]), OrderedDict([('pm_number', 96), ('pm_symbol', '-'), ('pm_correct', 93)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="pm_input.csv" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
@@ -21640,12 +21954,12 @@
     <Routine name="pm_test_start"/>
     <LoopInitiator loopType="TrialHandler" name="pm_test_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('pm_number', 3), ('pm_symbol', '-'), ('pm_correct', 0)]), OrderedDict([('pm_number', 4), ('pm_symbol', '-'), ('pm_correct', 1)]), OrderedDict([('pm_number', 5), ('pm_symbol', '-'), ('pm_correct', 2)]), OrderedDict([('pm_number', 6), ('pm_symbol', '-'), ('pm_correct', 3)]), OrderedDict([('pm_number', 3), ('pm_symbol', '+'), ('pm_correct', 6)]), OrderedDict([('pm_number', 4), ('pm_symbol', '+'), ('pm_correct', 7)]), OrderedDict([('pm_number', 5), ('pm_symbol', '+'), ('pm_correct', 8)]), OrderedDict([('pm_number', 6), ('pm_symbol', '+'), ('pm_correct', 9)])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="pm_test_input.csv" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('pm_number', 13), ('pm_symbol', '+'), ('pm_correct', 16)]), OrderedDict([('pm_number', 14), ('pm_symbol', '+'), ('pm_correct', 17)]), OrderedDict([('pm_number', 15), ('pm_symbol', '+'), ('pm_correct', 18)]), OrderedDict([('pm_number', 16), ('pm_symbol', '+'), ('pm_correct', 19)]), OrderedDict([('pm_number', 17), ('pm_symbol', '+'), ('pm_correct', 20)]), OrderedDict([('pm_number', 18), ('pm_symbol', '+'), ('pm_correct', 21)]), OrderedDict([('pm_number', 19), ('pm_symbol', '+'), ('pm_correct', 22)]), OrderedDict([('pm_number', 20), ('pm_symbol', '+'), ('pm_correct', 23)]), OrderedDict([('pm_number', 21), ('pm_symbol', '+'), ('pm_correct', 24)]), OrderedDict([('pm_number', 22), ('pm_symbol', '+'), ('pm_correct', 25)]), OrderedDict([('pm_number', 23), ('pm_symbol', '+'), ('pm_correct', 26)]), OrderedDict([('pm_number', 24), ('pm_symbol', '+'), ('pm_correct', 27)]), OrderedDict([('pm_number', 25), ('pm_symbol', '+'), ('pm_correct', 28)]), OrderedDict([('pm_number', 26), ('pm_symbol', '+'), ('pm_correct', 29)]), OrderedDict([('pm_number', 27), ('pm_symbol', '+'), ('pm_correct', 30)]), OrderedDict([('pm_number', 28), ('pm_symbol', '+'), ('pm_correct', 31)]), OrderedDict([('pm_number', 29), ('pm_symbol', '+'), ('pm_correct', 32)]), OrderedDict([('pm_number', 30), ('pm_symbol', '+'), ('pm_correct', 33)]), OrderedDict([('pm_number', 31), ('pm_symbol', '+'), ('pm_correct', 34)]), OrderedDict([('pm_number', 32), ('pm_symbol', '+'), ('pm_correct', 35)]), OrderedDict([('pm_number', 33), ('pm_symbol', '+'), ('pm_correct', 36)]), OrderedDict([('pm_number', 34), ('pm_symbol', '+'), ('pm_correct', 37)]), OrderedDict([('pm_number', 35), ('pm_symbol', '+'), ('pm_correct', 38)]), OrderedDict([('pm_number', 36), ('pm_symbol', '+'), ('pm_correct', 39)]), OrderedDict([('pm_number', 37), ('pm_symbol', '+'), ('pm_correct', 40)]), OrderedDict([('pm_number', 38), ('pm_symbol', '+'), ('pm_correct', 41)]), OrderedDict([('pm_number', 39), ('pm_symbol', '+'), ('pm_correct', 42)]), OrderedDict([('pm_number', 40), ('pm_symbol', '+'), ('pm_correct', 43)]), OrderedDict([('pm_number', 41), ('pm_symbol', '+'), ('pm_correct', 44)]), OrderedDict([('pm_number', 42), ('pm_symbol', '+'), ('pm_correct', 45)]), OrderedDict([('pm_number', 43), ('pm_symbol', '+'), ('pm_correct', 46)]), OrderedDict([('pm_number', 44), ('pm_symbol', '+'), ('pm_correct', 47)]), OrderedDict([('pm_number', 45), ('pm_symbol', '+'), ('pm_correct', 48)]), OrderedDict([('pm_number', 46), ('pm_symbol', '+'), ('pm_correct', 49)]), OrderedDict([('pm_number', 47), ('pm_symbol', '+'), ('pm_correct', 50)]), OrderedDict([('pm_number', 48), ('pm_symbol', '+'), ('pm_correct', 51)]), OrderedDict([('pm_number', 49), ('pm_symbol', '+'), ('pm_correct', 52)]), OrderedDict([('pm_number', 50), ('pm_symbol', '+'), ('pm_correct', 53)]), OrderedDict([('pm_number', 51), ('pm_symbol', '+'), ('pm_correct', 54)]), OrderedDict([('pm_number', 52), ('pm_symbol', '+'), ('pm_correct', 55)]), OrderedDict([('pm_number', 53), ('pm_symbol', '+'), ('pm_correct', 56)]), OrderedDict([('pm_number', 54), ('pm_symbol', '+'), ('pm_correct', 57)]), OrderedDict([('pm_number', 55), ('pm_symbol', '+'), ('pm_correct', 58)]), OrderedDict([('pm_number', 56), ('pm_symbol', '+'), ('pm_correct', 59)]), OrderedDict([('pm_number', 57), ('pm_symbol', '+'), ('pm_correct', 60)]), OrderedDict([('pm_number', 58), ('pm_symbol', '+'), ('pm_correct', 61)]), OrderedDict([('pm_number', 59), ('pm_symbol', '+'), ('pm_correct', 62)]), OrderedDict([('pm_number', 60), ('pm_symbol', '+'), ('pm_correct', 63)]), OrderedDict([('pm_number', 61), ('pm_symbol', '+'), ('pm_correct', 64)]), OrderedDict([('pm_number', 62), ('pm_symbol', '+'), ('pm_correct', 65)]), OrderedDict([('pm_number', 63), ('pm_symbol', '+'), ('pm_correct', 66)]), OrderedDict([('pm_number', 64), ('pm_symbol', '+'), ('pm_correct', 67)]), OrderedDict([('pm_number', 65), ('pm_symbol', '+'), ('pm_correct', 68)]), OrderedDict([('pm_number', 66), ('pm_symbol', '+'), ('pm_correct', 69)]), OrderedDict([('pm_number', 67), ('pm_symbol', '+'), ('pm_correct', 70)]), OrderedDict([('pm_number', 68), ('pm_symbol', '+'), ('pm_correct', 71)]), OrderedDict([('pm_number', 69), ('pm_symbol', '+'), ('pm_correct', 72)]), OrderedDict([('pm_number', 70), ('pm_symbol', '+'), ('pm_correct', 73)]), OrderedDict([('pm_number', 71), ('pm_symbol', '+'), ('pm_correct', 74)]), OrderedDict([('pm_number', 72), ('pm_symbol', '+'), ('pm_correct', 75)]), OrderedDict([('pm_number', 73), ('pm_symbol', '+'), ('pm_correct', 76)]), OrderedDict([('pm_number', 74), ('pm_symbol', '+'), ('pm_correct', 77)]), OrderedDict([('pm_number', 75), ('pm_symbol', '+'), ('pm_correct', 78)]), OrderedDict([('pm_number', 76), ('pm_symbol', '+'), ('pm_correct', 79)]), OrderedDict([('pm_number', 77), ('pm_symbol', '+'), ('pm_correct', 80)]), OrderedDict([('pm_number', 78), ('pm_symbol', '+'), ('pm_correct', 81)]), OrderedDict([('pm_number', 79), ('pm_symbol', '+'), ('pm_correct', 82)]), OrderedDict([('pm_number', 80), ('pm_symbol', '+'), ('pm_correct', 83)]), OrderedDict([('pm_number', 81), ('pm_symbol', '+'), ('pm_correct', 84)]), OrderedDict([('pm_number', 82), ('pm_symbol', '+'), ('pm_correct', 85)]), OrderedDict([('pm_number', 83), ('pm_symbol', '+'), ('pm_correct', 86)]), OrderedDict([('pm_number', 84), ('pm_symbol', '+'), ('pm_correct', 87)]), OrderedDict([('pm_number', 85), ('pm_symbol', '+'), ('pm_correct', 88)]), OrderedDict([('pm_number', 86), ('pm_symbol', '+'), ('pm_correct', 89)]), OrderedDict([('pm_number', 87), ('pm_symbol', '+'), ('pm_correct', 90)]), OrderedDict([('pm_number', 88), ('pm_symbol', '+'), ('pm_correct', 91)]), OrderedDict([('pm_number', 89), ('pm_symbol', '+'), ('pm_correct', 92)]), OrderedDict([('pm_number', 90), ('pm_symbol', '+'), ('pm_correct', 93)]), OrderedDict([('pm_number', 91), ('pm_symbol', '+'), ('pm_correct', 94)]), OrderedDict([('pm_number', 92), ('pm_symbol', '+'), ('pm_correct', 95)]), OrderedDict([('pm_number', 93), ('pm_symbol', '+'), ('pm_correct', 96)]), OrderedDict([('pm_number', 94), ('pm_symbol', '+'), ('pm_correct', 97)]), OrderedDict([('pm_number', 95), ('pm_symbol', '+'), ('pm_correct', 98)]), OrderedDict([('pm_number', 96), ('pm_symbol', '+'), ('pm_correct', 99)]), OrderedDict([('pm_number', 13), ('pm_symbol', '-'), ('pm_correct', 10)]), OrderedDict([('pm_number', 14), ('pm_symbol', '-'), ('pm_correct', 11)]), OrderedDict([('pm_number', 15), ('pm_symbol', '-'), ('pm_correct', 12)]), OrderedDict([('pm_number', 16), ('pm_symbol', '-'), ('pm_correct', 13)]), OrderedDict([('pm_number', 17), ('pm_symbol', '-'), ('pm_correct', 14)]), OrderedDict([('pm_number', 18), ('pm_symbol', '-'), ('pm_correct', 15)]), OrderedDict([('pm_number', 19), ('pm_symbol', '-'), ('pm_correct', 16)]), OrderedDict([('pm_number', 20), ('pm_symbol', '-'), ('pm_correct', 17)]), OrderedDict([('pm_number', 21), ('pm_symbol', '-'), ('pm_correct', 18)]), OrderedDict([('pm_number', 22), ('pm_symbol', '-'), ('pm_correct', 19)]), OrderedDict([('pm_number', 23), ('pm_symbol', '-'), ('pm_correct', 20)]), OrderedDict([('pm_number', 24), ('pm_symbol', '-'), ('pm_correct', 21)]), OrderedDict([('pm_number', 25), ('pm_symbol', '-'), ('pm_correct', 22)]), OrderedDict([('pm_number', 26), ('pm_symbol', '-'), ('pm_correct', 23)]), OrderedDict([('pm_number', 27), ('pm_symbol', '-'), ('pm_correct', 24)]), OrderedDict([('pm_number', 28), ('pm_symbol', '-'), ('pm_correct', 25)]), OrderedDict([('pm_number', 29), ('pm_symbol', '-'), ('pm_correct', 26)]), OrderedDict([('pm_number', 30), ('pm_symbol', '-'), ('pm_correct', 27)]), OrderedDict([('pm_number', 31), ('pm_symbol', '-'), ('pm_correct', 28)]), OrderedDict([('pm_number', 32), ('pm_symbol', '-'), ('pm_correct', 29)]), OrderedDict([('pm_number', 33), ('pm_symbol', '-'), ('pm_correct', 30)]), OrderedDict([('pm_number', 34), ('pm_symbol', '-'), ('pm_correct', 31)]), OrderedDict([('pm_number', 35), ('pm_symbol', '-'), ('pm_correct', 32)]), OrderedDict([('pm_number', 36), ('pm_symbol', '-'), ('pm_correct', 33)]), OrderedDict([('pm_number', 37), ('pm_symbol', '-'), ('pm_correct', 34)]), OrderedDict([('pm_number', 38), ('pm_symbol', '-'), ('pm_correct', 35)]), OrderedDict([('pm_number', 39), ('pm_symbol', '-'), ('pm_correct', 36)]), OrderedDict([('pm_number', 40), ('pm_symbol', '-'), ('pm_correct', 37)]), OrderedDict([('pm_number', 41), ('pm_symbol', '-'), ('pm_correct', 38)]), OrderedDict([('pm_number', 42), ('pm_symbol', '-'), ('pm_correct', 39)]), OrderedDict([('pm_number', 43), ('pm_symbol', '-'), ('pm_correct', 40)]), OrderedDict([('pm_number', 44), ('pm_symbol', '-'), ('pm_correct', 41)]), OrderedDict([('pm_number', 45), ('pm_symbol', '-'), ('pm_correct', 42)]), OrderedDict([('pm_number', 46), ('pm_symbol', '-'), ('pm_correct', 43)]), OrderedDict([('pm_number', 47), ('pm_symbol', '-'), ('pm_correct', 44)]), OrderedDict([('pm_number', 48), ('pm_symbol', '-'), ('pm_correct', 45)]), OrderedDict([('pm_number', 49), ('pm_symbol', '-'), ('pm_correct', 46)]), OrderedDict([('pm_number', 50), ('pm_symbol', '-'), ('pm_correct', 47)]), OrderedDict([('pm_number', 51), ('pm_symbol', '-'), ('pm_correct', 48)]), OrderedDict([('pm_number', 52), ('pm_symbol', '-'), ('pm_correct', 49)]), OrderedDict([('pm_number', 53), ('pm_symbol', '-'), ('pm_correct', 50)]), OrderedDict([('pm_number', 54), ('pm_symbol', '-'), ('pm_correct', 51)]), OrderedDict([('pm_number', 55), ('pm_symbol', '-'), ('pm_correct', 52)]), OrderedDict([('pm_number', 56), ('pm_symbol', '-'), ('pm_correct', 53)]), OrderedDict([('pm_number', 57), ('pm_symbol', '-'), ('pm_correct', 54)]), OrderedDict([('pm_number', 58), ('pm_symbol', '-'), ('pm_correct', 55)]), OrderedDict([('pm_number', 59), ('pm_symbol', '-'), ('pm_correct', 56)]), OrderedDict([('pm_number', 60), ('pm_symbol', '-'), ('pm_correct', 57)]), OrderedDict([('pm_number', 61), ('pm_symbol', '-'), ('pm_correct', 58)]), OrderedDict([('pm_number', 62), ('pm_symbol', '-'), ('pm_correct', 59)]), OrderedDict([('pm_number', 63), ('pm_symbol', '-'), ('pm_correct', 60)]), OrderedDict([('pm_number', 64), ('pm_symbol', '-'), ('pm_correct', 61)]), OrderedDict([('pm_number', 65), ('pm_symbol', '-'), ('pm_correct', 62)]), OrderedDict([('pm_number', 66), ('pm_symbol', '-'), ('pm_correct', 63)]), OrderedDict([('pm_number', 67), ('pm_symbol', '-'), ('pm_correct', 64)]), OrderedDict([('pm_number', 68), ('pm_symbol', '-'), ('pm_correct', 65)]), OrderedDict([('pm_number', 69), ('pm_symbol', '-'), ('pm_correct', 66)]), OrderedDict([('pm_number', 70), ('pm_symbol', '-'), ('pm_correct', 67)]), OrderedDict([('pm_number', 71), ('pm_symbol', '-'), ('pm_correct', 68)]), OrderedDict([('pm_number', 72), ('pm_symbol', '-'), ('pm_correct', 69)]), OrderedDict([('pm_number', 73), ('pm_symbol', '-'), ('pm_correct', 70)]), OrderedDict([('pm_number', 74), ('pm_symbol', '-'), ('pm_correct', 71)]), OrderedDict([('pm_number', 75), ('pm_symbol', '-'), ('pm_correct', 72)]), OrderedDict([('pm_number', 76), ('pm_symbol', '-'), ('pm_correct', 73)]), OrderedDict([('pm_number', 77), ('pm_symbol', '-'), ('pm_correct', 74)]), OrderedDict([('pm_number', 78), ('pm_symbol', '-'), ('pm_correct', 75)]), OrderedDict([('pm_number', 79), ('pm_symbol', '-'), ('pm_correct', 76)]), OrderedDict([('pm_number', 80), ('pm_symbol', '-'), ('pm_correct', 77)]), OrderedDict([('pm_number', 81), ('pm_symbol', '-'), ('pm_correct', 78)]), OrderedDict([('pm_number', 82), ('pm_symbol', '-'), ('pm_correct', 79)]), OrderedDict([('pm_number', 83), ('pm_symbol', '-'), ('pm_correct', 80)]), OrderedDict([('pm_number', 84), ('pm_symbol', '-'), ('pm_correct', 81)]), OrderedDict([('pm_number', 85), ('pm_symbol', '-'), ('pm_correct', 82)]), OrderedDict([('pm_number', 86), ('pm_symbol', '-'), ('pm_correct', 83)]), OrderedDict([('pm_number', 87), ('pm_symbol', '-'), ('pm_correct', 84)]), OrderedDict([('pm_number', 88), ('pm_symbol', '-'), ('pm_correct', 85)]), OrderedDict([('pm_number', 89), ('pm_symbol', '-'), ('pm_correct', 86)]), OrderedDict([('pm_number', 90), ('pm_symbol', '-'), ('pm_correct', 87)]), OrderedDict([('pm_number', 91), ('pm_symbol', '-'), ('pm_correct', 88)]), OrderedDict([('pm_number', 92), ('pm_symbol', '-'), ('pm_correct', 89)]), OrderedDict([('pm_number', 93), ('pm_symbol', '-'), ('pm_correct', 90)]), OrderedDict([('pm_number', 94), ('pm_symbol', '-'), ('pm_correct', 91)]), OrderedDict([('pm_number', 95), ('pm_symbol', '-'), ('pm_correct', 92)]), OrderedDict([('pm_number', 96), ('pm_symbol', '-'), ('pm_correct', 93)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="pm_input.csv" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="3" valType="code"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
       <Param name="name" updates="None" val="pm_test_loop" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
