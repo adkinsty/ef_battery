@@ -1,0 +1,9 @@
+oe_number,oe_position,oe_correct,oe_side,oe_type
+2,"[-.2,0]",z,left,even
+4,"[-.2,0]",z,left,even
+6,"[-.2,0]",z,left,even
+8,"[-.2,0]",z,left,even
+2,"[.2,0]",m,right,even
+4,"[.2,0]",m,right,even
+6,"[.2,0]",m,right,even
+8,"[.2,0]",m,right,even
