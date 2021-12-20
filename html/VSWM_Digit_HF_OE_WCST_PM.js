@@ -1199,7 +1199,6 @@ var image_2;
 var text_91;
 var key_resp_43;
 var Thank_YouClock;
-var white_background_31;
 var text_92;
 var text_111;
 var oe_welcomeClock;
@@ -1219,7 +1218,7 @@ var even_eg2Clock;
 var even_eg2_txt_top;
 var even_eg2_txt_num;
 var even_eg2_txt_bot;
-var plus_eg2_key_resp_2;
+var even_eg2_key_resp;
 var oe_train_startClock;
 var oe_train_start_txt;
 var oe_train_start_key_resp;
@@ -1238,9 +1237,9 @@ var odd_intro_txt_bot;
 var odd_intro_key_resp;
 var odd_eg1Clock;
 var odd_eg1_txt_top;
-var minus_eg1_txt_num_2;
-var minus_eg1_txt_bot_2;
-var minus_eg1_key_resp_2;
+var odd_eg1_txt_num;
+var odd_eg1_txt_bot;
+var odd_eg1_key_resp;
 var odd_eg2Clock;
 var odd_eg2_txt_top;
 var odd_eg2_txt_num;
@@ -7332,15 +7331,6 @@ function experimentInit() {
   
   // Initialize components for Routine "Thank_You"
   Thank_YouClock = new util.Clock();
-  white_background_31 = new visual.Rect ({
-    win: psychoJS.window, name: 'white_background_31', 
-    width: [2, 2][0], height: [2, 2][1],
-    ori: 0, pos: [0, 0],
-    lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([1, 1, 1]),
-    opacity: 1, depth: 0, interpolate: true,
-  });
-  
   text_92 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_92',
@@ -7348,8 +7338,8 @@ function experimentInit() {
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -1.0 
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
   });
   
   text_111 = new visual.TextStim({
@@ -7359,8 +7349,8 @@ function experimentInit() {
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: 0.8, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -2.0 
+    color: new util.Color('white'),  opacity: 1,
+    depth: -1.0 
   });
   
   // Initialize components for Routine "oe_welcome"
@@ -7434,7 +7424,7 @@ function experimentInit() {
     text: '2',
     font: 'Arial',
     units: undefined, 
-    pos: [(- 0.2), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.3), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -1.0 
   });
@@ -7445,7 +7435,7 @@ function experimentInit() {
     text: 'Press ‘z’.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.3), (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
@@ -7471,7 +7461,7 @@ function experimentInit() {
     text: '8',
     font: 'Arial',
     units: undefined, 
-    pos: [0.2, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.3, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -1.0 
   });
@@ -7482,12 +7472,12 @@ function experimentInit() {
     text: 'Press ‘m’.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0.3, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
   
-  plus_eg2_key_resp_2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  even_eg2_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "oe_train_start"
   oe_train_startClock = new util.Clock();
@@ -7623,29 +7613,29 @@ function experimentInit() {
     depth: 0.0 
   });
   
-  minus_eg1_txt_num_2 = new visual.TextStim({
+  odd_eg1_txt_num = new visual.TextStim({
     win: psychoJS.window,
-    name: 'minus_eg1_txt_num_2',
+    name: 'odd_eg1_txt_num',
     text: '1',
     font: 'Arial',
     units: undefined, 
-    pos: [(- 0.2), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.3), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -1.0 
   });
   
-  minus_eg1_txt_bot_2 = new visual.TextStim({
+  odd_eg1_txt_bot = new visual.TextStim({
     win: psychoJS.window,
-    name: 'minus_eg1_txt_bot_2',
+    name: 'odd_eg1_txt_bot',
     text: 'Press ‘m’.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0.3, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
   
-  minus_eg1_key_resp_2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  odd_eg1_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "odd_eg2"
   odd_eg2Clock = new util.Clock();
@@ -7666,7 +7656,7 @@ function experimentInit() {
     text: '7',
     font: 'Arial',
     units: undefined, 
-    pos: [0.2, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.3, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -1.0 
   });
@@ -7677,7 +7667,7 @@ function experimentInit() {
     text: 'Press ‘z’.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.3), (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
@@ -7824,7 +7814,7 @@ function experimentInit() {
     text: '2',
     font: 'Arial',
     units: undefined, 
-    pos: [(- 0.2), 0.1], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.3), 0.1], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -1.0 
   });
@@ -7835,7 +7825,7 @@ function experimentInit() {
     text: 'Press ‘z’.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.3), (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
@@ -7861,7 +7851,7 @@ function experimentInit() {
     text: '7',
     font: 'Arial',
     units: undefined, 
-    pos: [0.2, 0.1], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.3, 0.1], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -1.0 
   });
@@ -7872,7 +7862,7 @@ function experimentInit() {
     text: 'Press ‘z’.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.3), (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
   });
@@ -7976,15 +7966,6 @@ function experimentInit() {
   
   // Initialize components for Routine "Thank_You"
   Thank_YouClock = new util.Clock();
-  white_background_31 = new visual.Rect ({
-    win: psychoJS.window, name: 'white_background_31', 
-    width: [2, 2][0], height: [2, 2][1],
-    ori: 0, pos: [0, 0],
-    lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([1, 1, 1]),
-    opacity: 1, depth: 0, interpolate: true,
-  });
-  
   text_92 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_92',
@@ -7992,8 +7973,8 @@ function experimentInit() {
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -1.0 
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
   });
   
   text_111 = new visual.TextStim({
@@ -8003,8 +7984,8 @@ function experimentInit() {
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: 0.8, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -2.0 
+    color: new util.Color('white'),  opacity: 1,
+    depth: -1.0 
   });
   
   // Initialize components for Routine "welcome"
@@ -8990,7 +8971,7 @@ function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.1)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.15)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -6.0 
   });
@@ -9049,7 +9030,7 @@ function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.1)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.15)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -6.0 
   });
@@ -28090,7 +28071,6 @@ function Thank_YouRoutineBegin(snapshot) {
     // update component parameters for each repeat
     // keep track of which components have finished
     Thank_YouComponents = [];
-    Thank_YouComponents.push(white_background_31);
     Thank_YouComponents.push(text_92);
     Thank_YouComponents.push(text_111);
     
@@ -28113,20 +28093,6 @@ function Thank_YouRoutineEachFrame(snapshot) {
     t = Thank_YouClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
-    
-    // *white_background_31* updates
-    if (t >= 0.0 && white_background_31.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      white_background_31.tStart = t;  // (not accounting for frame time here)
-      white_background_31.frameNStart = frameN;  // exact frame index
-      
-      white_background_31.setAutoDraw(true);
-    }
-
-    frameRemains = 0.0 + 2.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((white_background_31.status === PsychoJS.Status.STARTED || white_background_31.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
-      white_background_31.setAutoDraw(false);
-    }
     
     // *text_92* updates
     if (t >= 0.0 && text_92.status === PsychoJS.Status.NOT_STARTED) {
@@ -28578,7 +28544,7 @@ function even_eg1RoutineEnd(snapshot) {
 }
 
 
-var _plus_eg2_key_resp_2_allKeys;
+var _even_eg2_key_resp_allKeys;
 var even_eg2Components;
 function even_eg2RoutineBegin(snapshot) {
   return function () {
@@ -28587,15 +28553,15 @@ function even_eg2RoutineBegin(snapshot) {
     even_eg2Clock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
-    plus_eg2_key_resp_2.keys = undefined;
-    plus_eg2_key_resp_2.rt = undefined;
-    _plus_eg2_key_resp_2_allKeys = [];
+    even_eg2_key_resp.keys = undefined;
+    even_eg2_key_resp.rt = undefined;
+    _even_eg2_key_resp_allKeys = [];
     // keep track of which components have finished
     even_eg2Components = [];
     even_eg2Components.push(even_eg2_txt_top);
     even_eg2Components.push(even_eg2_txt_num);
     even_eg2Components.push(even_eg2_txt_bot);
-    even_eg2Components.push(plus_eg2_key_resp_2);
+    even_eg2Components.push(even_eg2_key_resp);
     
     for (const thisComponent of even_eg2Components)
       if ('status' in thisComponent)
@@ -28647,24 +28613,24 @@ function even_eg2RoutineEachFrame(snapshot) {
     }
 
     
-    // *plus_eg2_key_resp_2* updates
-    if (t >= 0.0 && plus_eg2_key_resp_2.status === PsychoJS.Status.NOT_STARTED) {
+    // *even_eg2_key_resp* updates
+    if (t >= 0.0 && even_eg2_key_resp.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      plus_eg2_key_resp_2.tStart = t;  // (not accounting for frame time here)
-      plus_eg2_key_resp_2.frameNStart = frameN;  // exact frame index
+      even_eg2_key_resp.tStart = t;  // (not accounting for frame time here)
+      even_eg2_key_resp.frameNStart = frameN;  // exact frame index
       
       // keyboard checking is just starting
-      psychoJS.window.callOnFlip(function() { plus_eg2_key_resp_2.clock.reset(); });  // t=0 on next screen flip
-      psychoJS.window.callOnFlip(function() { plus_eg2_key_resp_2.start(); }); // start on screen flip
-      psychoJS.window.callOnFlip(function() { plus_eg2_key_resp_2.clearEvents(); });
+      psychoJS.window.callOnFlip(function() { even_eg2_key_resp.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { even_eg2_key_resp.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { even_eg2_key_resp.clearEvents(); });
     }
 
-    if (plus_eg2_key_resp_2.status === PsychoJS.Status.STARTED) {
-      let theseKeys = plus_eg2_key_resp_2.getKeys({keyList: ['m'], waitRelease: false});
-      _plus_eg2_key_resp_2_allKeys = _plus_eg2_key_resp_2_allKeys.concat(theseKeys);
-      if (_plus_eg2_key_resp_2_allKeys.length > 0) {
-        plus_eg2_key_resp_2.keys = _plus_eg2_key_resp_2_allKeys[_plus_eg2_key_resp_2_allKeys.length - 1].name;  // just the last key pressed
-        plus_eg2_key_resp_2.rt = _plus_eg2_key_resp_2_allKeys[_plus_eg2_key_resp_2_allKeys.length - 1].rt;
+    if (even_eg2_key_resp.status === PsychoJS.Status.STARTED) {
+      let theseKeys = even_eg2_key_resp.getKeys({keyList: ['m'], waitRelease: false});
+      _even_eg2_key_resp_allKeys = _even_eg2_key_resp_allKeys.concat(theseKeys);
+      if (_even_eg2_key_resp_allKeys.length > 0) {
+        even_eg2_key_resp.keys = _even_eg2_key_resp_allKeys[_even_eg2_key_resp_allKeys.length - 1].name;  // just the last key pressed
+        even_eg2_key_resp.rt = _even_eg2_key_resp_allKeys[_even_eg2_key_resp_allKeys.length - 1].rt;
         // a response ends the routine
         continueRoutine = false;
       }
@@ -29314,7 +29280,7 @@ function odd_introRoutineEnd(snapshot) {
 }
 
 
-var _minus_eg1_key_resp_2_allKeys;
+var _odd_eg1_key_resp_allKeys;
 var odd_eg1Components;
 function odd_eg1RoutineBegin(snapshot) {
   return function () {
@@ -29323,15 +29289,15 @@ function odd_eg1RoutineBegin(snapshot) {
     odd_eg1Clock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
-    minus_eg1_key_resp_2.keys = undefined;
-    minus_eg1_key_resp_2.rt = undefined;
-    _minus_eg1_key_resp_2_allKeys = [];
+    odd_eg1_key_resp.keys = undefined;
+    odd_eg1_key_resp.rt = undefined;
+    _odd_eg1_key_resp_allKeys = [];
     // keep track of which components have finished
     odd_eg1Components = [];
     odd_eg1Components.push(odd_eg1_txt_top);
-    odd_eg1Components.push(minus_eg1_txt_num_2);
-    odd_eg1Components.push(minus_eg1_txt_bot_2);
-    odd_eg1Components.push(minus_eg1_key_resp_2);
+    odd_eg1Components.push(odd_eg1_txt_num);
+    odd_eg1Components.push(odd_eg1_txt_bot);
+    odd_eg1Components.push(odd_eg1_key_resp);
     
     for (const thisComponent of odd_eg1Components)
       if ('status' in thisComponent)
@@ -29363,44 +29329,44 @@ function odd_eg1RoutineEachFrame(snapshot) {
     }
 
     
-    // *minus_eg1_txt_num_2* updates
-    if (t >= 0.0 && minus_eg1_txt_num_2.status === PsychoJS.Status.NOT_STARTED) {
+    // *odd_eg1_txt_num* updates
+    if (t >= 0.0 && odd_eg1_txt_num.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      minus_eg1_txt_num_2.tStart = t;  // (not accounting for frame time here)
-      minus_eg1_txt_num_2.frameNStart = frameN;  // exact frame index
+      odd_eg1_txt_num.tStart = t;  // (not accounting for frame time here)
+      odd_eg1_txt_num.frameNStart = frameN;  // exact frame index
       
-      minus_eg1_txt_num_2.setAutoDraw(true);
+      odd_eg1_txt_num.setAutoDraw(true);
     }
 
     
-    // *minus_eg1_txt_bot_2* updates
-    if (t >= 0.0 && minus_eg1_txt_bot_2.status === PsychoJS.Status.NOT_STARTED) {
+    // *odd_eg1_txt_bot* updates
+    if (t >= 0.0 && odd_eg1_txt_bot.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      minus_eg1_txt_bot_2.tStart = t;  // (not accounting for frame time here)
-      minus_eg1_txt_bot_2.frameNStart = frameN;  // exact frame index
+      odd_eg1_txt_bot.tStart = t;  // (not accounting for frame time here)
+      odd_eg1_txt_bot.frameNStart = frameN;  // exact frame index
       
-      minus_eg1_txt_bot_2.setAutoDraw(true);
+      odd_eg1_txt_bot.setAutoDraw(true);
     }
 
     
-    // *minus_eg1_key_resp_2* updates
-    if (t >= 0.0 && minus_eg1_key_resp_2.status === PsychoJS.Status.NOT_STARTED) {
+    // *odd_eg1_key_resp* updates
+    if (t >= 0.0 && odd_eg1_key_resp.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      minus_eg1_key_resp_2.tStart = t;  // (not accounting for frame time here)
-      minus_eg1_key_resp_2.frameNStart = frameN;  // exact frame index
+      odd_eg1_key_resp.tStart = t;  // (not accounting for frame time here)
+      odd_eg1_key_resp.frameNStart = frameN;  // exact frame index
       
       // keyboard checking is just starting
-      psychoJS.window.callOnFlip(function() { minus_eg1_key_resp_2.clock.reset(); });  // t=0 on next screen flip
-      psychoJS.window.callOnFlip(function() { minus_eg1_key_resp_2.start(); }); // start on screen flip
-      psychoJS.window.callOnFlip(function() { minus_eg1_key_resp_2.clearEvents(); });
+      psychoJS.window.callOnFlip(function() { odd_eg1_key_resp.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { odd_eg1_key_resp.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { odd_eg1_key_resp.clearEvents(); });
     }
 
-    if (minus_eg1_key_resp_2.status === PsychoJS.Status.STARTED) {
-      let theseKeys = minus_eg1_key_resp_2.getKeys({keyList: ['m', 'z'], waitRelease: false});
-      _minus_eg1_key_resp_2_allKeys = _minus_eg1_key_resp_2_allKeys.concat(theseKeys);
-      if (_minus_eg1_key_resp_2_allKeys.length > 0) {
-        minus_eg1_key_resp_2.keys = _minus_eg1_key_resp_2_allKeys[_minus_eg1_key_resp_2_allKeys.length - 1].name;  // just the last key pressed
-        minus_eg1_key_resp_2.rt = _minus_eg1_key_resp_2_allKeys[_minus_eg1_key_resp_2_allKeys.length - 1].rt;
+    if (odd_eg1_key_resp.status === PsychoJS.Status.STARTED) {
+      let theseKeys = odd_eg1_key_resp.getKeys({keyList: ['m', 'z'], waitRelease: false});
+      _odd_eg1_key_resp_allKeys = _odd_eg1_key_resp_allKeys.concat(theseKeys);
+      if (_odd_eg1_key_resp_allKeys.length > 0) {
+        odd_eg1_key_resp.keys = _odd_eg1_key_resp_allKeys[_odd_eg1_key_resp_allKeys.length - 1].name;  // just the last key pressed
+        odd_eg1_key_resp.rt = _odd_eg1_key_resp_allKeys[_odd_eg1_key_resp_allKeys.length - 1].rt;
         // a response ends the routine
         continueRoutine = false;
       }
@@ -32401,7 +32367,7 @@ function pm_train_startRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    pm_timer = new util.CountdownTimer(60);
+    pm_timer = new util.CountdownTimer(30);
     // the Routine "pm_train_start" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
