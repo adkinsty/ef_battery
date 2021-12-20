@@ -7715,7 +7715,7 @@ function experimentInit() {
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   pm_train_start_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -7791,7 +7791,7 @@ function experimentInit() {
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   plus_test_start_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -7998,7 +7998,7 @@ function experimentInit() {
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   pm_train_start_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -8074,7 +8074,7 @@ function experimentInit() {
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   minus_test_start_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -8281,7 +8281,7 @@ function experimentInit() {
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   pm_train_start_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -8357,7 +8357,7 @@ function experimentInit() {
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   pm_test_start_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -29396,7 +29396,7 @@ function pm_train_startRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    pm_timer = util.CountdownTimer(60);
+    pm_timer = new util.CountdownTimer(60);
     // the Routine "pm_train_start" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -29788,7 +29788,7 @@ function plus_test_startRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    pm_timer = util.CountdownTimer(120);
+    pm_timer = new util.CountdownTimer(120);
     // the Routine "plus_test_start" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -30392,7 +30392,7 @@ function minus_test_startRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    pm_timer = util.CountdownTimer(120);
+    pm_timer = new util.CountdownTimer(120);
     // the Routine "minus_test_start" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -30984,7 +30984,7 @@ function pm_test_startRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    pm_timer = util.CountdownTimer(120);
+    pm_timer = new util.CountdownTimer(120);
     // the Routine "pm_test_start" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
