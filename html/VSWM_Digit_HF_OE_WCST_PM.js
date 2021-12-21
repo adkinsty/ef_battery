@@ -211,9 +211,6 @@ const trial_flowersLoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(trial_flowersLoopBegin, trial_flowersLoopScheduler);
 flowScheduler.add(trial_flowersLoopScheduler);
 flowScheduler.add(trial_flowersLoopEnd);
-flowScheduler.add(IntroA_4RoutineBegin());
-flowScheduler.add(IntroA_4RoutineEachFrame());
-flowScheduler.add(IntroA_4RoutineEnd());
 flowScheduler.add(IntroB_5RoutineBegin());
 flowScheduler.add(IntroB_5RoutineEachFrame());
 flowScheduler.add(IntroB_5RoutineEnd());
@@ -1136,11 +1133,6 @@ var text_67;
 var image;
 var text_54;
 var key_resp_25;
-var IntroA_4Clock;
-var white_background_27;
-var text_55;
-var key_resp_26;
-var text_56;
 var IntroB_5Clock;
 var white_background_18;
 var text_57;
@@ -1421,7 +1413,7 @@ function experimentInit() {
     text: 'Welcome!',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.16,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
@@ -1429,7 +1421,7 @@ function experimentInit() {
   text_13 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_13',
-    text: 'Press space bar to continue.',
+    text: 'Press the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -1496,7 +1488,7 @@ function experimentInit() {
   text_14 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_14',
-    text: 'In this first task you will see some circles light up in order.\n\nYou will use your mouse to click on the circles in backwards order, meaning you will click the last circle first and the first circle last.',
+    text: 'In this first task you will see circles light up in order.\nYou will use your mouse to click on the circles in reverse order. \nSo, you will click the last circle first and the first circle last.',
     font: 'Arial',
     units: undefined, 
     pos: [0.0, 0.15], height: 0.05,  wrapWidth: 1.8, ori: 0,
@@ -1669,7 +1661,7 @@ function experimentInit() {
     text: 'For example, if you saw the circles light up in this order:',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.85], height: 0.1,  wrapWidth: 2, ori: 0,
+    pos: [0, 0.85], height: 0.05,  wrapWidth: 2, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -16.0 
   });
@@ -1826,7 +1818,7 @@ function experimentInit() {
     text: 'For example, if you saw the circles light up in this order:',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.85], height: 0.1,  wrapWidth: 2, ori: 0,
+    pos: [0, 0.85], height: 0.05,  wrapWidth: 2, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -16.0 
   });
@@ -1983,7 +1975,7 @@ function experimentInit() {
     text: 'For example, if you saw the circles light up in this order:',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.85], height: 0.1,  wrapWidth: 2, ori: 0,
+    pos: [0, 0.85], height: 0.05,  wrapWidth: 2, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -16.0 
   });
@@ -2140,7 +2132,7 @@ function experimentInit() {
     text: 'For example, if you saw the circles light up in this order:',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.85], height: 0.1,  wrapWidth: 2, ori: 0,
+    pos: [0, 0.85], height: 0.05,  wrapWidth: 2, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -16.0 
   });
@@ -2465,7 +2457,7 @@ function experimentInit() {
     text: 'You would click on the circles in this order:',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.85], height: 0.1,  wrapWidth: 2, ori: 0,
+    pos: [0, 0.85], height: 0.05,  wrapWidth: 2, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -20.0 
   });
@@ -5493,10 +5485,10 @@ function experimentInit() {
   instructions = new visual.TextStim({
     win: psychoJS.window,
     name: 'instructions',
-    text: 'In the next task, you will see numbers on the screen appear one after another.\n\nWhen you see the "Recall" screen, type the numbers you saw in backwards order and press Enter. Backspace will not work.\n\nDo your best to remember the numbers and do not cheat. \n\nPress the space bar to continue.',
+    text: 'In the next task, you will see numbers on the screen one after another.\n\nWhen you see the "Recall" screen, type the numbers you saw in reverse order and press enter. Backspace will not work.\n\nDo your best to remember the numbers and do not cheat. \n\nPress the space bar to continue.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
@@ -5523,7 +5515,7 @@ function experimentInit() {
   text_7 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_7',
-    text: 'Press ‘space bar’ to continue',
+    text: 'Press the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.3)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -5632,7 +5624,7 @@ function experimentInit() {
   get_ready_real_trial = new visual.TextStim({
     win: psychoJS.window,
     name: 'get_ready_real_trial',
-    text: 'Great! Let’s start the real task.',
+    text: 'Great! Let’s play for real now.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
@@ -5793,7 +5785,7 @@ function experimentInit() {
     text: 'In this part of the task, you will see hearts.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.3], height: 0.0825,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -2.0 
   });
@@ -6299,10 +6291,10 @@ function experimentInit() {
   text_32 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_32',
-    text: 'Great job! In the next part of this task, you will see flowers.',
+    text: 'Great! In the next part of this task, you will see flowers.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.3], height: 0.0825,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
   });
@@ -6312,7 +6304,7 @@ function experimentInit() {
   text_33 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_33',
-    text: "Press 'spacebar' to continue.",
+    text: 'Press the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6343,7 +6335,7 @@ function experimentInit() {
   text_47 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_47',
-    text: "You will see a flower on the left or right and you will press the button on the opposite side as the flower. \n\nIf the flower is on the right, press 'z,' and if the flower is on the left, press 'm.'",
+    text: "You will see a flower on the left or right and you will press the button on the opposite side of the flower. \n\nIf the flower is on the right, press 'z,' and if the flower is on the left, press 'm.'",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.1], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6504,7 +6496,7 @@ function experimentInit() {
     text: "Let's practice!\n",
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
   });
@@ -6613,7 +6605,7 @@ function experimentInit() {
   text_104 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_104',
-    text: "You will see a flower on the left or right and you will press the button on the opposite side as the flower. \n\nIf the flower is on the right, press 'z,' and if the flower is on the left, press 'm.'",
+    text: "Remember, you will see a flower on the left or right and you will press the button on the opposite side as the flower. \n\nIf the flower is on the right, press 'z,' and if the flower is on the left, press 'm.'",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.1], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6802,41 +6794,6 @@ function experimentInit() {
   
   key_resp_25 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  // Initialize components for Routine "IntroA_4"
-  IntroA_4Clock = new util.Clock();
-  white_background_27 = new visual.Rect ({
-    win: psychoJS.window, name: 'white_background_27', 
-    width: [2, 2][0], height: [2, 2][1],
-    ori: 0, pos: [0, 0],
-    lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([1, 1, 1]),
-    opacity: 1, depth: 0, interpolate: true,
-  });
-  
-  text_55 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'text_55',
-    text: "Great job! \n\nNow in this last part of the task, we'll put it all together.",
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, 0], height: 0.0825,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -1.0 
-  });
-  
-  key_resp_26 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
-  
-  text_56 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'text_56',
-    text: 'Press the space bar to continue.',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -3.0 
-  });
-  
   // Initialize components for Routine "IntroB_5"
   IntroB_5Clock = new util.Clock();
   white_background_18 = new visual.Rect ({
@@ -6851,7 +6808,7 @@ function experimentInit() {
   text_57 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_57',
-    text: "In this next part of the task, you'll see both hearts and flowers. ",
+    text: "Great! In the last part of the task, you'll see hearts and flowers. ",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -7103,7 +7060,7 @@ function experimentInit() {
   text_106 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_106',
-    text: 'Remember! If you see a heart, press the button on the SAME side as the heart. \n\nIf you see a flower, press the button on the OPPOSITE side of the flower.',
+    text: 'Remember, if you see a heart, press the button on the SAME side as the heart. \n\nIf you see a flower, press the button on the OPPOSITE side of the flower.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -7352,10 +7309,10 @@ function experimentInit() {
   text_92 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_92',
-    text: 'Great! This is the end of the fourth task.',
+    text: 'Thank you! This is the end of the fourth task.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
@@ -7582,7 +7539,7 @@ function experimentInit() {
   even_test_start_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'even_test_start_txt',
-    text: 'Ok let’s play for real now. Remember, you will see an even number and press the key on the same side as the number.\n\n\n\n\nPress ‘spacebar’ to continue.',
+    text: 'Ok let’s play for real now. Remember, you will see an even number and press the key on the same side as the number.\n\n\n\n\nPress the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -7634,7 +7591,7 @@ function experimentInit() {
   odd_intro_txt_bot = new visual.TextStim({
     win: psychoJS.window,
     name: 'odd_intro_txt_bot',
-    text: "Press 'spacebar' to continue.",
+    text: 'Press the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -7803,7 +7760,7 @@ function experimentInit() {
   odd_test_start_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'odd_test_start_txt',
-    text: 'Ok let’s play for real now. Remember, you will see an odd number and press the key on the opposite side of the number.\n\n\n\nPress ‘spacebar’ to continue.',
+    text: 'Ok let’s play for real now. Remember, you will see an odd number and press the key on the opposite side of the number.\n\n\n\nPress the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -7855,7 +7812,7 @@ function experimentInit() {
   oe_intro_txt_bot = new visual.TextStim({
     win: psychoJS.window,
     name: 'oe_intro_txt_bot',
-    text: "Press 'spacebar' to continue.",
+    text: 'Press the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8024,7 +7981,7 @@ function experimentInit() {
   oe_test_start_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'oe_test_start_txt',
-    text: 'Ok let’s play for real now. Remember, you will see an even or odd number and press the key on the same side of the number if it is even, but press the key on the opposite side of the number if it is odd.\n\n\n\n\nPress ‘spacebar’ to continue.',
+    text: 'Ok let’s play for real now. Remember, you will see an even or odd number and press the key on the same side of the number if it is even, but press the key on the opposite side of the number if it is odd.\n\n\n\n\nPress the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8065,10 +8022,10 @@ function experimentInit() {
   text_92 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_92',
-    text: 'Great! This is the end of the fourth task.',
+    text: 'Thank you! This is the end of the fourth task.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
@@ -8092,7 +8049,7 @@ function experimentInit() {
     text: 'Welcome!',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: undefined,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
@@ -8100,7 +8057,7 @@ function experimentInit() {
   text_123 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_123',
-    text: 'Press ‘space bar’ to continue',
+    text: 'Press the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8115,7 +8072,7 @@ function experimentInit() {
   instructions_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'instructions_2',
-    text: 'The fifth task is an unusual one. Instead of telling you the rules, you have to figure them out.',
+    text: 'The fifth task is unusual. Instead of telling you the rules, you have to figure them out.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8128,7 +8085,7 @@ function experimentInit() {
   text_124 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_124',
-    text: 'Press ‘space bar’ to continue',
+    text: 'Press the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8179,7 +8136,7 @@ function experimentInit() {
     text: 'Let’s practice',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
@@ -8288,7 +8245,7 @@ function experimentInit() {
     text: 'Ok, let’s play for real now.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
@@ -8400,10 +8357,10 @@ function experimentInit() {
   text_129 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_129',
-    text: 'Great! This is the end of the fifth task.',
+    text: 'Thank you! This is the end of the fifth task.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
@@ -9288,7 +9245,7 @@ function experimentInit() {
   thank_you_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'thank_you_2',
-    text: 'Great! You finished all six tasks.\n\nPlease do not close the window browser until you have seen the following message and click on OK. ',
+    text: 'Great! You finished all six tasks.\n\nPlease do not close the window browser until you see the following message and click OK. ',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -19976,7 +19933,7 @@ function Get_ExperimenterRoutineBegin(snapshot) {
     t = 0;
     Get_ExperimenterClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(2.000000);
+    routineTimer.add(5.000000);
     // update component parameters for each repeat
     // keep track of which components have finished
     Get_ExperimenterComponents = [];
@@ -20012,7 +19969,7 @@ function Get_ExperimenterRoutineEachFrame(snapshot) {
       text_11.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_11.status === PsychoJS.Status.STARTED || text_11.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_11.setAutoDraw(false);
     }
@@ -20026,7 +19983,7 @@ function Get_ExperimenterRoutineEachFrame(snapshot) {
       b_text_15.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((b_text_15.status === PsychoJS.Status.STARTED || b_text_15.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       b_text_15.setAutoDraw(false);
     }
@@ -21592,7 +21549,7 @@ function EndRoutineBegin(snapshot) {
     t = 0;
     EndClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(3.000000);
+    routineTimer.add(5.000000);
     // update component parameters for each repeat
     // keep track of which components have finished
     EndComponents = [];
@@ -21628,7 +21585,7 @@ function EndRoutineEachFrame(snapshot) {
       thank_you.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 3 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((thank_you.status === PsychoJS.Status.STARTED || thank_you.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       thank_you.setAutoDraw(false);
     }
@@ -21642,7 +21599,7 @@ function EndRoutineEachFrame(snapshot) {
       before_closing.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 3 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((before_closing.status === PsychoJS.Status.STARTED || before_closing.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       before_closing.setAutoDraw(false);
     }
@@ -22752,7 +22709,7 @@ function Practice_trial_congruentRoutineEachFrame(snapshot) {
       white_background_17.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 2.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 2.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((white_background_17.status === PsychoJS.Status.STARTED || white_background_17.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       white_background_17.setAutoDraw(false);
     }
@@ -23238,7 +23195,7 @@ function Practice_trial_congruent_2RoutineEachFrame(snapshot) {
       white_background_32.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 2.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 2.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((white_background_32.status === PsychoJS.Status.STARTED || white_background_32.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       white_background_32.setAutoDraw(false);
     }
@@ -23722,7 +23679,7 @@ function HeartsRoutineEachFrame(snapshot) {
       white_background_6.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 2.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 2.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((white_background_6.status === PsychoJS.Status.STARTED || white_background_6.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       white_background_6.setAutoDraw(false);
     }
@@ -24814,7 +24771,7 @@ function Practice_trial_incongruentRoutineEachFrame(snapshot) {
       white_background_22.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 2.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 2.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((white_background_22.status === PsychoJS.Status.STARTED || white_background_22.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       white_background_22.setAutoDraw(false);
     }
@@ -25309,7 +25266,7 @@ function Practice_trial_incongruent_2RoutineEachFrame(snapshot) {
       white_background_35.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 2.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 2.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((white_background_35.status === PsychoJS.Status.STARTED || white_background_35.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       white_background_35.setAutoDraw(false);
     }
@@ -25787,7 +25744,7 @@ function FlowersRoutineEachFrame(snapshot) {
       white_background_16.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 2.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 2.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((white_background_16.status === PsychoJS.Status.STARTED || white_background_16.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       white_background_16.setAutoDraw(false);
     }
@@ -25934,148 +25891,6 @@ function FlowersRoutineEnd(snapshot) {
         }
     
     key_resp_25.stop();
-    return Scheduler.Event.NEXT;
-  };
-}
-
-
-var _key_resp_26_allKeys;
-var IntroA_4Components;
-function IntroA_4RoutineBegin(snapshot) {
-  return function () {
-    //------Prepare to start Routine 'IntroA_4'-------
-    t = 0;
-    IntroA_4Clock.reset(); // clock
-    frameN = -1;
-    // update component parameters for each repeat
-    key_resp_26.keys = undefined;
-    key_resp_26.rt = undefined;
-    _key_resp_26_allKeys = [];
-    // keep track of which components have finished
-    IntroA_4Components = [];
-    IntroA_4Components.push(white_background_27);
-    IntroA_4Components.push(text_55);
-    IntroA_4Components.push(key_resp_26);
-    IntroA_4Components.push(text_56);
-    
-    for (const thisComponent of IntroA_4Components)
-      if ('status' in thisComponent)
-        thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    // check if the Routine should terminate
-    if (!continueRoutine) {  // a component has requested a forced-end of Routine
-      return Scheduler.Event.NEXT;
-    }
-  };
-}
-
-
-function IntroA_4RoutineEachFrame(snapshot) {
-  return function () {
-    //------Loop for each frame of Routine 'IntroA_4'-------
-    let continueRoutine = true; // until we're told otherwise
-    // get current time
-    t = IntroA_4Clock.getTime();
-    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
-    // update/draw components on each frame
-    
-    // *white_background_27* updates
-    if (t >= 0.0 && white_background_27.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      white_background_27.tStart = t;  // (not accounting for frame time here)
-      white_background_27.frameNStart = frameN;  // exact frame index
-      
-      white_background_27.setAutoDraw(true);
-    }
-
-    
-    // *text_55* updates
-    if (t >= 0.0 && text_55.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      text_55.tStart = t;  // (not accounting for frame time here)
-      text_55.frameNStart = frameN;  // exact frame index
-      
-      text_55.setAutoDraw(true);
-    }
-
-    
-    // *key_resp_26* updates
-    if (t >= 0.0 && key_resp_26.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      key_resp_26.tStart = t;  // (not accounting for frame time here)
-      key_resp_26.frameNStart = frameN;  // exact frame index
-      
-      // keyboard checking is just starting
-      psychoJS.window.callOnFlip(function() { key_resp_26.clock.reset(); });  // t=0 on next screen flip
-      psychoJS.window.callOnFlip(function() { key_resp_26.start(); }); // start on screen flip
-      psychoJS.window.callOnFlip(function() { key_resp_26.clearEvents(); });
-    }
-
-    if (key_resp_26.status === PsychoJS.Status.STARTED) {
-      let theseKeys = key_resp_26.getKeys({keyList: ['space'], waitRelease: false});
-      _key_resp_26_allKeys = _key_resp_26_allKeys.concat(theseKeys);
-      if (_key_resp_26_allKeys.length > 0) {
-        key_resp_26.keys = _key_resp_26_allKeys[_key_resp_26_allKeys.length - 1].name;  // just the last key pressed
-        key_resp_26.rt = _key_resp_26_allKeys[_key_resp_26_allKeys.length - 1].rt;
-        // a response ends the routine
-        continueRoutine = false;
-      }
-    }
-    
-    
-    // *text_56* updates
-    if (t >= 0.0 && text_56.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      text_56.tStart = t;  // (not accounting for frame time here)
-      text_56.frameNStart = frameN;  // exact frame index
-      
-      text_56.setAutoDraw(true);
-    }
-
-    // check for quit (typically the Esc key)
-    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
-      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
-    }
-    
-    // check if the Routine should terminate
-    if (!continueRoutine) {  // a component has requested a forced-end of Routine
-      return Scheduler.Event.NEXT;
-    }
-    
-    continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of IntroA_4Components)
-      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
-        continueRoutine = true;
-        break;
-      }
-    
-    // refresh the screen if continuing
-    if (continueRoutine) {
-      return Scheduler.Event.FLIP_REPEAT;
-    } else {
-      return Scheduler.Event.NEXT;
-    }
-  };
-}
-
-
-function IntroA_4RoutineEnd(snapshot) {
-  return function () {
-    //------Ending Routine 'IntroA_4'-------
-    for (const thisComponent of IntroA_4Components) {
-      if (typeof thisComponent.setAutoDraw === 'function') {
-        thisComponent.setAutoDraw(false);
-      }
-    }
-    psychoJS.experiment.addData('key_resp_26.keys', key_resp_26.keys);
-    if (typeof key_resp_26.keys !== 'undefined') {  // we had a response
-        psychoJS.experiment.addData('key_resp_26.rt', key_resp_26.rt);
-        routineTimer.reset();
-        }
-    
-    key_resp_26.stop();
-    // the Routine "IntroA_4" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
-    
     return Scheduler.Event.NEXT;
   };
 }
@@ -27338,7 +27153,7 @@ function Practice_trial_mixed_2RoutineEachFrame(snapshot) {
       white_background_36.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 2.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 2.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((white_background_36.status === PsychoJS.Status.STARTED || white_background_36.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       white_background_36.setAutoDraw(false);
     }
@@ -27819,7 +27634,7 @@ function mixed_firstRoutineEachFrame(snapshot) {
       white_background_9.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 2.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 2.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((white_background_9.status === PsychoJS.Status.STARTED || white_background_9.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       white_background_9.setAutoDraw(false);
     }
@@ -28023,7 +27838,7 @@ function MixedRoutineEachFrame(snapshot) {
       white_background_5.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 2.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 2.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((white_background_5.status === PsychoJS.Status.STARTED || white_background_5.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       white_background_5.setAutoDraw(false);
     }
@@ -28182,7 +27997,7 @@ function Thank_YouRoutineBegin(snapshot) {
     t = 0;
     Thank_YouClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(2.500000);
+    routineTimer.add(5.000000);
     // update component parameters for each repeat
     // keep track of which components have finished
     Thank_YouComponents = [];
@@ -28218,7 +28033,7 @@ function Thank_YouRoutineEachFrame(snapshot) {
       text_92.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 2.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_92.status === PsychoJS.Status.STARTED || text_92.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_92.setAutoDraw(false);
     }
@@ -28232,7 +28047,7 @@ function Thank_YouRoutineEachFrame(snapshot) {
       text_111.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 2.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_111.status === PsychoJS.Status.STARTED || text_111.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_111.setAutoDraw(false);
     }
@@ -29181,6 +28996,7 @@ function oe_trialRoutineEnd(snapshot) {
     if ((oe_trial_key_resp.keys === undefined)) {
         oe_feedback_color = "black";
         oe_feedback_message = "No response";
+    } else {
         if ((oe_trial_key_resp.corr > 0)) {
             oe_feedback_color = "green";
             oe_feedback_message = "Correct";
