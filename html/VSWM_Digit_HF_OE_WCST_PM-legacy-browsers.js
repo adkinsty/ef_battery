@@ -254,6 +254,9 @@ flowScheduler.add(even_eg1RoutineEnd());
 flowScheduler.add(even_eg2RoutineBegin());
 flowScheduler.add(even_eg2RoutineEachFrame());
 flowScheduler.add(even_eg2RoutineEnd());
+flowScheduler.add(oe_speed_instrRoutineBegin());
+flowScheduler.add(oe_speed_instrRoutineEachFrame());
+flowScheduler.add(oe_speed_instrRoutineEnd());
 flowScheduler.add(oe_train_startRoutineBegin());
 flowScheduler.add(oe_train_startRoutineEachFrame());
 flowScheduler.add(oe_train_startRoutineEnd());
@@ -277,6 +280,9 @@ flowScheduler.add(odd_eg1RoutineEnd());
 flowScheduler.add(odd_eg2RoutineBegin());
 flowScheduler.add(odd_eg2RoutineEachFrame());
 flowScheduler.add(odd_eg2RoutineEnd());
+flowScheduler.add(oe_speed_instrRoutineBegin());
+flowScheduler.add(oe_speed_instrRoutineEachFrame());
+flowScheduler.add(oe_speed_instrRoutineEnd());
 flowScheduler.add(oe_train_startRoutineBegin());
 flowScheduler.add(oe_train_startRoutineEachFrame());
 flowScheduler.add(oe_train_startRoutineEnd());
@@ -300,6 +306,9 @@ flowScheduler.add(oe_eg1RoutineEnd());
 flowScheduler.add(oe_eg2RoutineBegin());
 flowScheduler.add(oe_eg2RoutineEachFrame());
 flowScheduler.add(oe_eg2RoutineEnd());
+flowScheduler.add(oe_speed_instrRoutineBegin());
+flowScheduler.add(oe_speed_instrRoutineEachFrame());
+flowScheduler.add(oe_speed_instrRoutineEnd());
 flowScheduler.add(oe_train_startRoutineBegin());
 flowScheduler.add(oe_train_startRoutineEachFrame());
 flowScheduler.add(oe_train_startRoutineEnd());
@@ -340,6 +349,9 @@ const blocks_2LoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(blocks_2LoopBegin, blocks_2LoopScheduler);
 flowScheduler.add(blocks_2LoopScheduler);
 flowScheduler.add(blocks_2LoopEnd);
+flowScheduler.add(thank_you_5RoutineBegin());
+flowScheduler.add(thank_you_5RoutineEachFrame());
+flowScheduler.add(thank_you_5RoutineEnd());
 flowScheduler.add(pm_welcomeRoutineBegin());
 flowScheduler.add(pm_welcomeRoutineEachFrame());
 flowScheduler.add(pm_welcomeRoutineEnd());
@@ -1208,6 +1220,10 @@ var even_eg2_txt_top;
 var even_eg2_txt_num;
 var even_eg2_txt_bot;
 var even_eg2_key_resp;
+var oe_speed_instrClock;
+var oe_speed_instr_top;
+var oe_speed_instr_bot;
+var oe_speed_instr_key_resp;
 var oe_train_startClock;
 var oe_train_start_txt;
 var oe_train_start_key_resp;
@@ -1299,6 +1315,8 @@ var response;
 var Feedback_2Clock;
 var feedback_text;
 var code_end_2Clock;
+var thank_you_5Clock;
+var text_129;
 var pm_welcomeClock;
 var pm_welcome_txt_top;
 var pm_welcome_txt_bot;
@@ -1432,7 +1450,7 @@ function experimentInit() {
   text_130 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_130',
-    text: 'Today, you will complete five computer tasks. \nHowever, if you need to exit the session at any given moment, please press escape twice and wait until you see this popup window before you close the window browser.',
+    text: 'Today, you will complete six computer tasks. \nIf you need to stop, please press escape twice and wait until you see this popup window before you exit.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: 1.5, ori: 0,
@@ -1443,7 +1461,7 @@ function experimentInit() {
   text_131 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_131',
-    text: 'Press space bar to continue.',
+    text: 'Press the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -1467,7 +1485,7 @@ function experimentInit() {
   text_14 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_14',
-    text: 'In this first task you will see a series of circles light up. \n\nYour job is to use the mouse to click on the circles in reverse order.',
+    text: 'In this first task you will see some circles light up in order.\n\nYou will use your mouse to click on the circles in backwards order, meaning you will click the last circle first and the first circle last.',
     font: 'Arial',
     units: undefined, 
     pos: [0.0, 0.15], height: 0.05,  wrapWidth: 1.8, ori: 0,
@@ -1478,7 +1496,7 @@ function experimentInit() {
   text_16 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_16',
-    text: 'Press space bar to continue.',
+    text: 'Press the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -1637,7 +1655,7 @@ function experimentInit() {
   For_example = new visual.TextStim({
     win: psychoJS.window,
     name: 'For_example',
-    text: 'For example, if you saw the following sequence:',
+    text: 'For example, if you saw the circles light up in this order:',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.85], height: 0.1,  wrapWidth: 2, ori: 0,
@@ -1794,7 +1812,7 @@ function experimentInit() {
   For_example_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'For_example_2',
-    text: 'For example, if you saw the following sequence:',
+    text: 'For example, if you saw the circles light up in this order:',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.85], height: 0.1,  wrapWidth: 2, ori: 0,
@@ -1951,7 +1969,7 @@ function experimentInit() {
   b_For_example_4 = new visual.TextStim({
     win: psychoJS.window,
     name: 'b_For_example_4',
-    text: 'For example, if you saw the following sequence:',
+    text: 'For example, if you saw the circles light up in this order:',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.85], height: 0.1,  wrapWidth: 2, ori: 0,
@@ -2108,7 +2126,7 @@ function experimentInit() {
   For_example_5 = new visual.TextStim({
     win: psychoJS.window,
     name: 'For_example_5',
-    text: 'For example, if you saw the following sequence:',
+    text: 'For example, if you saw the circles light up in this order:',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.85], height: 0.1,  wrapWidth: 2, ori: 0,
@@ -2804,7 +2822,7 @@ function experimentInit() {
   practice_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'practice_text',
-    text: "You'll first do a short practice.",
+    text: 'Let’s practice.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: 1.8, ori: 0,
@@ -5410,7 +5428,7 @@ function experimentInit() {
   repeat_inst = new visual.TextStim({
     win: psychoJS.window,
     name: 'repeat_inst',
-    text: 'Remember!\nYour job is to use the mouse to click on the circles in reverse order.\n',
+    text: 'Remember!\n\nYour job is to use the mouse to click on the circles in backwards order.\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -5440,7 +5458,7 @@ function experimentInit() {
   text_11 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_11',
-    text: 'Thank you! This is the end of this task',
+    text: 'Thank you! This is the end of the first task.\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -5464,7 +5482,7 @@ function experimentInit() {
   instructions = new visual.TextStim({
     win: psychoJS.window,
     name: 'instructions',
-    text: 'In the second task, you will try to remember a sequence of numbers that appears on the screen one after the other. \n\nWhen you see the "Recall" screen, type the numbers you saw in the opposite order you saw them. Use the number keys at the top of the keyboard.\n\nBe careful with your typing, as if you make a mistake, you will not be able to correct it. Press ‘ENTER’ to confirm your answer.\n\nDo your best to memorize the numbers, and do not write them down or use any other tool to help you remember them.\n\nPress ‘space bar’ to continue',
+    text: 'In the next task, you will see numbers on the screen appear one after another.\n\nWhen you see the "Recall" screen, type the numbers you saw in backwards order and press Enter. Backspace will not work.\n\nDo your best to remember the numbers and do not cheat. \n\nPress the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
@@ -5481,7 +5499,7 @@ function experimentInit() {
   text_6 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_6',
-    text: 'Let’s practice!\nWhen you see the square, it means that the task is about to start.',
+    text: 'Let’s practice!',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -5603,7 +5621,7 @@ function experimentInit() {
   get_ready_real_trial = new visual.TextStim({
     win: psychoJS.window,
     name: 'get_ready_real_trial',
-    text: 'Great! Let’s start the real task',
+    text: 'Great! Let’s start the real task.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
@@ -5614,7 +5632,7 @@ function experimentInit() {
   press_space = new visual.TextStim({
     win: psychoJS.window,
     name: 'press_space',
-    text: 'Press ‘space bar’ to continue',
+    text: 'Press the space bar to continue',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -5684,7 +5702,7 @@ function experimentInit() {
   thank_you = new visual.TextStim({
     win: psychoJS.window,
     name: 'thank_you',
-    text: 'Thank you! This is the end of this task.\n',
+    text: 'Thank you! This is the end of the second task.\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -5728,7 +5746,7 @@ function experimentInit() {
   text_17 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_17',
-    text: "Please press 'spacebar' to continue.",
+    text: 'Press the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -5761,7 +5779,7 @@ function experimentInit() {
   text_40 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_40',
-    text: 'In the third task, you will see hearts.',
+    text: 'In this part of the task, you will see hearts.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.0825,  wrapWidth: undefined, ori: 0,
@@ -5772,7 +5790,7 @@ function experimentInit() {
   text_46 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_46',
-    text: "Press 'spacebar' to continue.",
+    text: 'Press the space bar to continue. ',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -5796,7 +5814,7 @@ function experimentInit() {
   text_52 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_52',
-    text: "Your job will be to press the button on the SAME side as where the heart appears.\n\n\nIf the heart appears on the right, press 'm,' and if the heart appears on the left, press 'z.'",
+    text: 'You will see a heart on the left or right side and you will press the button on the same side as the heart. \n\nIf the heart is on the right, press ‘m’, and if the heart is on the left, press ‘z’.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.1], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -5807,7 +5825,7 @@ function experimentInit() {
   text_53 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_53',
-    text: "Press 'spacebar' to continue.",
+    text: 'Press the space bar to continue. ',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -5919,7 +5937,7 @@ function experimentInit() {
   text_71 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_71',
-    text: 'The hearts will appear very quickly. \nTry to be as fast as you can and try your \nbest!',
+    text: 'The hearts will dissapear after a short time. \n\nTry to press the correct key as fast as you can!',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6066,7 +6084,7 @@ function experimentInit() {
   text_102 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_102',
-    text: "Remember! Your job is to press the button on the SAME side as where the heart appears.\n\nIf the heart appears on the right, press 'm,' and if the heart appears on the left, press 'z.'",
+    text: 'Remember, will see a heart on the left or right side and you will press the button on the same side as the heart. \n\nIf the heart is on the right, press ‘m’, and if the heart is on the left, press ‘z’.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.1], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6077,7 +6095,7 @@ function experimentInit() {
   text_103 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_103',
-    text: "Press 'spacebar' to continue.",
+    text: 'Press the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6180,7 +6198,7 @@ function experimentInit() {
   text_29 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_29',
-    text: "Let's play for real now.\n\n\nRemember, when the heart appears on the left, press 'z' and when the heart appears on the right, press 'm.'",
+    text: "Let's play for real now.\n\nRemember, if the heart is on the left, press 'z' and if the heart is on the right, press 'm.'",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.1], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6270,7 +6288,7 @@ function experimentInit() {
   text_32 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_32',
-    text: 'Great job! In this next task, you will see flowers.',
+    text: 'Great job! In the next part of this task, you will see flowers.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.0825,  wrapWidth: undefined, ori: 0,
@@ -6314,7 +6332,7 @@ function experimentInit() {
   text_47 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_47',
-    text: "Your job will be to press the button on the OPPOSITE side of where the flower appears.\n\n\nIf the flower appears on the right, press 'z,' and if the flower appears on the left, press 'm.'",
+    text: "You will see a flower on the left or right and you will press the button on the opposite side as the flower. \n\nIf the flower is on the right, press 'z,' and if the flower is on the left, press 'm.'",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.1], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6437,7 +6455,7 @@ function experimentInit() {
   text_75 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_75',
-    text: 'The flowers will appear very quickly. \nTry to be as fast as you can and try your best!',
+    text: 'The flowers will dissapear after a short time. \n\nTry to press the correct key as fast as you can!',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6584,7 +6602,7 @@ function experimentInit() {
   text_104 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_104',
-    text: "Remember! Your job is to press the button on the OPPOSITE side of where the flower appears.\n\nIf the flower appears on the right, press 'z,' and if the flower appears on the left, press 'm.'",
+    text: "You will see a flower on the left or right and you will press the button on the opposite side as the flower. \n\nIf the flower is on the right, press 'z,' and if the flower is on the left, press 'm.'",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.1], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6697,7 +6715,7 @@ function experimentInit() {
   text_49 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_49',
-    text: "Let's play for real now. \n\n\nRemember, when the flower appears on the left, press 'm,' and when the flower appears on the right, press 'z.'",
+    text: "Let's play for real now. \n\n\nRemember, when the flower is on the left, press 'm,' and when the flower is on the right, press 'z.'",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6787,7 +6805,7 @@ function experimentInit() {
   text_55 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_55',
-    text: "Great job! \nNow in this last task, we'll put it all together.",
+    text: "Great job! \n\nNow in this last part of the task, we'll put it all together.",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.0825,  wrapWidth: undefined, ori: 0,
@@ -6800,7 +6818,7 @@ function experimentInit() {
   text_56 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_56',
-    text: "Press 'spacebar' to continue.\n",
+    text: 'Press the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6822,7 +6840,7 @@ function experimentInit() {
   text_57 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_57',
-    text: "In this next task, you'll see both hearts and flowers. ",
+    text: "In this next part of the task, you'll see both hearts and flowers. ",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6833,7 +6851,7 @@ function experimentInit() {
   text_58 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_58',
-    text: "Press 'spacebar' to continue. ",
+    text: 'Press the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6857,7 +6875,7 @@ function experimentInit() {
   text_69 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_69',
-    text: "If you see a heart, press the button on the SAME side as the heart appears. \n\n\nIf the heart appears on the right, press 'm,' and if the heart appears on the left, press 'z.'",
+    text: "If you see a heart, press the button on the SAME side as the heart. \n\nIf the heart is on the right, press 'm,' and if the heart is on the left, press 'z.'",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6868,7 +6886,7 @@ function experimentInit() {
   text_70 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_70',
-    text: "Press 'spacebar' to continue.",
+    text: 'Press the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6892,7 +6910,7 @@ function experimentInit() {
   text_73 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_73',
-    text: "If you see a flower, press the button on the OPPOSITE side of where the flower appears. \n\n\nIf the flower appears on the right, press 'z,' and if the flower appears on the left, press 'm.'",
+    text: "If you see a flower, press the button on the OPPOSITE side. \n\n\nIf the flower is on the right, press 'z,' and if the flower is on the left, press 'm.'",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -6927,7 +6945,7 @@ function experimentInit() {
   text_77 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_77',
-    text: 'Remember, try to be as fast and accurate as you can.',
+    text: 'The hearts and flowers will dissapear after a short time. \n\nTry to press the correct key as fast as you can!',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -7074,7 +7092,7 @@ function experimentInit() {
   text_106 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_106',
-    text: 'Remember! If you see a heart, press the button on the SAME side as the heart appears. \n\nIf you see a flower, press the button on the OPPOSITE side of where the flower appears. ',
+    text: 'Remember! If you see a heart, press the button on the SAME side as the heart. \n\nIf you see a flower, press the button on the OPPOSITE side of the flower.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -7323,7 +7341,7 @@ function experimentInit() {
   text_92 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_92',
-    text: 'Great! This is the end of this task',
+    text: 'Great! This is the end of the fourth task.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.0], height: 0.1,  wrapWidth: undefined, ori: 0,
@@ -7358,7 +7376,7 @@ function experimentInit() {
   oe_welcome_txt_bot = new visual.TextStim({
     win: psychoJS.window,
     name: 'oe_welcome_txt_bot',
-    text: "Please press 'spacebar' to continue.",
+    text: 'Press the spacebar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -7373,7 +7391,7 @@ function experimentInit() {
   even_intro_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'even_intro_txt_top',
-    text: 'In this task, you will see an even number on the left or right side. \n\nYour job will to press ‘z’ if the number is on the left and press ‘m’ if the number is on the right. \n',
+    text: 'In this task, you will see an even number on the left or right side. \n\nYou will press ‘z’ if the number is on the left and press ‘m’ if the number is on the right. \n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.1], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -7384,7 +7402,7 @@ function experimentInit() {
   even_intro_txt_bot = new visual.TextStim({
     win: psychoJS.window,
     name: 'even_intro_txt_bot',
-    text: "Press 'spacebar' to continue.",
+    text: 'Press the spacebar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -7399,7 +7417,7 @@ function experimentInit() {
   even_eg1_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'even_eg1_txt_top',
-    text: 'In this example, the even number is on the left side. Your job is to press the key on the same side as the number. ',
+    text: 'In this example, the even number is on the left side. You will press the key on the same side as the number. ',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -7436,7 +7454,7 @@ function experimentInit() {
   even_eg2_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'even_eg2_txt_top',
-    text: 'In this example, the even number is on the right side. Your job is to press the key on the same side as the number. ',
+    text: 'In this example, the even number is on the right side. You will press the key on the same side as the number. ',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -7468,12 +7486,38 @@ function experimentInit() {
   
   even_eg2_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  // Initialize components for Routine "oe_speed_instr"
+  oe_speed_instrClock = new util.Clock();
+  oe_speed_instr_top = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'oe_speed_instr_top',
+    text: 'The numbers will dissapear after a short time. \n\nTry to press the correct key as fast as you can!',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  oe_speed_instr_bot = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'oe_speed_instr_bot',
+    text: 'Press ‘z’ or ‘m’ to continue.',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -1.0 
+  });
+  
+  oe_speed_instr_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
   // Initialize components for Routine "oe_train_start"
   oe_train_startClock = new util.Clock();
   oe_train_start_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'oe_train_start_txt',
-    text: 'Ok let’s practice. \n\n\n\n\nPress ‘spacebar’ to continue.',
+    text: 'Ok let’s practice. \n\n\n\n\nPress ‘z’ or ‘m’ to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -7663,12 +7707,38 @@ function experimentInit() {
   
   odd_eg2_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  // Initialize components for Routine "oe_speed_instr"
+  oe_speed_instrClock = new util.Clock();
+  oe_speed_instr_top = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'oe_speed_instr_top',
+    text: 'The numbers will dissapear after a short time. \n\nTry to press the correct key as fast as you can!',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  oe_speed_instr_bot = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'oe_speed_instr_bot',
+    text: 'Press ‘z’ or ‘m’ to continue.',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -1.0 
+  });
+  
+  oe_speed_instr_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
   // Initialize components for Routine "oe_train_start"
   oe_train_startClock = new util.Clock();
   oe_train_start_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'oe_train_start_txt',
-    text: 'Ok let’s practice. \n\n\n\n\nPress ‘spacebar’ to continue.',
+    text: 'Ok let’s practice. \n\n\n\n\nPress ‘z’ or ‘m’ to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -7858,12 +7928,38 @@ function experimentInit() {
   
   oe_eg2_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  // Initialize components for Routine "oe_speed_instr"
+  oe_speed_instrClock = new util.Clock();
+  oe_speed_instr_top = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'oe_speed_instr_top',
+    text: 'The numbers will dissapear after a short time. \n\nTry to press the correct key as fast as you can!',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  oe_speed_instr_bot = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'oe_speed_instr_bot',
+    text: 'Press ‘z’ or ‘m’ to continue.',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -1.0 
+  });
+  
+  oe_speed_instr_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
   // Initialize components for Routine "oe_train_start"
   oe_train_startClock = new util.Clock();
   oe_train_start_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'oe_train_start_txt',
-    text: 'Ok let’s practice. \n\n\n\n\nPress ‘spacebar’ to continue.',
+    text: 'Ok let’s practice. \n\n\n\n\nPress ‘z’ or ‘m’ to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -7958,7 +8054,7 @@ function experimentInit() {
   text_92 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_92',
-    text: 'Great! This is the end of this task',
+    text: 'Great! This is the end of the fourth task.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.0], height: 0.1,  wrapWidth: undefined, ori: 0,
@@ -8008,7 +8104,7 @@ function experimentInit() {
   instructions_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'instructions_2',
-    text: 'The fourth task is an unusual one. Instead of telling you the rules, you have to figure them out.',
+    text: 'The fifth task is an unusual one. Instead of telling you the rules, you have to figure them out.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8054,7 +8150,7 @@ function experimentInit() {
   example_text_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'example_text_2',
-    text: 'Your job is to click on one of the four cards at the top you think is related to the one presented in the middle of the screen.  You will receive feedback on each trial. If you choose the right card, you will see a message saying ‘correct.’ If you choose the incorrect one, you will see a message saying ‘incorrect.’\nPress ‘space bar’ to continue.',
+    text: 'You will click on one of the four cards at the top that you think is similar to the card at the bottom.  We will tell you if you clicked the correct card or the incorrect card. \n\n\n\nPress the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.25)], height: 0.04,  wrapWidth: undefined, ori: 0,
@@ -8082,7 +8178,7 @@ function experimentInit() {
   text_126 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_126',
-    text: 'Press ‘space bar’ continue',
+    text: 'Press the space bar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8178,7 +8274,7 @@ function experimentInit() {
   text_127 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_127',
-    text: 'Now, you will start the task.',
+    text: 'Ok, let’s play for real now.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
@@ -8189,7 +8285,7 @@ function experimentInit() {
   text_128 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_128',
-    text: 'Press ‘space bar’ to continue',
+    text: 'Press the spacebar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8288,6 +8384,19 @@ function experimentInit() {
   
   // Initialize components for Routine "code_end_2"
   code_end_2Clock = new util.Clock();
+  // Initialize components for Routine "thank_you_5"
+  thank_you_5Clock = new util.Clock();
+  text_129 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_129',
+    text: 'Great! This is the end of the fifth task.',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
   // Initialize components for Routine "pm_welcome"
   pm_welcomeClock = new util.Clock();
   pm_welcome_txt_top = new visual.TextStim({
@@ -8304,7 +8413,7 @@ function experimentInit() {
   pm_welcome_txt_bot = new visual.TextStim({
     win: psychoJS.window,
     name: 'pm_welcome_txt_bot',
-    text: "Please press 'spacebar' to continue.",
+    text: 'Press the spacebar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8319,7 +8428,7 @@ function experimentInit() {
   plus_intro_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'plus_intro_txt_top',
-    text: 'In this task, you will see a number and a plus sign. \n\nYour job will be to add 3 to this number and type in the answer.\n',
+    text: 'In this task, you will see a number and a plus sign. \n\nYou will add 3 to this number and type in the answer.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.1], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8330,7 +8439,7 @@ function experimentInit() {
   plus_intro_txt_bot = new visual.TextStim({
     win: psychoJS.window,
     name: 'plus_intro_txt_bot',
-    text: "Press 'spacebar' to continue.",
+    text: 'Press the spacebar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8345,7 +8454,7 @@ function experimentInit() {
   plus_eg1_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'plus_eg1_txt_top',
-    text: 'In this example, the number is 25. Your job is to add 3 to this number.',
+    text: 'In this example, the number is 25. You will add 3 to this number.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8404,7 +8513,7 @@ function experimentInit() {
   plus_eg2_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'plus_eg2_txt_top',
-    text: 'In this example, the number is 13. Your job is to add 3 to this number.',
+    text: 'In this example, the number is 13. You will add 3 to this number.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8463,7 +8572,7 @@ function experimentInit() {
   pm_train_start_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'pm_train_start_txt',
-    text: 'Ok let’s practice. \n\n\n\n\nPress ‘spacebar’ to continue.',
+    text: 'Ok let’s practice. \n\n\n\n\nPress the spacebar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8539,7 +8648,7 @@ function experimentInit() {
   plus_test_start_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'plus_test_start_txt',
-    text: 'Ok let’s play for real now. Remember, you will add 3 to the number on the screen and type the correct answer. \n\n\n\n\nPress ‘spacebar’ to continue.',
+    text: 'Ok let’s play for real now. Remember, you will add 3 to the number on the screen and type the correct answer. \n\n\n\n\nPress the spacebar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8602,7 +8711,7 @@ function experimentInit() {
   minus_intro_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'minus_intro_txt_top',
-    text: 'In this task, you will see a number and a minus sign. \n\nYour job will be to subtract 3 from this number and type in the answer.\n',
+    text: 'In this task, you will see a number and a minus sign. \n\nYou will subtract 3 from this number and type in the answer.\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.1], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8613,7 +8722,7 @@ function experimentInit() {
   minus_intro_txt_bot = new visual.TextStim({
     win: psychoJS.window,
     name: 'minus_intro_txt_bot',
-    text: "Press 'spacebar' to continue.",
+    text: 'Press the spacebar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.35)], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8628,7 +8737,7 @@ function experimentInit() {
   minus_eg1_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'minus_eg1_txt_top',
-    text: 'In this example, the number is 25. Your job is to subtract 3 from this number.',
+    text: 'In this example, the number is 25. You will subtract 3 from this number.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8687,7 +8796,7 @@ function experimentInit() {
   minus_eg2_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'minus_eg2_txt_top',
-    text: 'In this example, the number is 13. Your job is to subtract 3 from this number.',
+    text: 'In this example, the number is 13. You will subtract 3 from this number.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8746,7 +8855,7 @@ function experimentInit() {
   pm_train_start_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'pm_train_start_txt',
-    text: 'Ok let’s practice. \n\n\n\n\nPress ‘spacebar’ to continue.',
+    text: 'Ok let’s practice. \n\n\n\n\nPress the spacebar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8822,7 +8931,7 @@ function experimentInit() {
   minus_test_start_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'minus_test_start_txt',
-    text: 'Ok let’s play for real now. Remember, you will subtract 3 from the number on the screen and type the correct answer. \n\n\n\n\nPress ‘spacebar’ to continue.',
+    text: 'Ok let’s play for real now. Remember, you will subtract 3 from the number on the screen and type the correct answer. \n\n\n\n\nPress the spacebar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8885,7 +8994,7 @@ function experimentInit() {
   pm_intro_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'pm_intro_txt_top',
-    text: 'In this task, you will see a number and a minus sign or a plus sign.\n\nYour job will be to add 3 to this number if you see a plus sign, but subtract 3 from this number if you see a minus sign. \n',
+    text: 'In this task, you will see a number and a minus sign or a plus sign.\n\nYou will add 3 to this number if you see a plus sign, but subtract 3 from this number if you see a minus sign. \n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.1], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8911,7 +9020,7 @@ function experimentInit() {
   pm_eg1_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'pm_eg1_txt_top',
-    text: 'In this example, the number is 25 and there is a minus sign. Your job is to subtract 3 from this number.',
+    text: 'In this example, the number is 25 and there is a minus sign. You will subtract 3 from this number.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8970,7 +9079,7 @@ function experimentInit() {
   pm_eg2_txt_top = new visual.TextStim({
     win: psychoJS.window,
     name: 'pm_eg2_txt_top',
-    text: 'In this example, the number is 13 but there is a plus sign. Your job is to add 3 to this number.',
+    text: 'In this example, the number is 13 but there is a plus sign. You will add 3 to this number.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -9029,7 +9138,7 @@ function experimentInit() {
   pm_train_start_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'pm_train_start_txt',
-    text: 'Ok let’s practice. \n\n\n\n\nPress ‘spacebar’ to continue.',
+    text: 'Ok let’s practice. \n\n\n\n\nPress the spacebar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -9105,7 +9214,7 @@ function experimentInit() {
   pm_test_start_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'pm_test_start_txt',
-    text: 'Ok let’s play for real now. Remember, you will subtract 3 from the number on the screen if you see a minus sign and you will add 3 if you see a plus sign.\n\n\n\n\nPress ‘spacebar’ to continue.',
+    text: 'Ok let’s play for real now. Remember, you will subtract 3 from the number on the screen if you see a minus sign and you will add 3 if you see a plus sign.\n\n\n\n\nPress the spacebar to continue.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -9168,7 +9277,7 @@ function experimentInit() {
   thank_you_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'thank_you_2',
-    text: 'Great! You have finished all the tasks.\nPlease, DO NOT close the window browser until you have seen the following message. Then, click on OK to be directed to the next task.',
+    text: 'Great! You finished all six tasks.\n\nPlease do not close the window browser until you have seen the following message and click on OK. ',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -20634,6 +20743,7 @@ function Recall_practiceRoutineEachFrame(snapshot) {
 
 
 var correct;
+var msg_color;
 function Recall_practiceRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Recall_practice'-------
@@ -20653,9 +20763,11 @@ function Recall_practiceRoutineEnd(snapshot) {
     if (Number(current_resp) === digits_corr) {
         correct = 1;
         msg = "Correct";
+        msg_color = 'green';
         psychoJS.experiment.addData("correct", correct)
     } else {
         msg = "Incorrect";
+        msg_color = 'red';
         psychoJS.experiment.addData("Incorrect", correct)
     }
     psychoJS.experiment.addData("response", current_resp);
@@ -20681,6 +20793,7 @@ function feedback_practiceRoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(1.000000);
     // update component parameters for each repeat
+    text_8.setColor(new util.Color(msg_color));
     text_8.setText(msg);
     // keep track of which components have finished
     feedback_practiceComponents = [];
@@ -21406,9 +21519,11 @@ function RecallRoutineEnd(snapshot) {
     if (Number(current_resp) === digits_corr) {
         correct = 1;
         msg = "Correct";
+        msg_color = 'green';
         psychoJS.experiment.addData("correct", correct)
     } else {
         msg = "Incorrect";
+        msg_color = 'red';
         psychoJS.experiment.addData("Incorrect", correct)
     }
     psychoJS.experiment.addData("response", current_resp);
@@ -22667,7 +22782,7 @@ function Practice_trial_congruentRoutineBegin(snapshot) {
     t = 0;
     Practice_trial_congruentClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(2.250000);
+    routineTimer.add(2.500000);
     // update component parameters for each repeat
     image_5.setImage(Heart);
     key_resp_14.keys = undefined;
@@ -22787,7 +22902,7 @@ function Practice_trial_congruentRoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function() { key_resp_14.clearEvents(); });
     }
 
-    frameRemains = 1.0 + 1.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1.0 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((key_resp_14.status === PsychoJS.Status.STARTED || key_resp_14.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       key_resp_14.status = PsychoJS.Status.FINISHED;
   }
@@ -23153,7 +23268,7 @@ function Practice_trial_congruent_2RoutineBegin(snapshot) {
     t = 0;
     Practice_trial_congruent_2Clock.reset(); // clock
     frameN = -1;
-    routineTimer.add(2.250000);
+    routineTimer.add(2.500000);
     // update component parameters for each repeat
     image_13.setImage(Heart);
     key_resp_21.keys = undefined;
@@ -23276,7 +23391,7 @@ function Practice_trial_congruent_2RoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function() { key_resp_21.clearEvents(); });
     }
 
-    frameRemains = 1.0 + 1.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1.0 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((key_resp_21.status === PsychoJS.Status.STARTED || key_resp_21.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       key_resp_21.status = PsychoJS.Status.FINISHED;
   }
@@ -23645,7 +23760,7 @@ function HeartsRoutineBegin(snapshot) {
     t = 0;
     HeartsClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(2.250000);
+    routineTimer.add(2.500000);
     // update component parameters for each repeat
     hearts.setImage(Hearts);
     heart_resp.keys = undefined;
@@ -23763,7 +23878,7 @@ function HeartsRoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function() { heart_resp.clearEvents(); });
     }
 
-    frameRemains = 1.0 + 1.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1.0 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((heart_resp.status === PsychoJS.Status.STARTED || heart_resp.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       heart_resp.status = PsychoJS.Status.FINISHED;
   }
@@ -24741,7 +24856,7 @@ function Practice_trial_incongruentRoutineBegin(snapshot) {
     t = 0;
     Practice_trial_incongruentClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(2.250000);
+    routineTimer.add(2.500000);
     // update component parameters for each repeat
     image_8.setImage(Flowers);
     key_resp_22.keys = undefined;
@@ -24862,7 +24977,7 @@ function Practice_trial_incongruentRoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function() { key_resp_22.clearEvents(); });
     }
 
-    frameRemains = 1.0 + 1.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1.0 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((key_resp_22.status === PsychoJS.Status.STARTED || key_resp_22.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       key_resp_22.status = PsychoJS.Status.FINISHED;
   }
@@ -25236,7 +25351,7 @@ function Practice_trial_incongruent_2RoutineBegin(snapshot) {
     t = 0;
     Practice_trial_incongruent_2Clock.reset(); // clock
     frameN = -1;
-    routineTimer.add(2.250000);
+    routineTimer.add(2.500000);
     // update component parameters for each repeat
     image_14.setImage(Flowers);
     key_resp_23.keys = undefined;
@@ -25360,7 +25475,7 @@ function Practice_trial_incongruent_2RoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function() { key_resp_23.clearEvents(); });
     }
 
-    frameRemains = 1.0 + 1.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1.0 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((key_resp_23.status === PsychoJS.Status.STARTED || key_resp_23.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       key_resp_23.status = PsychoJS.Status.FINISHED;
   }
@@ -25723,7 +25838,7 @@ function FlowersRoutineBegin(snapshot) {
     t = 0;
     FlowersClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(2.250000);
+    routineTimer.add(2.500000);
     // update component parameters for each repeat
     image.setImage(Flowers);
     key_resp_25.keys = undefined;
@@ -25841,7 +25956,7 @@ function FlowersRoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function() { key_resp_25.clearEvents(); });
     }
 
-    frameRemains = 1.0 + 1.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1.0 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((key_resp_25.status === PsychoJS.Status.STARTED || key_resp_25.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       key_resp_25.status = PsychoJS.Status.FINISHED;
   }
@@ -26358,7 +26473,7 @@ function IntroC_2RoutineBegin(snapshot) {
     IntroC_2Clock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
-    text_74.setText("Press 'spacebar' to continue.");
+    text_74.setText('Press the space bar to continue.');
     key_resp_30.keys = undefined;
     key_resp_30.rt = undefined;
     _key_resp_30_allKeys = [];
@@ -26787,7 +26902,7 @@ function Practice_trial_mixedRoutineBegin(snapshot) {
     t = 0;
     Practice_trial_mixedClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(2.250000);
+    routineTimer.add(2.500000);
     // update component parameters for each repeat
     image_9.setImage(Hearts_Flowers);
     key_resp_36.keys = undefined;
@@ -26907,7 +27022,7 @@ function Practice_trial_mixedRoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function() { key_resp_36.clearEvents(); });
     }
 
-    frameRemains = 1.0 + 1.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1.0 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((key_resp_36.status === PsychoJS.Status.STARTED || key_resp_36.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       key_resp_36.status = PsychoJS.Status.FINISHED;
   }
@@ -27280,7 +27395,7 @@ function Practice_trial_mixed_2RoutineBegin(snapshot) {
     t = 0;
     Practice_trial_mixed_2Clock.reset(); // clock
     frameN = -1;
-    routineTimer.add(2.250000);
+    routineTimer.add(2.500000);
     // update component parameters for each repeat
     image_15.setImage(Hearts_Flowers);
     key_resp_40.keys = undefined;
@@ -27402,7 +27517,7 @@ function Practice_trial_mixed_2RoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function() { key_resp_40.clearEvents(); });
     }
 
-    frameRemains = 1.0 + 1.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1.0 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((key_resp_40.status === PsychoJS.Status.STARTED || key_resp_40.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       key_resp_40.status = PsychoJS.Status.FINISHED;
   }
@@ -27769,7 +27884,7 @@ function mixed_firstRoutineBegin(snapshot) {
     t = 0;
     mixed_firstClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(2.250000);
+    routineTimer.add(2.500000);
     // update component parameters for each repeat
     key_resp_42.keys = undefined;
     key_resp_42.rt = undefined;
@@ -27886,7 +28001,7 @@ function mixed_firstRoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function() { key_resp_42.clearEvents(); });
     }
 
-    frameRemains = 1.0 + 1.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1.0 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((key_resp_42.status === PsychoJS.Status.STARTED || key_resp_42.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       key_resp_42.status = PsychoJS.Status.FINISHED;
   }
@@ -27973,7 +28088,7 @@ function MixedRoutineBegin(snapshot) {
     t = 0;
     MixedClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(2.250000);
+    routineTimer.add(2.500000);
     // update component parameters for each repeat
     image_2.setImage(Hearts_Flowers);
     key_resp_43.keys = undefined;
@@ -28091,7 +28206,7 @@ function MixedRoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function() { key_resp_43.clearEvents(); });
     }
 
-    frameRemains = 1.0 + 1.25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1.0 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((key_resp_43.status === PsychoJS.Status.STARTED || key_resp_43.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       key_resp_43.status = PsychoJS.Status.FINISHED;
   }
@@ -28794,6 +28909,138 @@ function even_eg2RoutineEnd(snapshot) {
 }
 
 
+var _oe_speed_instr_key_resp_allKeys;
+var oe_speed_instrComponents;
+function oe_speed_instrRoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'oe_speed_instr'-------
+    t = 0;
+    oe_speed_instrClock.reset(); // clock
+    frameN = -1;
+    // update component parameters for each repeat
+    oe_speed_instr_key_resp.keys = undefined;
+    oe_speed_instr_key_resp.rt = undefined;
+    _oe_speed_instr_key_resp_allKeys = [];
+    // keep track of which components have finished
+    oe_speed_instrComponents = [];
+    oe_speed_instrComponents.push(oe_speed_instr_top);
+    oe_speed_instrComponents.push(oe_speed_instr_bot);
+    oe_speed_instrComponents.push(oe_speed_instr_key_resp);
+    
+    oe_speed_instrComponents.forEach( function(thisComponent) {
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function oe_speed_instrRoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'oe_speed_instr'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = oe_speed_instrClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *oe_speed_instr_top* updates
+    if (t >= 0.0 && oe_speed_instr_top.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      oe_speed_instr_top.tStart = t;  // (not accounting for frame time here)
+      oe_speed_instr_top.frameNStart = frameN;  // exact frame index
+      
+      oe_speed_instr_top.setAutoDraw(true);
+    }
+
+    
+    // *oe_speed_instr_bot* updates
+    if (t >= 0.0 && oe_speed_instr_bot.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      oe_speed_instr_bot.tStart = t;  // (not accounting for frame time here)
+      oe_speed_instr_bot.frameNStart = frameN;  // exact frame index
+      
+      oe_speed_instr_bot.setAutoDraw(true);
+    }
+
+    
+    // *oe_speed_instr_key_resp* updates
+    if (t >= 0.0 && oe_speed_instr_key_resp.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      oe_speed_instr_key_resp.tStart = t;  // (not accounting for frame time here)
+      oe_speed_instr_key_resp.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { oe_speed_instr_key_resp.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { oe_speed_instr_key_resp.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { oe_speed_instr_key_resp.clearEvents(); });
+    }
+
+    if (oe_speed_instr_key_resp.status === PsychoJS.Status.STARTED) {
+      let theseKeys = oe_speed_instr_key_resp.getKeys({keyList: ['m', 'z'], waitRelease: false});
+      _oe_speed_instr_key_resp_allKeys = _oe_speed_instr_key_resp_allKeys.concat(theseKeys);
+      if (_oe_speed_instr_key_resp_allKeys.length > 0) {
+        oe_speed_instr_key_resp.keys = _oe_speed_instr_key_resp_allKeys[_oe_speed_instr_key_resp_allKeys.length - 1].name;  // just the last key pressed
+        oe_speed_instr_key_resp.rt = _oe_speed_instr_key_resp_allKeys[_oe_speed_instr_key_resp_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    oe_speed_instrComponents.forEach( function(thisComponent) {
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+      }
+    });
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function oe_speed_instrRoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'oe_speed_instr'-------
+    oe_speed_instrComponents.forEach( function(thisComponent) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    });
+    psychoJS.experiment.addData('oe_speed_instr_key_resp.keys', oe_speed_instr_key_resp.keys);
+    if (typeof oe_speed_instr_key_resp.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('oe_speed_instr_key_resp.rt', oe_speed_instr_key_resp.rt);
+        routineTimer.reset();
+        }
+    
+    oe_speed_instr_key_resp.stop();
+    // the Routine "oe_speed_instr" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
 var _oe_train_start_key_resp_allKeys;
 var oe_train_startComponents;
 function oe_train_startRoutineBegin(snapshot) {
@@ -28855,7 +29102,7 @@ function oe_train_startRoutineEachFrame(snapshot) {
     }
 
     if (oe_train_start_key_resp.status === PsychoJS.Status.STARTED) {
-      let theseKeys = oe_train_start_key_resp.getKeys({keyList: ['space'], waitRelease: false});
+      let theseKeys = oe_train_start_key_resp.getKeys({keyList: ['z', 'm'], waitRelease: false});
       _oe_train_start_key_resp_allKeys = _oe_train_start_key_resp_allKeys.concat(theseKeys);
       if (_oe_train_start_key_resp_allKeys.length > 0) {
         oe_train_start_key_resp.keys = _oe_train_start_key_resp_allKeys[_oe_train_start_key_resp_allKeys.length - 1].name;  // just the last key pressed
@@ -28916,6 +29163,7 @@ function oe_trialRoutineBegin(snapshot) {
     t = 0;
     oe_trialClock.reset(); // clock
     frameN = -1;
+    routineTimer.add(2.500000);
     // update component parameters for each repeat
     oe_trial_txt_num.setPos(oe_position);
     oe_trial_txt_num.setText(oe_number);
@@ -28972,6 +29220,10 @@ function oe_trialRoutineEachFrame(snapshot) {
       oe_trial_txt_num.setAutoDraw(true);
     }
 
+    frameRemains = 1 + 0.75 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((oe_trial_txt_num.status === PsychoJS.Status.STARTED || oe_trial_txt_num.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      oe_trial_txt_num.setAutoDraw(false);
+    }
     
     // *oe_trial_key_resp* updates
     if (t >= 1 && oe_trial_key_resp.status === PsychoJS.Status.NOT_STARTED) {
@@ -28984,6 +29236,11 @@ function oe_trialRoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function() { oe_trial_key_resp.start(); }); // start on screen flip
       psychoJS.window.callOnFlip(function() { oe_trial_key_resp.clearEvents(); });
     }
+
+    frameRemains = 1 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((oe_trial_key_resp.status === PsychoJS.Status.STARTED || oe_trial_key_resp.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      oe_trial_key_resp.status = PsychoJS.Status.FINISHED;
+  }
 
     if (oe_trial_key_resp.status === PsychoJS.Status.STARTED) {
       let theseKeys = oe_trial_key_resp.getKeys({keyList: ['m', 'z'], waitRelease: false});
@@ -29020,7 +29277,7 @@ function oe_trialRoutineEachFrame(snapshot) {
     });
     
     // refresh the screen if continuing
-    if (continueRoutine) {
+    if (continueRoutine && routineTimer.getTime() > 0) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -29039,12 +29296,16 @@ function oe_trialRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     });
-    if ((oe_trial_key_resp.corr > 0)) {
-        oe_feedback_color = "green";
-        oe_feedback_message = "Correct!";
-    } else {
-        oe_feedback_color = "red";
-        oe_feedback_message = "Incorrect.";
+    if ((oe_trial_key_resp.keys === undefined)) {
+        oe_feedback_color = "black";
+        oe_feedback_message = "No response";
+        if ((oe_trial_key_resp.corr > 0)) {
+            oe_feedback_color = "green";
+            oe_feedback_message = "Correct";
+        } else {
+            oe_feedback_color = "red";
+            oe_feedback_message = "Incorrect";
+        }
     }
     
     // was no response the correct answer?!
@@ -29064,9 +29325,6 @@ function oe_trialRoutineEnd(snapshot) {
         }
     
     oe_trial_key_resp.stop();
-    // the Routine "oe_trial" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
-    
     return Scheduler.Event.NEXT;
   };
 }
@@ -29081,7 +29339,7 @@ function oe_feedbackRoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(1.000000);
     // update component parameters for each repeat
-    oe_feedback_txt.setColor(new util.Color('white'));
+    oe_feedback_txt.setColor(new util.Color(oe_feedback_color));
     oe_feedback_txt.setText(oe_feedback_message);
     // keep track of which components have finished
     oe_feedbackComponents = [];
@@ -31062,13 +31320,16 @@ function feedback_practice_2RoutineBegin(snapshot) {
     routineTimer.add(1.000000);
     // update component parameters for each repeat
     if ((corr === 1)) {
+        msg_color = 'green';
         msg = "Correct!";
     } else {
+        msg_color = 'red';
         msg = "Incorrect";
     }
     
     
     
+    feedback_text_2.setColor(new util.Color(msg_color));
     feedback_text_2.setText(msg);
     // keep track of which components have finished
     feedback_practice_2Components = [];
@@ -31583,13 +31844,16 @@ function Feedback_2RoutineBegin(snapshot) {
     routineTimer.add(1.000000);
     // update component parameters for each repeat
     if ((corr === 1)) {
+        msg_color = 'green';
         msg = "Correct! ";
     } else {
+        msg_color = 'red';
         msg = "Incorrect";
     }
     
     
     
+    feedback_text.setColor(new util.Color(msg_color));
     feedback_text.setText(msg);
     // keep track of which components have finished
     Feedback_2Components = [];
@@ -31784,6 +32048,93 @@ function code_end_2RoutineEnd(snapshot) {
     // the Routine "code_end_2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+var thank_you_5Components;
+function thank_you_5RoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'thank_you_5'-------
+    t = 0;
+    thank_you_5Clock.reset(); // clock
+    frameN = -1;
+    routineTimer.add(2.500000);
+    // update component parameters for each repeat
+    // keep track of which components have finished
+    thank_you_5Components = [];
+    thank_you_5Components.push(text_129);
+    
+    thank_you_5Components.forEach( function(thisComponent) {
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function thank_you_5RoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'thank_you_5'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = thank_you_5Clock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *text_129* updates
+    if (t >= 0.0 && text_129.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_129.tStart = t;  // (not accounting for frame time here)
+      text_129.frameNStart = frameN;  // exact frame index
+      
+      text_129.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 2.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_129.status === PsychoJS.Status.STARTED || text_129.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_129.setAutoDraw(false);
+    }
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    thank_you_5Components.forEach( function(thisComponent) {
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+      }
+    });
+    
+    // refresh the screen if continuing
+    if (continueRoutine && routineTimer.getTime() > 0) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function thank_you_5RoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'thank_you_5'-------
+    thank_you_5Components.forEach( function(thisComponent) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    });
     return Scheduler.Event.NEXT;
   };
 }
@@ -32680,6 +33031,7 @@ function pm_trialRoutineEachFrame(snapshot) {
 }
 
 
+var pm_feedback_color;
 var pm_feedback_message;
 function pm_trialRoutineEnd(snapshot) {
   return function () {
@@ -32690,8 +33042,10 @@ function pm_trialRoutineEnd(snapshot) {
       }
     });
     if (Number(current_resp) === pm_correct) {
+        pm_feedback_color = 'green';
         pm_feedback_message = "Correct";
     } else {
+        pm_feedback_color = 'red';
         pm_feedback_message = "Incorrect";
     }
     //psychoJS.experiment.addData("response", current_resp);
@@ -32719,7 +33073,7 @@ function pm_feedbackRoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(1.000000);
     // update component parameters for each repeat
-    pm_feedback_txt.setColor(new util.Color('white'));
+    pm_feedback_txt.setColor(new util.Color(pm_feedback_color));
     pm_feedback_txt.setText(pm_feedback_message);
     // keep track of which components have finished
     pm_feedbackComponents = [];

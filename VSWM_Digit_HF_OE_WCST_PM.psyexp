@@ -56,7 +56,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this first task you will see a series of circles light up. &amp;#10;&amp;#10;Your job is to use the mouse to click on the circles in reverse order." valType="str"/>
+        <Param name="text" updates="constant" val="In this first task you will see some circles light up in order.&amp;#10;&amp;#10;You will use your mouse to click on the circles in backwards order, meaning you will click the last circle first and the first circle last." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1.8" valType="code"/>
       </TextComponent>
@@ -80,7 +80,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press space bar to continue." valType="str"/>
+        <Param name="text" updates="constant" val="Press the space bar to continue." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -950,7 +950,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="1" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="For example, if you saw the following sequence:" valType="str"/>
+        <Param name="text" updates="constant" val="For example, if you saw the circles light up in this order:" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="2" valType="code"/>
       </TextComponent>
@@ -1376,7 +1376,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="0.9" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="For example, if you saw the following sequence:" valType="str"/>
+        <Param name="text" updates="constant" val="For example, if you saw the circles light up in this order:" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="2" valType="code"/>
       </TextComponent>
@@ -1802,7 +1802,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="0.9" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="For example, if you saw the following sequence:" valType="str"/>
+        <Param name="text" updates="constant" val="For example, if you saw the circles light up in this order:" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="2" valType="code"/>
       </TextComponent>
@@ -6931,7 +6931,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="0.9" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="For example, if you saw the following sequence:" valType="str"/>
+        <Param name="text" updates="constant" val="For example, if you saw the circles light up in this order:" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="2" valType="code"/>
       </TextComponent>
@@ -9150,7 +9150,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="You'll first do a short practice." valType="str"/>
+        <Param name="text" updates="constant" val="Let’s practice." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1.8" valType="code"/>
       </TextComponent>
@@ -9655,7 +9655,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="2" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Thank you! This is the end of this task" valType="str"/>
+        <Param name="text" updates="constant" val="Thank you! This is the end of the first task.&amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -11538,7 +11538,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Remember!&amp;#10;Your job is to use the mouse to click on the circles in reverse order.&amp;#10;" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Remember!&amp;#10;&amp;#10;Your job is to use the mouse to click on the circles in backwards order.&amp;#10;" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -11666,7 +11666,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In the second task, you will try to remember a sequence of numbers that appears on the screen one after the other. &amp;#10;&amp;#10;When you see the &quot;Recall&quot; screen, type the numbers you saw in the opposite order you saw them. Use the number keys at the top of the keyboard.&amp;#10;&amp;#10;Be careful with your typing, as if you make a mistake, you will not be able to correct it. Press ‘ENTER’ to confirm your answer.&amp;#10;&amp;#10;Do your best to memorize the numbers, and do not write them down or use any other tool to help you remember them.&amp;#10;&amp;#10;Press ‘space bar’ to continue" valType="str"/>
+        <Param name="text" updates="constant" val="In the next task, you will see numbers on the screen appear one after another.&amp;#10;&amp;#10;When you see the &quot;Recall&quot; screen, type the numbers you saw in backwards order and press Enter. Backspace will not work.&amp;#10;&amp;#10;Do your best to remember the numbers and do not cheat. &amp;#10;&amp;#10;Press the space bar to continue." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -11727,7 +11727,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Let’s practice!&amp;#10;When you see the square, it means that the task is about to start." valType="str"/>
+        <Param name="text" updates="constant" val="Let’s practice!" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -11915,7 +11915,7 @@
         <Param name="Each JS Frame" updates="constant" val="console.log(current_resp)&amp;#10;console.log(pts_response_2.text)&amp;#10;console.log(n)&amp;#10;&amp;#10;&amp;#10;let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'return'], waitRelease: false});&amp;#10;if (theseKeys.length &gt; 0) {  // at least one key was pressed&amp;#10;  textAdd = theseKeys[theseKeys.length-1]; &amp;#10; }&amp;#10;&amp;#10;if (n &lt; 1){&amp;#10;    textAdd = ''&amp;#10;}&amp;#10;&amp;#10;&amp;#10;if (textAdd === 'return') {&amp;#10;    textAdd = '';  // Add nothing&amp;#10;    continueRoutine = false;  // End routine (if that is what you want)&amp;#10;} else if (textAdd === 'backspace') {&amp;#10;    pts_response_2.text = pts_response_2.text.slice(0, -1);&amp;#10;    textAdd = undefined;&amp;#10;} else if (['lshift', 'rshift'].includes(textAdd)) {&amp;#10;        modify = true;&amp;#10;} else if (textAdd !== undefined) {&amp;#10;    if (modify) {&amp;#10;        pts_response_2.text = pts_response_2.text + textAdd.toUpperCase();&amp;#10;        modify = false;&amp;#10;    } else {&amp;#10;        pts_response_2.text = pts_response_2.text + textAdd&amp;#10;    }&amp;#10;    textAdd = undefined;&amp;#10;}&amp;#10; &amp;#10;&amp;#10;current_resp = pts_response_2.text&amp;#10;n = n + 1&amp;#10;console.log(n)" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="correct = 0;&amp;#10;&amp;#10;if (Number(current_resp) === digits_corr) {&amp;#10;    correct = 1;&amp;#10;    msg = &quot;Correct&quot;;&amp;#10;    psychoJS.experiment.addData(&quot;correct&quot;, correct)&amp;#10;} else {&amp;#10;    msg = &quot;Incorrect&quot;;&amp;#10;    psychoJS.experiment.addData(&quot;Incorrect&quot;, correct)&amp;#10;}&amp;#10;psychoJS.experiment.addData(&quot;response&quot;, current_resp);&amp;#10;&amp;#10;allResponses_p.push(correct)&amp;#10;pts_response_2.text = '';&amp;#10;&amp;#10;console.log(allResponses_p)" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="correct = 0;&amp;#10;&amp;#10;if (Number(current_resp) === digits_corr) {&amp;#10;    correct = 1;&amp;#10;    msg = &quot;Correct&quot;;&amp;#10;    msg_color = 'green';&amp;#10;    psychoJS.experiment.addData(&quot;correct&quot;, correct)&amp;#10;} else {&amp;#10;    msg = &quot;Incorrect&quot;;&amp;#10;    msg_color = 'red';&amp;#10;    psychoJS.experiment.addData(&quot;Incorrect&quot;, correct)&amp;#10;}&amp;#10;psychoJS.experiment.addData(&quot;response&quot;, current_resp);&amp;#10;&amp;#10;allResponses_p.push(correct)&amp;#10;pts_response_2.text = '';&amp;#10;&amp;#10;console.log(allResponses_p)" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="correct = 0&amp;#10;if int(current_resp) == digits_corr:&amp;#10;    correct = 1&amp;#10;    msg = 'Correct'&amp;#10;    practice.addData('correct', correct) #where trials is the name of the loop&amp;#10;else:&amp;#10;    msg = 'Incorrect'&amp;#10;    practice.addData('Incorrect', correct) #store for accuracy&amp;#10;practice.addData('response', current_resp) #store full response&amp;#10;&amp;#10;# Store each response in list&amp;#10;allResponses_p.append(correct)&amp;#10;    " valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="check_keys_2" valType="code"/>
@@ -11964,7 +11964,7 @@
         <Param name="name" updates="None" val="feedback_code_2" valType="code"/>
       </CodeComponent>
       <TextComponent name="text_8">
-        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="color" updates="set every repeat" val="$msg_color" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -12113,7 +12113,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Great! Let’s start the real task" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Great! Let’s start the real task." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -12137,7 +12137,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press ‘space bar’ to continue" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Press the space bar to continue" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -12282,7 +12282,7 @@
         <Param name="Each JS Frame" updates="constant" val="let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'return'], waitRelease: false});&amp;#10;if (theseKeys.length &gt; 0) {  // at least one key was pressed&amp;#10;  textAdd = theseKeys[theseKeys.length-1]; &amp;#10;  }&amp;#10;&amp;#10;if (nn &lt; 1){&amp;#10;    textAdd = '';&amp;#10;}&amp;#10;&amp;#10;&amp;#10;&amp;#10;if (textAdd === 'return') {&amp;#10;    textAdd = '';  // Add nothing&amp;#10;    continueRoutine = false;  // End routine (if that is what you want)&amp;#10;} else if (textAdd === 'backspace') {&amp;#10;    pts_response.text = pts_response.text.slice(0, -1);&amp;#10;    textAdd = undefined;&amp;#10;} else if (['lshift', 'rshift'].includes(textAdd)) {&amp;#10;        modify = true;&amp;#10;} else if (textAdd !== undefined) {&amp;#10;    if (modify) {&amp;#10;        pts_response.text = pts_response.text + textAdd.toUpperCase();&amp;#10;        modify = false;&amp;#10;    } else {&amp;#10;        pts_response.text = pts_response.text + textAdd&amp;#10;    }&amp;#10;    textAdd = undefined;&amp;#10;}&amp;#10; &amp;#10;nn = nn + 1;&amp;#10;current_resp = pts_response.text" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="correct = 0;&amp;#10;&amp;#10;if (Number(current_resp) === digits_corr) {&amp;#10;    correct = 1;&amp;#10;    msg = &quot;Correct&quot;;&amp;#10;    psychoJS.experiment.addData(&quot;correct&quot;, correct)&amp;#10;} else {&amp;#10;    msg = &quot;Incorrect&quot;;&amp;#10;    psychoJS.experiment.addData(&quot;Incorrect&quot;, correct)&amp;#10;}&amp;#10;psychoJS.experiment.addData(&quot;response&quot;, current_resp);&amp;#10;&amp;#10;allResponses.push(correct)&amp;#10;pts_response.text = '';" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="correct = 0;&amp;#10;&amp;#10;if (Number(current_resp) === digits_corr) {&amp;#10;    correct = 1;&amp;#10;    msg = &quot;Correct&quot;;&amp;#10;    msg_color = 'green';&amp;#10;    psychoJS.experiment.addData(&quot;correct&quot;, correct)&amp;#10;} else {&amp;#10;    msg = &quot;Incorrect&quot;;&amp;#10;    msg_color = 'red';&amp;#10;    psychoJS.experiment.addData(&quot;Incorrect&quot;, correct)&amp;#10;}&amp;#10;psychoJS.experiment.addData(&quot;response&quot;, current_resp);&amp;#10;&amp;#10;allResponses.push(correct)&amp;#10;pts_response.text = '';" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="correct = 0&amp;#10;if int(current_resp) == digits_corr:&amp;#10;    correct = 1&amp;#10;    msg = 'Correct'&amp;#10;    trials.addData('correct', correct) #where trials is the name of the loop&amp;#10;else:&amp;#10;    msg = 'Incorrect'&amp;#10;    trials.addData('Incorrect', correct) #store for accuracy&amp;#10;trials.addData('response', current_resp) #store full response&amp;#10;&amp;#10;# Store each response in list&amp;#10;allResponses.append(correct)&amp;#10;    " valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="check_keys" valType="code"/>
@@ -12352,7 +12352,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="3" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Thank you! This is the end of this task.&amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="Thank you! This is the end of the second task.&amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -12451,7 +12451,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Please press 'spacebar' to continue." valType="str"/>
+        <Param name="text" updates="constant" val="Press the space bar to continue." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -12545,7 +12545,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In the third task, you will see hearts." valType="str"/>
+        <Param name="text" updates="constant" val="In this part of the task, you will see hearts." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -12569,7 +12569,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press 'spacebar' to continue." valType="str"/>
+        <Param name="text" updates="constant" val="Press the space bar to continue. " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -12638,7 +12638,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Your job will be to press the button on the SAME side as where the heart appears.&amp;#10;&amp;#10;&amp;#10;If the heart appears on the right, press 'm,' and if the heart appears on the left, press 'z.'" valType="str"/>
+        <Param name="text" updates="constant" val="You will see a heart on the left or right side and you will press the button on the same side as the heart. &amp;#10;&amp;#10;If the heart is on the right, press ‘m’, and if the heart is on the left, press ‘z’." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -12662,7 +12662,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press 'spacebar' to continue." valType="str"/>
+        <Param name="text" updates="constant" val="Press the space bar to continue. " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -12967,7 +12967,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="The hearts will appear very quickly. &amp;#10;Try to be as fast as you can and try your &amp;#10;best!" valType="str"/>
+        <Param name="text" updates="constant" val="The hearts will dissapear after a short time. &amp;#10;&amp;#10;Try to press the correct key as fast as you can!" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -13243,7 +13243,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.25" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -13363,7 +13363,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Remember! Your job is to press the button on the SAME side as where the heart appears.&amp;#10;&amp;#10;If the heart appears on the right, press 'm,' and if the heart appears on the left, press 'z.'" valType="str"/>
+        <Param name="text" updates="constant" val="Remember, will see a heart on the left or right side and you will press the button on the same side as the heart. &amp;#10;&amp;#10;If the heart is on the right, press ‘m’, and if the heart is on the left, press ‘z’." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -13387,7 +13387,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press 'spacebar' to continue." valType="str"/>
+        <Param name="text" updates="constant" val="Press the space bar to continue." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -13563,7 +13563,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.25" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -13700,7 +13700,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Let's play for real now.&amp;#10;&amp;#10;&amp;#10;Remember, when the heart appears on the left, press 'z' and when the heart appears on the right, press 'm.'" valType="str"/>
+        <Param name="text" updates="constant" val="Let's play for real now.&amp;#10;&amp;#10;Remember, if the heart is on the left, press 'z' and if the heart is on the right, press 'm.'" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -13883,7 +13883,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.25" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -13935,7 +13935,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Great job! In this next task, you will see flowers." valType="str"/>
+        <Param name="text" updates="constant" val="Great job! In the next part of this task, you will see flowers." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -14053,7 +14053,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Your job will be to press the button on the OPPOSITE side of where the flower appears.&amp;#10;&amp;#10;&amp;#10;If the flower appears on the right, press 'z,' and if the flower appears on the left, press 'm.'" valType="str"/>
+        <Param name="text" updates="constant" val="You will see a flower on the left or right and you will press the button on the opposite side as the flower. &amp;#10;&amp;#10;If the flower is on the right, press 'z,' and if the flower is on the left, press 'm.'" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -14382,7 +14382,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="The flowers will appear very quickly. &amp;#10;Try to be as fast as you can and try your best!" valType="str"/>
+        <Param name="text" updates="constant" val="The flowers will dissapear after a short time. &amp;#10;&amp;#10;Try to press the correct key as fast as you can!" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -14658,7 +14658,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.25" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -14778,7 +14778,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Remember! Your job is to press the button on the OPPOSITE side of where the flower appears.&amp;#10;&amp;#10;If the flower appears on the right, press 'z,' and if the flower appears on the left, press 'm.'" valType="str"/>
+        <Param name="text" updates="constant" val="You will see a flower on the left or right and you will press the button on the opposite side as the flower. &amp;#10;&amp;#10;If the flower is on the right, press 'z,' and if the flower is on the left, press 'm.'" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -14978,7 +14978,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.25" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -15115,7 +15115,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Let's play for real now. &amp;#10;&amp;#10;&amp;#10;Remember, when the flower appears on the left, press 'm,' and when the flower appears on the right, press 'z.'" valType="str"/>
+        <Param name="text" updates="constant" val="Let's play for real now. &amp;#10;&amp;#10;&amp;#10;Remember, when the flower is on the left, press 'm,' and when the flower is on the right, press 'z.'" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -15298,7 +15298,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.25" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -15350,7 +15350,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Great job! &amp;#10;Now in this last task, we'll put it all together." valType="str"/>
+        <Param name="text" updates="constant" val="Great job! &amp;#10;&amp;#10;Now in this last part of the task, we'll put it all together." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -15392,7 +15392,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press 'spacebar' to continue.&amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="Press the space bar to continue." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -15443,7 +15443,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this next task, you'll see both hearts and flowers. " valType="str"/>
+        <Param name="text" updates="constant" val="In this next part of the task, you'll see both hearts and flowers. " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -15467,7 +15467,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press 'spacebar' to continue. " valType="str"/>
+        <Param name="text" updates="constant" val="Press the space bar to continue." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -15536,7 +15536,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="If you see a heart, press the button on the SAME side as the heart appears. &amp;#10;&amp;#10;&amp;#10;If the heart appears on the right, press 'm,' and if the heart appears on the left, press 'z.'" valType="str"/>
+        <Param name="text" updates="constant" val="If you see a heart, press the button on the SAME side as the heart. &amp;#10;&amp;#10;If the heart is on the right, press 'm,' and if the heart is on the left, press 'z.'" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -15560,7 +15560,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press 'spacebar' to continue." valType="str"/>
+        <Param name="text" updates="constant" val="Press the space bar to continue." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -15629,7 +15629,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="If you see a flower, press the button on the OPPOSITE side of where the flower appears. &amp;#10;&amp;#10;&amp;#10;If the flower appears on the right, press 'z,' and if the flower appears on the left, press 'm.'" valType="str"/>
+        <Param name="text" updates="constant" val="If you see a flower, press the button on the OPPOSITE side. &amp;#10;&amp;#10;&amp;#10;If the flower is on the right, press 'z,' and if the flower is on the left, press 'm.'" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -15653,7 +15653,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="Press 'spacebar' to continue." valType="str"/>
+        <Param name="text" updates="set every repeat" val="Press the space bar to continue." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -15722,7 +15722,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Remember, try to be as fast and accurate as you can." valType="str"/>
+        <Param name="text" updates="constant" val="The hearts and flowers will dissapear after a short time. &amp;#10;&amp;#10;Try to press the correct key as fast as you can!" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -15998,7 +15998,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.25" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -16118,7 +16118,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Remember! If you see a heart, press the button on the SAME side as the heart appears. &amp;#10;&amp;#10;If you see a flower, press the button on the OPPOSITE side of where the flower appears. " valType="str"/>
+        <Param name="text" updates="constant" val="Remember! If you see a heart, press the button on the SAME side as the heart. &amp;#10;&amp;#10;If you see a flower, press the button on the OPPOSITE side of the flower." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -16318,7 +16318,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.25" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -16638,7 +16638,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.25" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -16780,7 +16780,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.25" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -16807,7 +16807,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="2.5" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Great! This is the end of this task" valType="str"/>
+        <Param name="text" updates="constant" val="Great! This is the end of the fourth task." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -18810,7 +18810,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="The fourth task is an unusual one. Instead of telling you the rules, you have to figure them out." valType="str"/>
+        <Param name="text" updates="constant" val="The fifth task is an unusual one. Instead of telling you the rules, you have to figure them out." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -18927,7 +18927,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Your job is to click on one of the four cards at the top you think is related to the one presented in the middle of the screen.  You will receive feedback on each trial. If you choose the right card, you will see a message saying ‘correct.’ If you choose the incorrect one, you will see a message saying ‘incorrect.’&amp;#10;Press ‘space bar’ to continue." valType="str"/>
+        <Param name="text" updates="constant" val="You will click on one of the four cards at the top that you think is similar to the card at the bottom.  We will tell you if you clicked the correct card or the incorrect card. &amp;#10;&amp;#10;&amp;#10;&amp;#10;Press the space bar to continue." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -19013,7 +19013,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press ‘space bar’ continue" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Press the space bar to continue." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -19210,7 +19210,7 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="msg = ''" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="msg = &quot;&quot;;&amp;#10;&amp;#10;trial_counter = 0;&amp;#10;corr = 0 ;&amp;#10;&amp;#10;corr_trial_counter = 0;&amp;#10;&amp;#10;prev = 0;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="if ((corr === 1)) {&amp;#10;    msg = &quot;Correct!&quot;;&amp;#10;} else {&amp;#10;    msg = &quot;Incorrect&quot;;&amp;#10;}&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="if ((corr === 1)) {&amp;#10;    msg_color = 'green';&amp;#10;    msg = &quot;Correct!&quot;;&amp;#10;} else {&amp;#10;    msg_color = 'red';&amp;#10;    msg = &quot;Incorrect&quot;;&amp;#10;}&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="if (corr == 1):&amp;#10;    msg=&quot;Correct! &quot;&amp;#10;else:&amp;#10;    msg=&quot;Incorrect&quot;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
@@ -19223,7 +19223,7 @@
         <Param name="name" updates="None" val="feedback_code_3" valType="code"/>
       </CodeComponent>
       <TextComponent name="feedback_text_2">
-        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="color" updates="set every repeat" val="$msg_color" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -19268,7 +19268,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Now, you will start the task." valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Ok, let’s play for real now." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -19292,7 +19292,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press ‘space bar’ to continue" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Press the spacebar to continue." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -19526,7 +19526,7 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="msg = ''" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="msg = &quot;&quot;;&amp;#10;&amp;#10;trial_counter = 0;&amp;#10;corr = 0 ;&amp;#10;&amp;#10;corr_trial_counter = 0;&amp;#10;&amp;#10;prev = 0;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="if ((corr === 1)) {&amp;#10;    msg = &quot;Correct! &quot;;&amp;#10;} else {&amp;#10;    msg = &quot;Incorrect&quot;;&amp;#10;}&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="if ((corr === 1)) {&amp;#10;    msg_color = 'green';&amp;#10;    msg = &quot;Correct! &quot;;&amp;#10;} else {&amp;#10;    msg_color = 'red';&amp;#10;    msg = &quot;Incorrect&quot;;&amp;#10;}&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="if (corr == 1):&amp;#10;    msg=&quot;Correct! &quot;&amp;#10;else:&amp;#10;    msg=&quot;Incorrect&quot;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
@@ -19539,7 +19539,7 @@
         <Param name="name" updates="None" val="feedback_code_4" valType="code"/>
       </CodeComponent>
       <TextComponent name="feedback_text">
-        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="color" updates="set every repeat" val="$msg_color" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -19603,7 +19603,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="10" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Great! You have finished all the tasks.&amp;#10;Please, DO NOT close the window browser until you have seen the following message. Then, click on OK to be directed to the next task." valType="str"/>
+        <Param name="text" updates="constant" val="Great! You finished all six tasks.&amp;#10;&amp;#10;Please do not close the window browser until you have seen the following message and click on OK. " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -19695,7 +19695,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Today, you will complete five computer tasks. &amp;#10;However, if you need to exit the session at any given moment, please press escape twice and wait until you see this popup window before you close the window browser." valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Today, you will complete six computer tasks. &amp;#10;If you need to stop, please press escape twice and wait until you see this popup window before you exit." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1.5" valType="code"/>
       </TextComponent>
@@ -19719,7 +19719,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press space bar to continue." valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Press the space bar to continue." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -19949,7 +19949,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Please press 'spacebar' to continue." valType="str"/>
+        <Param name="text" updates="constant" val="Press the spacebar to continue." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -19993,7 +19993,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this task, you will see a number and a plus sign. &amp;#10;&amp;#10;Your job will be to add 3 to this number and type in the answer.&amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="In this task, you will see a number and a plus sign. &amp;#10;&amp;#10;You will add 3 to this number and type in the answer." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20017,7 +20017,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press 'spacebar' to continue." valType="str"/>
+        <Param name="text" updates="constant" val="Press the spacebar to continue." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20078,7 +20078,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this example, the number is 25. Your job is to add 3 to this number." valType="str"/>
+        <Param name="text" updates="constant" val="In this example, the number is 25. You will add 3 to this number." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20235,7 +20235,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this example, the number is 13. Your job is to add 3 to this number." valType="str"/>
+        <Param name="text" updates="constant" val="In this example, the number is 13. You will add 3 to this number." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20392,7 +20392,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Ok let’s practice. &amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;Press ‘spacebar’ to continue." valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Ok let’s practice. &amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;Press the spacebar to continue." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20428,7 +20428,7 @@
         <Param name="Each JS Frame" updates="constant" val="if (pm_timer.getTime() &lt;= 0) {&amp;#10;    currentLoop.finished = true;&amp;#10;}&amp;#10;&amp;#10;&amp;#10;let theseKeys = psychoJS.eventManager.getKeys({keyList: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace','return'], waitRelease: false});&amp;#10;if (theseKeys.length &gt; 0) {  // at least one key was pressed&amp;#10;  textAdd = theseKeys[theseKeys.length-1]; &amp;#10;  }&amp;#10;if (frame_n &lt; 1){&amp;#10;    textAdd = '';&amp;#10;}&amp;#10;if (textAdd === 'return') {&amp;#10;    textAdd = '';  // Add nothing&amp;#10;    continueRoutine = false;  // End routine (if that is what you want)&amp;#10;} else if (textAdd === 'backspace') {&amp;#10;    pm_trial_resp_txt.text = pm_trial_resp_txt.text.slice(0, -1);&amp;#10;    textAdd = undefined;&amp;#10;} else if (textAdd !== undefined) {&amp;#10;    pm_trial_resp_txt.text = pm_trial_resp_txt.text + textAdd&amp;#10;    textAdd = undefined;&amp;#10;}&amp;#10;frame_n = frame_n + 1;&amp;#10;current_resp = pm_trial_resp_txt.text" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="if (Number(current_resp) === pm_correct) {&amp;#10;    pm_feedback_message = &quot;Correct&quot;;&amp;#10;} else {&amp;#10;    pm_feedback_message = &quot;Incorrect&quot;;&amp;#10;}&amp;#10;//psychoJS.experiment.addData(&quot;response&quot;, current_resp);&amp;#10;pm_trial_resp_txt.text = '';" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="if (Number(current_resp) === pm_correct) {&amp;#10;    pm_feedback_color = 'green';&amp;#10;    pm_feedback_message = &quot;Correct&quot;;&amp;#10;} else {&amp;#10;    pm_feedback_color = 'red';&amp;#10;    pm_feedback_message = &quot;Incorrect&quot;;&amp;#10;}&amp;#10;//psychoJS.experiment.addData(&quot;response&quot;, current_resp);&amp;#10;pm_trial_resp_txt.text = '';" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="pm_trial_code" valType="code"/>
@@ -20550,7 +20550,7 @@
     </Routine>
     <Routine name="pm_feedback">
       <TextComponent name="pm_feedback_txt">
-        <Param name="color" updates="set every repeat" val="white" valType="str"/>
+        <Param name="color" updates="set every repeat" val="$pm_feedback_color" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -20612,7 +20612,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Ok let’s play for real now. Remember, you will add 3 to the number on the screen and type the correct answer. &amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;Press ‘spacebar’ to continue." valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Ok let’s play for real now. Remember, you will add 3 to the number on the screen and type the correct answer. &amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;Press the spacebar to continue." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20656,7 +20656,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this task, you will see a number and a minus sign. &amp;#10;&amp;#10;Your job will be to subtract 3 from this number and type in the answer.&amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="In this task, you will see a number and a minus sign. &amp;#10;&amp;#10;You will subtract 3 from this number and type in the answer.&amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20680,7 +20680,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press 'spacebar' to continue." valType="str"/>
+        <Param name="text" updates="constant" val="Press the spacebar to continue." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20741,7 +20741,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this example, the number is 25. Your job is to subtract 3 from this number." valType="str"/>
+        <Param name="text" updates="constant" val="In this example, the number is 25. You will subtract 3 from this number." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -20898,7 +20898,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this example, the number is 13. Your job is to subtract 3 from this number." valType="str"/>
+        <Param name="text" updates="constant" val="In this example, the number is 13. You will subtract 3 from this number." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -21055,7 +21055,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Ok let’s play for real now. Remember, you will subtract 3 from the number on the screen and type the correct answer. &amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;Press ‘spacebar’ to continue." valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Ok let’s play for real now. Remember, you will subtract 3 from the number on the screen and type the correct answer. &amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;Press the spacebar to continue." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -21099,7 +21099,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this task, you will see a number and a minus sign or a plus sign.&amp;#10;&amp;#10;Your job will be to add 3 to this number if you see a plus sign, but subtract 3 from this number if you see a minus sign. &amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="In this task, you will see a number and a minus sign or a plus sign.&amp;#10;&amp;#10;You will add 3 to this number if you see a plus sign, but subtract 3 from this number if you see a minus sign. &amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -21184,7 +21184,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this example, the number is 25 and there is a minus sign. Your job is to subtract 3 from this number." valType="str"/>
+        <Param name="text" updates="constant" val="In this example, the number is 25 and there is a minus sign. You will subtract 3 from this number." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -21341,7 +21341,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this example, the number is 13 but there is a plus sign. Your job is to add 3 to this number." valType="str"/>
+        <Param name="text" updates="constant" val="In this example, the number is 13 but there is a plus sign. You will add 3 to this number." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -21498,7 +21498,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Ok let’s play for real now. Remember, you will subtract 3 from the number on the screen if you see a minus sign and you will add 3 if you see a plus sign.&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;Press ‘spacebar’ to continue." valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Ok let’s play for real now. Remember, you will subtract 3 from the number on the screen if you see a minus sign and you will add 3 if you see a plus sign.&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;Press the spacebar to continue." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -21566,7 +21566,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Please press 'spacebar' to continue." valType="str"/>
+        <Param name="text" updates="constant" val="Press the spacebar to continue." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -21610,7 +21610,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this task, you will see an even number on the left or right side. &amp;#10;&amp;#10;Your job will to press ‘z’ if the number is on the left and press ‘m’ if the number is on the right. &amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="In this task, you will see an even number on the left or right side. &amp;#10;&amp;#10;You will press ‘z’ if the number is on the left and press ‘m’ if the number is on the right. &amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -21634,7 +21634,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Press 'spacebar' to continue." valType="str"/>
+        <Param name="text" updates="constant" val="Press the spacebar to continue." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -21678,7 +21678,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this example, the even number is on the left side. Your job is to press the key on the same side as the number. " valType="str"/>
+        <Param name="text" updates="constant" val="In this example, the even number is on the left side. You will press the key on the same side as the number. " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -21770,7 +21770,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="In this example, the even number is on the right side. Your job is to press the key on the same side as the number. " valType="str"/>
+        <Param name="text" updates="constant" val="In this example, the even number is on the right side. You will press the key on the same side as the number. " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -21862,12 +21862,12 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Ok let’s practice. &amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;Press ‘spacebar’ to continue." valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Ok let’s practice. &amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;Press ‘z’ or ‘m’ to continue." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="oe_train_start_key_resp">
-        <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'z','m'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -21893,13 +21893,13 @@
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Code Type" updates="None" val="JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="if ((oe_trial_key_resp.corr &gt; 0)) {&amp;#10;    oe_feedback_color = &quot;green&quot;;&amp;#10;    oe_feedback_message = &quot;Correct!&quot;;&amp;#10;} else {&amp;#10;    oe_feedback_color = &quot;red&quot;;&amp;#10;    oe_feedback_message = &quot;Incorrect.&quot;;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="if oe_trial_key_resp.corr &gt; 0:&amp;#10;    oe_feedback_color = 'green'&amp;#10;    oe_feedback_message = 'Correct!'&amp;#10;else:&amp;#10;    oe_feedback_color = 'red'&amp;#10;    oe_feedback_message = 'Incorrect.'&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="if ((oe_trial_key_resp.keys === undefined)) {&amp;#10;    oe_feedback_color = &quot;black&quot;;&amp;#10;    oe_feedback_message = &quot;No response&quot;;&amp;#10;    if ((oe_trial_key_resp.corr &gt; 0)) {&amp;#10;        oe_feedback_color = &quot;green&quot;;&amp;#10;        oe_feedback_message = &quot;Correct&quot;;&amp;#10;    } else {&amp;#10;        oe_feedback_color = &quot;red&quot;;&amp;#10;        oe_feedback_message = &quot;Incorrect&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="if oe_trial_key_resp.keys == undefined:    &amp;#10;    if oe_trial_key_resp.corr &gt; 0:&amp;#10;        oe_feedback_color = 'green'&amp;#10;        oe_feedback_message = 'Correct!'&amp;#10;    else:&amp;#10;        oe_feedback_color = 'red'&amp;#10;        oe_feedback_message = 'Incorrect.'&amp;#10;&amp;#10;#&amp;#10;#  if (key_resp_40.keys === undefined) {&amp;#10;#      msg_mixed02 = 'No response'&amp;#10;#      color_msg_mixed02 = 'black'&amp;#10;#      } else {&amp;#10;#      if (key_resp_40.corr &gt; 0){&amp;#10;#          msg_mixed02 = 'Correct'&amp;#10;#          color_msg_mixed02 = 'green'&amp;#10;#      } else {&amp;#10;#          msg_mixed02 = 'Incorrect'&amp;#10;#          color_msg_mixed02 = 'red'&amp;#10;#      }&amp;#10;# }" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="oe_trial_code" valType="code"/>
       </CodeComponent>
@@ -21945,7 +21945,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="stopVal" updates="constant" val=".75" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="set every repeat" val="$oe_number" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
@@ -21964,7 +21964,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -21972,7 +21972,7 @@
     </Routine>
     <Routine name="oe_feedback">
       <TextComponent name="oe_feedback_txt">
-        <Param name="color" updates="set every repeat" val="white" valType="str"/>
+        <Param name="color" updates="set every repeat" val="$oe_feedback_color" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -22676,6 +22676,100 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
     </Routine>
+    <Routine name="oe_speed_instr">
+      <TextComponent name="oe_speed_instr_top">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="oe_speed_instr_top" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="The numbers will dissapear after a short time. &amp;#10;&amp;#10;Try to press the correct key as fast as you can!" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="oe_speed_instr_bot">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="oe_speed_instr_bot" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -.35)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Press ‘z’ or ‘m’ to continue." valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="oe_speed_instr_key_resp">
+        <Param name="allowedKeys" updates="constant" val="'m', 'z'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="oe_speed_instr_key_resp" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="thank_you_5">
+      <TextComponent name="text_129">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_129" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="2.5" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Great! This is the end of the fifth task." valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="Welcome"/>
@@ -22955,6 +23049,7 @@
     <Routine name="even_intro"/>
     <Routine name="even_eg1"/>
     <Routine name="even_eg2"/>
+    <Routine name="oe_speed_instr"/>
     <Routine name="oe_train_start"/>
     <LoopInitiator loopType="TrialHandler" name="even_train_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
@@ -22987,6 +23082,7 @@
     <Routine name="odd_intro"/>
     <Routine name="odd_eg1"/>
     <Routine name="odd_eg2"/>
+    <Routine name="oe_speed_instr"/>
     <Routine name="oe_train_start"/>
     <LoopInitiator loopType="TrialHandler" name="odd_train_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
@@ -23019,6 +23115,7 @@
     <Routine name="oe_intro"/>
     <Routine name="oe_eg1"/>
     <Routine name="oe_eg2"/>
+    <Routine name="oe_speed_instr"/>
     <Routine name="oe_train_start"/>
     <LoopInitiator loopType="TrialHandler" name="oe_train_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
@@ -23096,6 +23193,7 @@
     <LoopTerminator name="trials_3"/>
     <Routine name="code_end_2"/>
     <LoopTerminator name="blocks_2"/>
+    <Routine name="thank_you_5"/>
     <Routine name="pm_welcome"/>
     <Routine name="plus_intro"/>
     <Routine name="plus_eg1"/>
