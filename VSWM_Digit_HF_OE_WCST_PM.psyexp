@@ -9712,7 +9712,7 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="VSWM_duration = VSWM_clock.getTime() - VSWM_start;&amp;#10;//psychoJS.experiment.addData(“VSWM_duration”,  VSWM_duration);" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="VSWM_duration = VSWM_clock.getTime() - VSWM_start;&amp;#10;psychoJS.experiment.addData('VSWM_duration',  VSWM_duration);" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="VSWM_end_code" valType="code"/>
@@ -12426,7 +12426,7 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="Digit_duration = Digit_clock.getTime() - Digit_start;&amp;#10;psychoJS.experiment.addData(“Digit_duration”,  Digit_duration);&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="Digit_duration = Digit_clock.getTime() - Digit_start;&amp;#10;psychoJS.experiment.addData('Digit_duration',  Digit_duration);&amp;#10;" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="end_digit_code" valType="code"/>
@@ -16915,7 +16915,7 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="HF_duration = HF_clock.getTime() - HF_start;&amp;#10;psychoJS.experiment.addData(“HF_duration”,  HF_duration);&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="HF_duration = HF_clock.getTime() - HF_start;&amp;#10;psychoJS.experiment.addData('HF_duration',  HF_duration);&amp;#10;" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="end_HF_code" valType="code"/>
@@ -19787,7 +19787,7 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="PM_duration = PM_clock.getTime() - PM_start;&amp;#10;psychoJS.experiment.addData(“PM_duration”,  PM_duration);&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="PM_duration = PM_clock.getTime() - PM_start;&amp;#10;psychoJS.experiment.addData('PM_duration',  PM_duration);&amp;#10;" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="end_PM_code" valType="code"/>
@@ -22934,7 +22934,7 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="WCST_duration = WCST_clock.getTime() - WCST_start;&amp;#10;psychoJS.experiment.addData(“WCST_duration”,  WCST_duration);&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="WCST_duration = WCST_clock.getTime() - WCST_start;&amp;#10;psychoJS.experiment.addData('WCST_duration',  WCST_duration);&amp;#10;" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="end_WCST_code" valType="code"/>
@@ -22977,7 +22977,7 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="OE_duration = OE_clock.getTime() - OE_start;&amp;#10;psychoJS.experiment.addData(“OE_duration”,  OE_duration);" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="OE_duration = OE_clock.getTime() - OE_start;&amp;#10;psychoJS.experiment.addData('OE_duration',  OE_duration);" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="end_OE_code" valType="code"/>
