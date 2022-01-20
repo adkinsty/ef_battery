@@ -33,7 +33,6 @@ var timer = '';
 var timer_exp = '';
 var beginning_exp = '';
 var beginning_exp2 = '';
-
 function getBrowserId () {
     var browsers = ["MSIE", "Firefox", "Safari", "Chrome", "Opera"];
     sUsrAg = window.navigator.userAgent,
@@ -320,9 +319,9 @@ const oe_test_loopLoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(oe_test_loopLoopBegin, oe_test_loopLoopScheduler);
 flowScheduler.add(oe_test_loopLoopScheduler);
 flowScheduler.add(oe_test_loopLoopEnd);
-flowScheduler.add(Thank_YouRoutineBegin());
-flowScheduler.add(Thank_YouRoutineEachFrame());
-flowScheduler.add(Thank_YouRoutineEnd());
+flowScheduler.add(end_OERoutineBegin());
+flowScheduler.add(end_OERoutineEachFrame());
+flowScheduler.add(end_OERoutineEnd());
 flowScheduler.add(welcomeRoutineBegin());
 flowScheduler.add(welcomeRoutineEachFrame());
 flowScheduler.add(welcomeRoutineEnd());
@@ -436,8 +435,6 @@ psychoJS.start({
 
 psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.DEBUG);
 
-
-var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
@@ -457,942 +454,6 @@ function updateInfo() {
   return Scheduler.Event.NEXT;
 }
 
-
-var WelcomeClock;
-var text_12;
-var text_13;
-var key_resp_8;
-var end_experiment;
-var timer;
-var timer_exp;
-var beginning_exp;
-var beginning_exp2;
-var overal_ef_assessment_instructionsClock;
-var text_130;
-var text_131;
-var key_resp_57;
-var image_29;
-var IntroductionClock;
-var text_14;
-var text_16;
-var key_resp_9;
-var Circles_Example_1Clock;
-var init_circle;
-var init_circle_17;
-var init_circle_18;
-var init_circle_19;
-var init_circle_20;
-var init_circle_21;
-var init_circle_22;
-var init_circle_23;
-var init_circle_24;
-var init_circle_25;
-var init_circle_26;
-var init_circle_27;
-var init_circle_28;
-var init_circle_29;
-var init_circle_30;
-var init_circle_31;
-var For_example;
-var Circles_Example_2Clock;
-var init_circle_32;
-var init_circle_33;
-var init_circle_34;
-var C4_circle_lights_up;
-var init_circle_36;
-var init_circle_37;
-var init_circle_38;
-var init_circle_39;
-var init_circle_40;
-var init_circle_41;
-var init_circle_42;
-var init_circle_43;
-var init_circle_44;
-var init_circle_45;
-var init_circle_46;
-var init_circle_47;
-var For_example_2;
-var Circles_Example_3Clock;
-var init_circle_35;
-var init_circle_48;
-var init_circle_49;
-var init_circle_63;
-var init_circle_50;
-var circle_6_lights_up;
-var init_circle_52;
-var init_circle_53;
-var init_circle_54;
-var init_circle_55;
-var init_circle_56;
-var init_circle_57;
-var init_circle_58;
-var init_circle_59;
-var init_circle_60;
-var init_circle_61;
-var b_For_example_4;
-var Circle_Example_4Clock;
-var init_circle_51;
-var init_circle_62;
-var init_circle_64;
-var init_circle_65;
-var init_circle_66;
-var init_circle_80;
-var init_circle_67;
-var init_circle_68;
-var init_circle_69;
-var init_circle_70;
-var init_circle_71;
-var init_circle_72;
-var init_circle_73;
-var init_circle_74;
-var circle_15_lights_up;
-var init_circle_76;
-var For_example_5;
-var Initial_CirclesClock;
-var init_circle_1;
-var init_circle_2;
-var init_circle_3;
-var init_circle_4;
-var init_circle_5;
-var init_circle_6;
-var init_circle_7;
-var init_circle_8;
-var init_circle_9;
-var init_circle_10;
-var init_circle_11;
-var init_circle_12;
-var init_circle_13;
-var init_circle_14;
-var init_circle_15;
-var init_circle_16;
-var Circle_Example_5AClock;
-var first_response_C1_example;
-var first_response_C2_example;
-var first_response_C3_example;
-var first_response_C4_example;
-var first_response_C5_example;
-var first_response_C6_example;
-var first_response_C7_example;
-var first_response_C8_example;
-var first_response_C9_example;
-var first_response_C10_example;
-var first_response_C11_example;
-var first_response_C12_example;
-var first_response_C13_example;
-var first_response_C14_example;
-var first_response_C15_example;
-var first_response_C16_example;
-var first_mouse_response_example;
-var polygon;
-var triangle;
-var push_these_circles;
-var Circle_Example_6Clock;
-var second_response_C1_example;
-var second_response_C2_example;
-var second_response_C3_example;
-var second_response_C4_example;
-var second_response_C5_example;
-var second_response_C6_example;
-var second_response_C7_example;
-var second_response_C8_example;
-var second_response_C9_example;
-var second_response_C10_example;
-var second_response_C11_example;
-var second_response_C12_example;
-var second_response_C13_example;
-var second_response_C14_example;
-var second_response_C15_example;
-var second_response_C16_example;
-var second_mouse_response_example;
-var polygon_2;
-var triangle_2;
-var push_these_circles_2;
-var Circle_Example_7Clock;
-var third_response_C1_example;
-var third_response_C2_example;
-var third_response_C3_example;
-var third_response_C4_example;
-var third_response_C5_example;
-var third_response_C6_example;
-var third_response_C7_example;
-var third_response_C8_example;
-var third_response_C9_example;
-var third_response_C10_example;
-var third_response_C11_example;
-var third_response_C12_example;
-var third_response_C13_example;
-var third_response_C14_example;
-var third_response_C15_example;
-var third_response_C16_example;
-var third_mouse_response_example;
-var polygon_3;
-var triangle_3;
-var push_these_circles_3;
-var Start_PracticeClock;
-var practice_text;
-var spacebar_text;
-var mouse;
-var Update_loopClock;
-var circle_loop;
-var Check_practice_overClock;
-var text_3;
-var mouse_2;
-var mouse_click_text;
-var check_first_round_practiceClock;
-var First_Circle_PresentationClock;
-var first_circle_pres_C1;
-var first_circle_pres_C2;
-var first_circle_pres_C3;
-var first_circle_pres_C4;
-var first_circle_pres_C5;
-var first_circle_pres_C6;
-var first_circle_pres_C7;
-var first_circle_pres_C8;
-var first_circle_pres_C9;
-var first_circle_pres_C10;
-var first_circle_pres_C11;
-var first_circle_pres_C12;
-var first_circle_pres_C13;
-var first_circle_pres_C14;
-var first_circle_pres_C15;
-var first_circle_pres_C16;
-var Second_Circle_PresentationClock;
-var second_circle_pres_C1;
-var second_circle_pres_C2;
-var second_circle_pres_C3;
-var second_circle_pres_C4;
-var second_circle_pres_C5;
-var second_circle_pres_C6;
-var second_circle_pres_C7;
-var second_circle_pres_C8;
-var second_circle_pres_C9;
-var second_circle_pres_C10;
-var second_circle_pres_C11;
-var second_circle_pres_C12;
-var second_circle_pres_C13;
-var second_circle_pres_C14;
-var second_circle_pres_C15;
-var second_circle_pres_C16;
-var Third_Circle_PresentationClock;
-var third_circle_pres_C1;
-var third_circle_pres_C2;
-var third_circle_pres_C3;
-var third_circle_pres_C4;
-var third_circle_pres_C5;
-var third_circle_pres_C6;
-var third_circle_pres_C7;
-var third_circle_pres_C8;
-var third_circle_pres_C9;
-var third_circle_pres_C10;
-var third_circle_pres_C11;
-var third_circle_pres_C12;
-var third_circle_pres_C13;
-var third_circle_pres_C14;
-var third_circle_pres_C15;
-var third_circle_pres_C16;
-var Fourth_Circle_PresentationClock;
-var fourth_circle_pres_C1;
-var fourth_circle_pres_C2;
-var fourth_circle_pres_C3;
-var fourth_circle_pres_C4;
-var fourth_circle_pres_C5;
-var fourth_circle_pres_C6;
-var fourth_circle_pres_C7;
-var fourth_circle_pres_C8;
-var fourth_circle_pres_C9;
-var fourth_circle_pres_C10;
-var fourth_circle_pres_C11;
-var fourth_circle_pres_C12;
-var fourth_circle_pres_C13;
-var fourth_circle_pres_C14;
-var fourth_circle_pres_C15;
-var fourth_circle_pres_C16;
-var Fifth_Circle_PresentationClock;
-var fifth_circle_pres_C1;
-var fifth_circle_pres_C2;
-var fifth_circle_pres_C3;
-var fifth_circle_pres_C4;
-var fifth_circle_pres_C5;
-var fifth_circle_pres_C6;
-var fifth_circle_pres_C7;
-var fifth_circle_pres_C8;
-var fifth_circle_pres_C9;
-var fifth_circle_pres_C10;
-var fifth_circle_pres_C11;
-var fifth_circle_pres_C12;
-var fifth_circle_pres_C13;
-var fifth_circle_pres_C14;
-var fifth_circle_pres_C15;
-var fifth_circle_pres_C16;
-var Sixth_Circle_PresentationClock;
-var sixth_circle_pres_C1;
-var sixth_circle_pres_C2;
-var sixth_circle_pres_C3;
-var sixth_circle_pres_C4;
-var sixth_circle_pres_C5;
-var sixth_circle_pres_C6;
-var sixth_circle_pres_C7;
-var sixth_circle_pres_C8;
-var sixth_circle_pres_C9;
-var sixth_circle_pres_C10;
-var sixth_circle_pres_C11;
-var sixth_circle_pres_C12;
-var sixth_circle_pres_C13;
-var sixth_circle_pres_C14;
-var sixth_circle_pres_C15;
-var sixth_circle_pres_C16;
-var Seventh_Circle_PresentationClock;
-var seventh_circle_pres_C1;
-var seventh_circle_pres_C2;
-var seventh_circle_pres_C3;
-var seventh_circle_pres_C4;
-var seventh_circle_pres_C5;
-var seventh_circle_pres_C6;
-var seventh_circle_pres_C7;
-var seventh_circle_pres_C8;
-var seventh_circle_pres_C9;
-var seventh_circle_pres_C10;
-var seventh_circle_pres_C11;
-var seventh_circle_pres_C12;
-var seventh_circle_pres_C13;
-var seventh_circle_pres_C14;
-var seventh_circle_pres_C15;
-var seventh_circle_pres_C16;
-var Eighth_Circle_PresentationClock;
-var eighth_circle_pres_C1;
-var eighth_circle_pres_C2;
-var eighth_circle_pres_C3;
-var eighth_circle_pres_C4;
-var eighth_circle_pres_C5;
-var eighth_circle_pres_C6;
-var eighth_circle_pres_C7;
-var eighth_circle_pres_C8;
-var eighth_circle_pres_C9;
-var eighth_circle_pres_C10;
-var eighth_circle_pres_C11;
-var eighth_circle_pres_C12;
-var eighth_circle_pres_C13;
-var eighth_circle_pres_C14;
-var eighth_circle_pres_C15;
-var eighth_circle_pres_C16;
-var Wait_for_First_responseClock;
-var first_response_C1;
-var first_response_C2;
-var first_response_C3;
-var first_response_C4;
-var first_response_C5;
-var first_response_C6;
-var first_response_C7;
-var first_response_C8;
-var first_response_C9;
-var first_response_C10;
-var first_response_C11;
-var first_response_C12;
-var first_response_C13;
-var first_response_C14;
-var first_response_C15;
-var first_response_C16;
-var first_mouse_response;
-var Wait_for_Second_responseClock;
-var second_response_C1;
-var second_response_C2;
-var second_response_C3;
-var second_response_C4;
-var second_response_C5;
-var second_response_C6;
-var second_response_C7;
-var second_response_C8;
-var second_response_C9;
-var second_response_C10;
-var second_response_C11;
-var second_response_C12;
-var second_response_C13;
-var second_response_C14;
-var second_response_C15;
-var second_response_C16;
-var second_mouse_response;
-var Wait_for_Third_ResponseClock;
-var third_response_C1;
-var third_response_C2;
-var third_response_C3;
-var third_response_C4;
-var third_response_C5;
-var third_response_C6;
-var third_response_C7;
-var third_response_C8;
-var third_response_C9;
-var third_response_C10;
-var third_response_C11;
-var third_response_C12;
-var third_response_C13;
-var third_response_C14;
-var third_response_C15;
-var third_response_C16;
-var third_mouse_response;
-var Wait_for_Fourth_ResponseClock;
-var fourth_response_C1;
-var fourth_response_C2;
-var fourth_response_C3;
-var fourth_response_C4;
-var fourth_response_C5;
-var fourth_response_C6;
-var fourth_response_C7;
-var fourth_response_C8;
-var fourth_response_C9;
-var fourth_response_C10;
-var fourth_response_C11;
-var fourth_response_C12;
-var fourth_response_C13;
-var fourth_response_C14;
-var fourth_response_C15;
-var fourth_response_C16;
-var fourth_mouse_response;
-var Wait_for_Fifth_ResponseClock;
-var fifth_response_C1;
-var fifth_response_C2;
-var fifth_response_C3;
-var fifth_response_C4;
-var fifth_response_C5;
-var fifth_response_C6;
-var fifth_response_C7;
-var fifth_response_C8;
-var fifth_response_C9;
-var fifth_response_C10;
-var fifth_response_C11;
-var fifth_response_C12;
-var fifth_response_C13;
-var fifth_response_C14;
-var fifth_response_C15;
-var fifth_response_C16;
-var fifth_mouse_response;
-var Wait_For_Sixth_ResponseClock;
-var sixth_response_C1;
-var sixth_response_C2;
-var sixth_response_C3;
-var sixth_response_C4;
-var sixth_response_C5;
-var sixth_response_C6;
-var sixth_response_C7;
-var sixth_response_C8;
-var sixth_response_C9;
-var sixth_response_C10;
-var sixth_response_C11;
-var sixth_response_C12;
-var sixth_response_C13;
-var sixth_response_C14;
-var sixth_response_C15;
-var sixth_response_C16;
-var sixth_mouse_response;
-var Wait_For_Seventh_ResponseClock;
-var seventh_response_C1;
-var seventh_response_C2;
-var seventh_response_C3;
-var seventh_response_C4;
-var seventh_response_C5;
-var seventh_response_C6;
-var seventh_response_C7;
-var seventh_response_C8;
-var seventh_response_C9;
-var seventh_response_C10;
-var seventh_response_C11;
-var seventh_response_C12;
-var seventh_response_C13;
-var seventh_response_C14;
-var seventh_response_C15;
-var seventh_response_C16;
-var seventh_mouse_response;
-var Wait_For_Eighth_ResponseClock;
-var eighth_response_C1;
-var eighth_response_C2;
-var eighth_response_C3;
-var eighth_response_C4;
-var eighth_response_C5;
-var eighth_response_C6;
-var eighth_response_C7;
-var eighth_response_C8;
-var eighth_response_C9;
-var eighth_response_C10;
-var eighth_response_C11;
-var eighth_response_C12;
-var eighth_response_C13;
-var eighth_response_C14;
-var eighth_response_C15;
-var eighth_response_C16;
-var eighth_mouse_response;
-var Check_outcomeClock;
-var corr;
-var Blank_ScreenClock;
-var text;
-var feedbackClock;
-var text_4;
-var msg;
-var Repeat_InstructionsClock;
-var repeat_inst;
-var key_resp;
-var text_5;
-var check_end_experimentClock;
-var Get_ExperimenterClock;
-var text_11;
-var b_text_15;
-var InstructionsClock;
-var instructions;
-var key_resp_2;
-var trial_counter;
-var condition_counter;
-var get_readyClock;
-var text_6;
-var key_resp_3;
-var text_7;
-var code_metaClock;
-var Presentation_practiceClock;
-var fixation_2;
-var pres_text_2;
-var Recall_practiceClock;
-var recall_text_2;
-var key_resp_4;
-var allResponses_p;
-var current_resp;
-var pts_response_2;
-var feedback_practiceClock;
-var text_8;
-var code_endClock;
-var repeat_instructionsClock;
-var text_9;
-var key_resp_6;
-var text_10;
-var real_trialsClock;
-var get_ready_real_trial;
-var press_space;
-var key_resp_5;
-var PresentationClock;
-var fixation;
-var pres_text;
-var RecallClock;
-var recall_text;
-var key_resp_7;
-var allResponses;
-var pts_response;
-var FeedbackClock;
-var EndClock;
-var thank_you;
-var before_closing;
-var Welcome_2Clock;
-var white_background_10;
-var text_15;
-var text_17;
-var key_resp_10;
-var IntroA_2Clock;
-var white_background_25;
-var image_11;
-var text_40;
-var text_46;
-var key_resp_27;
-var IntroB_2Clock;
-var white_background_21;
-var text_52;
-var text_53;
-var key_resp_28;
-var Example1Clock;
-var white_background_14;
-var text_18;
-var image_3;
-var key_resp_11;
-var text_60;
-var Example2Clock;
-var white_background_12;
-var text_19;
-var image_4;
-var key_resp_12;
-var text_61;
-var Quick_ReminderClock;
-var white_background_19;
-var text_71;
-var key_resp_32;
-var text_72;
-var Practice_congruentClock;
-var white_background_7;
-var text_20;
-var text_21;
-var key_resp_13;
-var Practice_trial_congruentClock;
-var white_background_17;
-var text_22;
-var text_64;
-var image_5;
-var text_28;
-var key_resp_14;
-var feedback_hf_congruent_1Clock;
-var white_background_33;
-var text_108;
-var congruent_reminderClock;
-var white_background_41;
-var text_102;
-var text_103;
-var key_resp_37;
-var eachResp;
-var Practice_trial_congruent_2Clock;
-var white_background_32;
-var text_93;
-var text_94;
-var image_13;
-var text_95;
-var key_resp_21;
-var feedback_hf_congruent_2Clock;
-var white_background_34;
-var text_114;
-var ReadyClock;
-var white_background_30;
-var text_29;
-var key_resp_15;
-var text_30;
-var HeartsClock;
-var white_background_6;
-var text_23;
-var text_65;
-var hearts;
-var text_31;
-var heart_resp;
-var IntroA_3Clock;
-var white_background_26;
-var text_32;
-var key_resp_16;
-var text_33;
-var image_12;
-var IntroB_3Clock;
-var white_background_20;
-var text_47;
-var text_34;
-var key_resp_17;
-var Example3Clock;
-var white_background_13;
-var text_35;
-var image_6;
-var key_resp_18;
-var text_62;
-var Example4Clock;
-var white_background_11;
-var text_36;
-var image_7;
-var key_resp_19;
-var text_63;
-var Quick_Reminder_IncongruentClock;
-var white_background_28;
-var text_75;
-var key_resp_34;
-var text_76;
-var Practice_IncongruentClock;
-var white_background_8;
-var text_37;
-var text_38;
-var key_resp_20;
-var Practice_trial_incongruentClock;
-var white_background_22;
-var text_39;
-var text_66;
-var image_8;
-var text_48;
-var key_resp_22;
-var feedback_hf_incongruent_1Clock;
-var white_background_38;
-var text_113;
-var incongruent_reminderClock;
-var white_background_42;
-var text_104;
-var text_105;
-var key_resp_38;
-var Practice_trial_incongruent_2Clock;
-var white_background_35;
-var text_96;
-var text_97;
-var image_14;
-var text_98;
-var key_resp_23;
-var feedback_hf_incongruent_2Clock;
-var white_background_37;
-var text_112;
-var Ready2Clock;
-var white_background_3;
-var text_49;
-var text_50;
-var key_resp_24;
-var FlowersClock;
-var white_background_16;
-var text_51;
-var text_67;
-var image;
-var text_54;
-var key_resp_25;
-var IntroB_5Clock;
-var white_background_18;
-var text_57;
-var text_58;
-var key_resp_29;
-var IntroC_11Clock;
-var white_background_23;
-var text_69;
-var text_70;
-var key_resp_31;
-var IntroC_2Clock;
-var white_background_24;
-var text_73;
-var text_74;
-var key_resp_30;
-var Quick_Reminder_MixedClock;
-var white_background_29;
-var text_77;
-var key_resp_33;
-var text_78;
-var Practice_mixedClock;
-var white_background_2;
-var text_79;
-var key_resp_35;
-var text_80;
-var Practice_trial_mixedClock;
-var white_background_15;
-var text_81;
-var text_82;
-var image_9;
-var text_83;
-var key_resp_36;
-var feedback_hf_mixed_1Clock;
-var white_background_39;
-var text_110;
-var reminder_mixedClock;
-var white_background_43;
-var text_106;
-var text_107;
-var key_resp_39;
-var Practice_trial_mixed_2Clock;
-var white_background_36;
-var text_99;
-var text_100;
-var image_15;
-var text_101;
-var key_resp_40;
-var feedback_hf_mixed_2Clock;
-var white_background_40;
-var text_109;
-var Ready3Clock;
-var white_background_4;
-var text_84;
-var key_resp_41;
-var text_85;
-var mixed_firstClock;
-var white_background_9;
-var text_86;
-var text_87;
-var image_10;
-var text_88;
-var key_resp_42;
-var MixedClock;
-var white_background_5;
-var text_89;
-var text_90;
-var image_2;
-var text_91;
-var key_resp_43;
-var Thank_YouClock;
-var text_92;
-var text_111;
-var oe_welcomeClock;
-var oe_welcome_txt_top;
-var oe_welcome_txt_bot;
-var oe_welcome_key_resp;
-var even_introClock;
-var even_intro_txt_top;
-var even_intro_txt_bot;
-var even_intro_key_resp;
-var even_eg1Clock;
-var even_eg1_txt_top;
-var even_eg1_txt_num;
-var even_eg1_txt_bot;
-var even_eg1_key_resp;
-var even_eg2Clock;
-var even_eg2_txt_top;
-var even_eg2_txt_num;
-var even_eg2_txt_bot;
-var even_eg2_key_resp;
-var oe_speed_instrClock;
-var oe_speed_instr_top;
-var oe_speed_instr_bot;
-var oe_speed_instr_key_resp;
-var oe_train_startClock;
-var oe_train_start_txt;
-var oe_train_start_key_resp;
-var oe_trialClock;
-var oe_trial_fixation;
-var oe_trial_txt_num;
-var oe_trial_key_resp;
-var oe_feedbackClock;
-var oe_feedback_txt;
-var even_test_startClock;
-var even_test_start_txt;
-var even_test_start_key_resp;
-var odd_introClock;
-var odd_intro_txt_top;
-var odd_intro_txt_bot;
-var odd_intro_key_resp;
-var odd_eg1Clock;
-var odd_eg1_txt_top;
-var odd_eg1_txt_num;
-var odd_eg1_txt_bot;
-var odd_eg1_key_resp;
-var odd_eg2Clock;
-var odd_eg2_txt_top;
-var odd_eg2_txt_num;
-var odd_eg2_txt_bot;
-var odd_eg2_key_resp;
-var odd_test_startClock;
-var odd_test_start_txt;
-var odd_test_start_key_resp;
-var oe_introClock;
-var oe_intro_txt_top;
-var oe_intro_txt_bot;
-var oe_intro_key_resp;
-var oe_eg1Clock;
-var oe_eg1_txt_top;
-var oe_eg1_txt_num;
-var oe_eg1_txt_bot;
-var oe_eg1_key_resp;
-var oe_eg2Clock;
-var oe_eg2_txt_top;
-var oe_eg2_txt_num;
-var oe_eg2_txt_bot;
-var oe_eg2_key_resp;
-var oe_test_startClock;
-var oe_test_start_txt;
-var oe_test_start_key_resp;
-var welcomeClock;
-var text_122;
-var text_123;
-var key_resp_52;
-var Instructions_3Clock;
-var instructions_2;
-var key_resp_53;
-var text_124;
-var ExampleClock;
-var example_text;
-var example;
-var example_text_2;
-var key_resp_54;
-var lets_practiceClock;
-var text_125;
-var key_resp_55;
-var text_126;
-var trials_practice_2Clock;
-var fixation_4;
-var one_red_dot_2;
-var two_yellow_triangles_2;
-var three_green_crosses_2;
-var four_blue_stars_2;
-var trial_card_2;
-var response_2;
-var feedback_practice_2Clock;
-var corr_trial_counter;
-var prev;
-var feedback_text_2;
-var readyClock;
-var text_127;
-var text_128;
-var key_resp_56;
-var code_meta_2Clock;
-var TrialsClock;
-var fixation_5;
-var one_red_dot;
-var two_yellow_triangles;
-var three_green_crosses;
-var four_blue_stars;
-var trial_card;
-var response;
-var Feedback_2Clock;
-var feedback_text;
-var code_end_2Clock;
-var thank_you_5Clock;
-var text_129;
-var pm_welcomeClock;
-var pm_welcome_txt_top;
-var pm_welcome_txt_bot;
-var pm_welcome_key_resp;
-var plus_introClock;
-var plus_intro_txt_top;
-var plus_intro_txt_bot;
-var plus_intro_key_resp;
-var plus_eg1Clock;
-var plus_eg1_txt_top;
-var plus_eg1_txt_num;
-var plus_eg1_txt_sym;
-var plus_eg1_txt_bot;
-var plus_eg1_key_resp;
-var plus_eg1_resp_txt;
-var plus_eg2Clock;
-var plus_eg2_txt_top;
-var plus_eg2_txt_num;
-var plus_eg2_txt_sym;
-var plus_eg2_txt_bot;
-var plus_eg2_key_resp;
-var plus_eg2_resp_txt;
-var pm_train_startClock;
-var pm_train_start_txt;
-var pm_train_start_key_resp;
-var pm_trialClock;
-var pm_trial_fixation;
-var pm_trial_txt_num;
-var pm_trial_txt_sym;
-var pm_trial_key_resp;
-var pm_trial_resp_txt;
-var pm_feedbackClock;
-var pm_feedback_txt;
-var plus_test_startClock;
-var plus_test_start_txt;
-var plus_test_start_key_resp;
-var minus_introClock;
-var minus_intro_txt_top;
-var minus_intro_txt_bot;
-var minus_intro_key_resp;
-var minus_eg1Clock;
-var minus_eg1_txt_top;
-var minus_eg1_txt_num;
-var minus_eg1_txt_sym;
-var minus_eg1_txt_bot;
-var minus_eg1_key_resp;
-var minus_eg1_resp_txt;
-var minus_eg2Clock;
-var minus_eg2_txt_top;
-var minus_eg2_txt_num;
-var minus_eg2_txt_sym;
-var minus_eg2_txt_bot;
-var minus_eg2_key_resp;
-var minus_eg2_resp_txt;
-var minus_test_startClock;
-var minus_test_start_txt;
-var minus_test_start_key_resp;
-var pm_introClock;
-var pm_intro_txt_top;
-var pm_intro_txt_bot;
-var pm_intro_key_resp;
-var pm_eg1Clock;
-var pm_eg1_txt_top;
-var pm_eg1_txt_num;
-var pm_eg1_txt_sym;
-var pm_eg1_txt_bot;
-var pm_eg1_key_resp;
-var pm_eg1_resp_txt;
-var pm_eg2Clock;
-var pm_eg2_txt_top;
-var pm_eg2_txt_num;
-var pm_eg2_txt_sym;
-var pm_eg2_txt_bot;
-var pm_eg2_key_resp;
-var pm_eg2_resp_txt;
-var pm_test_startClock;
-var pm_test_start_txt;
-var pm_test_start_key_resp;
-var End_2Clock;
-var thank_you_2;
-var end;
-var image_16;
-var globalClock;
-var routineTimer;
 function experimentInit() {
   // Initialize components for Routine "Welcome"
   WelcomeClock = new util.Clock();
@@ -5486,6 +4547,7 @@ function experimentInit() {
   
   trial_counter = 0;
   condition_counter = 0;
+  
   // Initialize components for Routine "get_ready"
   get_readyClock = new util.Clock();
   text_6 = new visual.TextStim({
@@ -7298,7 +6360,7 @@ function experimentInit() {
   text_92 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_92',
-    text: 'Thank you! This is the end of the fourth task.',
+    text: 'Thank you! This is the end of the third task.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -8006,28 +7068,17 @@ function experimentInit() {
   
   oe_trial_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  // Initialize components for Routine "Thank_You"
-  Thank_YouClock = new util.Clock();
-  text_92 = new visual.TextStim({
+  // Initialize components for Routine "end_OE"
+  end_OEClock = new util.Clock();
+  end_OE_text = new visual.TextStim({
     win: psychoJS.window,
-    name: 'text_92',
+    name: 'end_OE_text',
     text: 'Thank you! This is the end of the fourth task.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
-  });
-  
-  text_111 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'text_111',
-    text: '',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, (- 0.35)], height: 0.05,  wrapWidth: 0.8, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
-    depth: -1.0 
   });
   
   // Initialize components for Routine "welcome"
@@ -9269,11 +8320,6 @@ function experimentInit() {
   return Scheduler.Event.NEXT;
 }
 
-
-var t;
-var frameN;
-var _key_resp_8_allKeys;
-var WelcomeComponents;
 function WelcomeRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Welcome'-------
@@ -9301,8 +8347,6 @@ function WelcomeRoutineBegin(snapshot) {
   };
 }
 
-
-var continueRoutine;
 function WelcomeRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'Welcome'-------
@@ -9381,7 +8425,6 @@ function WelcomeRoutineEachFrame(snapshot) {
   };
 }
 
-
 function WelcomeRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Welcome'-------
@@ -9397,9 +8440,6 @@ function WelcomeRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_57_allKeys;
-var overal_ef_assessment_instructionsComponents;
 function overal_ef_assessment_instructionsRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'overal_ef_assessment_instructions'-------
@@ -9427,7 +8467,6 @@ function overal_ef_assessment_instructionsRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function overal_ef_assessment_instructionsRoutineEachFrame(snapshot) {
   return function () {
@@ -9517,7 +8556,6 @@ function overal_ef_assessment_instructionsRoutineEachFrame(snapshot) {
   };
 }
 
-
 function overal_ef_assessment_instructionsRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'overal_ef_assessment_instructions'-------
@@ -9540,9 +8578,6 @@ function overal_ef_assessment_instructionsRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_9_allKeys;
-var IntroductionComponents;
 function IntroductionRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Introduction'-------
@@ -9553,6 +8588,8 @@ function IntroductionRoutineBegin(snapshot) {
     key_resp_9.keys = undefined;
     key_resp_9.rt = undefined;
     _key_resp_9_allKeys = [];
+    VSWM_clock = new util.Clock();
+    VSWM_start = VSWM_clock.getTime();
     // keep track of which components have finished
     IntroductionComponents = [];
     IntroductionComponents.push(text_14);
@@ -9569,7 +8606,6 @@ function IntroductionRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function IntroductionRoutineEachFrame(snapshot) {
   return function () {
@@ -9649,7 +8685,6 @@ function IntroductionRoutineEachFrame(snapshot) {
   };
 }
 
-
 function IntroductionRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Introduction'-------
@@ -9665,8 +8700,6 @@ function IntroductionRoutineEnd(snapshot) {
   };
 }
 
-
-var Circles_Example_1Components;
 function Circles_Example_1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Circles_Example_1'-------
@@ -9706,8 +8739,6 @@ function Circles_Example_1RoutineBegin(snapshot) {
   };
 }
 
-
-var frameRemains;
 function Circles_Example_1RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'Circles_Example_1'-------
@@ -9980,7 +9011,6 @@ function Circles_Example_1RoutineEachFrame(snapshot) {
   };
 }
 
-
 function Circles_Example_1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Circles_Example_1'-------
@@ -9993,8 +9023,6 @@ function Circles_Example_1RoutineEnd(snapshot) {
   };
 }
 
-
-var Circles_Example_2Components;
 function Circles_Example_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Circles_Example_2'-------
@@ -10033,7 +9061,6 @@ function Circles_Example_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Circles_Example_2RoutineEachFrame(snapshot) {
   return function () {
@@ -10307,7 +9334,6 @@ function Circles_Example_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function Circles_Example_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Circles_Example_2'-------
@@ -10320,8 +9346,6 @@ function Circles_Example_2RoutineEnd(snapshot) {
   };
 }
 
-
-var Circles_Example_3Components;
 function Circles_Example_3RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Circles_Example_3'-------
@@ -10360,7 +9384,6 @@ function Circles_Example_3RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Circles_Example_3RoutineEachFrame(snapshot) {
   return function () {
@@ -10634,7 +9657,6 @@ function Circles_Example_3RoutineEachFrame(snapshot) {
   };
 }
 
-
 function Circles_Example_3RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Circles_Example_3'-------
@@ -10647,8 +9669,6 @@ function Circles_Example_3RoutineEnd(snapshot) {
   };
 }
 
-
-var Circle_Example_4Components;
 function Circle_Example_4RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Circle_Example_4'-------
@@ -10687,7 +9707,6 @@ function Circle_Example_4RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Circle_Example_4RoutineEachFrame(snapshot) {
   return function () {
@@ -10961,7 +9980,6 @@ function Circle_Example_4RoutineEachFrame(snapshot) {
   };
 }
 
-
 function Circle_Example_4RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Circle_Example_4'-------
@@ -10974,8 +9992,6 @@ function Circle_Example_4RoutineEnd(snapshot) {
   };
 }
 
-
-var Initial_CirclesComponents;
 function Initial_CirclesRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Initial_Circles'-------
@@ -11013,7 +10029,6 @@ function Initial_CirclesRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Initial_CirclesRoutineEachFrame(snapshot) {
   return function () {
@@ -11278,7 +10293,6 @@ function Initial_CirclesRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Initial_CirclesRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Initial_Circles'-------
@@ -11291,10 +10305,6 @@ function Initial_CirclesRoutineEnd(snapshot) {
   };
 }
 
-
-var gotValidClick;
-var clicked_frame;
-var Circle_Example_5AComponents;
 function Circle_Example_5ARoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Circle_Example_5A'-------
@@ -11349,11 +10359,6 @@ function Circle_Example_5ARoutineBegin(snapshot) {
   };
 }
 
-
-var prevButtonState;
-var _mouseButtons;
-var _mouseXYs;
-var clicked_circle;
 function Circle_Example_5ARoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'Circle_Example_5A'-------
@@ -11622,7 +10627,6 @@ function Circle_Example_5ARoutineEachFrame(snapshot) {
   };
 }
 
-
 function Circle_Example_5ARoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Circle_Example_5A'-------
@@ -11647,8 +10651,6 @@ function Circle_Example_5ARoutineEnd(snapshot) {
   };
 }
 
-
-var Circle_Example_6Components;
 function Circle_Example_6RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Circle_Example_6'-------
@@ -11702,7 +10704,6 @@ function Circle_Example_6RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Circle_Example_6RoutineEachFrame(snapshot) {
   return function () {
@@ -11970,7 +10971,6 @@ function Circle_Example_6RoutineEachFrame(snapshot) {
   };
 }
 
-
 function Circle_Example_6RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Circle_Example_6'-------
@@ -11996,8 +10996,6 @@ function Circle_Example_6RoutineEnd(snapshot) {
   };
 }
 
-
-var Circle_Example_7Components;
 function Circle_Example_7RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Circle_Example_7'-------
@@ -12051,7 +11049,6 @@ function Circle_Example_7RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Circle_Example_7RoutineEachFrame(snapshot) {
   return function () {
@@ -12318,7 +11315,6 @@ function Circle_Example_7RoutineEachFrame(snapshot) {
   };
 }
 
-
 function Circle_Example_7RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Circle_Example_7'-------
@@ -12344,8 +11340,6 @@ function Circle_Example_7RoutineEnd(snapshot) {
   };
 }
 
-
-var Start_PracticeComponents;
 function Start_PracticeRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Start_Practice'-------
@@ -12372,7 +11366,6 @@ function Start_PracticeRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Start_PracticeRoutineEachFrame(snapshot) {
   return function () {
@@ -12447,7 +11440,6 @@ function Start_PracticeRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Start_PracticeRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Start_Practice'-------
@@ -12464,9 +11456,6 @@ function Start_PracticeRoutineEnd(snapshot) {
   };
 }
 
-
-var Meta_Loop;
-var currentLoop;
 function Meta_LoopLoopBegin(Meta_LoopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   Meta_Loop = new TrialHandler({
@@ -12503,8 +11492,6 @@ function Meta_LoopLoopBegin(Meta_LoopLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
-var Circle_Blocks;
 function Circle_BlocksLoopBegin(Circle_BlocksLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   Circle_Blocks = new TrialHandler({
@@ -12594,13 +11581,11 @@ function Circle_BlocksLoopBegin(Circle_BlocksLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function Circle_BlocksLoopEnd() {
   psychoJS.experiment.removeLoop(Circle_Blocks);
 
   return Scheduler.Event.NEXT;
 }
-
 
 function Meta_LoopLoopEnd() {
   psychoJS.experiment.removeLoop(Meta_Loop);
@@ -12608,8 +11593,6 @@ function Meta_LoopLoopEnd() {
   return Scheduler.Event.NEXT;
 }
 
-
-var trials_2;
 function trials_2LoopBegin(trials_2LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials_2 = new TrialHandler({
@@ -12646,8 +11629,6 @@ function trials_2LoopBegin(trials_2LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
-var practice;
 function practiceLoopBegin(practiceLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   practice = new TrialHandler({
@@ -12680,13 +11661,11 @@ function practiceLoopBegin(practiceLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function practiceLoopEnd() {
   psychoJS.experiment.removeLoop(practice);
 
   return Scheduler.Event.NEXT;
 }
-
 
 function trials_2LoopEnd() {
   psychoJS.experiment.removeLoop(trials_2);
@@ -12694,8 +11673,6 @@ function trials_2LoopEnd() {
   return Scheduler.Event.NEXT;
 }
 
-
-var blocks;
 function blocksLoopBegin(blocksLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   blocks = new TrialHandler({
@@ -12723,8 +11700,6 @@ function blocksLoopBegin(blocksLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
-var trials;
 function trialsLoopBegin(trialsLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials = new TrialHandler({
@@ -12757,13 +11732,11 @@ function trialsLoopBegin(trialsLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function trialsLoopEnd() {
   psychoJS.experiment.removeLoop(trials);
 
   return Scheduler.Event.NEXT;
 }
-
 
 function blocksLoopEnd() {
   psychoJS.experiment.removeLoop(blocks);
@@ -12771,8 +11744,6 @@ function blocksLoopEnd() {
   return Scheduler.Event.NEXT;
 }
 
-
-var practice_congruent_1;
 function practice_congruent_1LoopBegin(practice_congruent_1LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   practice_congruent_1 = new TrialHandler({
@@ -12802,15 +11773,12 @@ function practice_congruent_1LoopBegin(practice_congruent_1LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function practice_congruent_1LoopEnd() {
   psychoJS.experiment.removeLoop(practice_congruent_1);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var practice_congruent_2;
 function practice_congruent_2LoopBegin(practice_congruent_2LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   practice_congruent_2 = new TrialHandler({
@@ -12840,15 +11808,12 @@ function practice_congruent_2LoopBegin(practice_congruent_2LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function practice_congruent_2LoopEnd() {
   psychoJS.experiment.removeLoop(practice_congruent_2);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var trial_hearts;
 function trial_heartsLoopBegin(trial_heartsLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trial_hearts = new TrialHandler({
@@ -12875,15 +11840,12 @@ function trial_heartsLoopBegin(trial_heartsLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function trial_heartsLoopEnd() {
   psychoJS.experiment.removeLoop(trial_hearts);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var practice_incongruent_1;
 function practice_incongruent_1LoopBegin(practice_incongruent_1LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   practice_incongruent_1 = new TrialHandler({
@@ -12913,15 +11875,12 @@ function practice_incongruent_1LoopBegin(practice_incongruent_1LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function practice_incongruent_1LoopEnd() {
   psychoJS.experiment.removeLoop(practice_incongruent_1);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var practice_incongruent_2;
 function practice_incongruent_2LoopBegin(practice_incongruent_2LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   practice_incongruent_2 = new TrialHandler({
@@ -12951,15 +11910,12 @@ function practice_incongruent_2LoopBegin(practice_incongruent_2LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function practice_incongruent_2LoopEnd() {
   psychoJS.experiment.removeLoop(practice_incongruent_2);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var trial_flowers;
 function trial_flowersLoopBegin(trial_flowersLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trial_flowers = new TrialHandler({
@@ -12986,15 +11942,12 @@ function trial_flowersLoopBegin(trial_flowersLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function trial_flowersLoopEnd() {
   psychoJS.experiment.removeLoop(trial_flowers);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var practice_mixed_1;
 function practice_mixed_1LoopBegin(practice_mixed_1LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   practice_mixed_1 = new TrialHandler({
@@ -13024,15 +11977,12 @@ function practice_mixed_1LoopBegin(practice_mixed_1LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function practice_mixed_1LoopEnd() {
   psychoJS.experiment.removeLoop(practice_mixed_1);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var practice_mixed_2;
 function practice_mixed_2LoopBegin(practice_mixed_2LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   practice_mixed_2 = new TrialHandler({
@@ -13062,15 +12012,12 @@ function practice_mixed_2LoopBegin(practice_mixed_2LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function practice_mixed_2LoopEnd() {
   psychoJS.experiment.removeLoop(practice_mixed_2);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var trial_mixed;
 function trial_mixedLoopBegin(trial_mixedLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trial_mixed = new TrialHandler({
@@ -13097,15 +12044,12 @@ function trial_mixedLoopBegin(trial_mixedLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function trial_mixedLoopEnd() {
   psychoJS.experiment.removeLoop(trial_mixed);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var even_train_loop;
 function even_train_loopLoopBegin(even_train_loopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   even_train_loop = new TrialHandler({
@@ -13135,15 +12079,12 @@ function even_train_loopLoopBegin(even_train_loopLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function even_train_loopLoopEnd() {
   psychoJS.experiment.removeLoop(even_train_loop);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var even_test_loop;
 function even_test_loopLoopBegin(even_test_loopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   even_test_loop = new TrialHandler({
@@ -13170,15 +12111,12 @@ function even_test_loopLoopBegin(even_test_loopLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function even_test_loopLoopEnd() {
   psychoJS.experiment.removeLoop(even_test_loop);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var odd_train_loop;
 function odd_train_loopLoopBegin(odd_train_loopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   odd_train_loop = new TrialHandler({
@@ -13208,15 +12146,12 @@ function odd_train_loopLoopBegin(odd_train_loopLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function odd_train_loopLoopEnd() {
   psychoJS.experiment.removeLoop(odd_train_loop);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var odd_test_loop;
 function odd_test_loopLoopBegin(odd_test_loopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   odd_test_loop = new TrialHandler({
@@ -13243,15 +12178,12 @@ function odd_test_loopLoopBegin(odd_test_loopLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function odd_test_loopLoopEnd() {
   psychoJS.experiment.removeLoop(odd_test_loop);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var oe_train_loop;
 function oe_train_loopLoopBegin(oe_train_loopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   oe_train_loop = new TrialHandler({
@@ -13281,15 +12213,12 @@ function oe_train_loopLoopBegin(oe_train_loopLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function oe_train_loopLoopEnd() {
   psychoJS.experiment.removeLoop(oe_train_loop);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var oe_test_loop;
 function oe_test_loopLoopBegin(oe_test_loopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   oe_test_loop = new TrialHandler({
@@ -13316,15 +12245,12 @@ function oe_test_loopLoopBegin(oe_test_loopLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function oe_test_loopLoopEnd() {
   psychoJS.experiment.removeLoop(oe_test_loop);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var trials_practice_loop;
 function trials_practice_loopLoopBegin(trials_practice_loopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials_practice_loop = new TrialHandler({
@@ -13354,15 +12280,12 @@ function trials_practice_loopLoopBegin(trials_practice_loopLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function trials_practice_loopLoopEnd() {
   psychoJS.experiment.removeLoop(trials_practice_loop);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var blocks_2;
 function blocks_2LoopBegin(blocks_2LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   blocks_2 = new TrialHandler({
@@ -13396,8 +12319,6 @@ function blocks_2LoopBegin(blocks_2LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
-var trials_3;
 function trials_3LoopBegin(trials_3LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials_3 = new TrialHandler({
@@ -13427,13 +12348,11 @@ function trials_3LoopBegin(trials_3LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function trials_3LoopEnd() {
   psychoJS.experiment.removeLoop(trials_3);
 
   return Scheduler.Event.NEXT;
 }
-
 
 function blocks_2LoopEnd() {
   psychoJS.experiment.removeLoop(blocks_2);
@@ -13441,8 +12360,6 @@ function blocks_2LoopEnd() {
   return Scheduler.Event.NEXT;
 }
 
-
-var plus_train_loop;
 function plus_train_loopLoopBegin(plus_train_loopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   plus_train_loop = new TrialHandler({
@@ -13472,15 +12389,12 @@ function plus_train_loopLoopBegin(plus_train_loopLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function plus_train_loopLoopEnd() {
   psychoJS.experiment.removeLoop(plus_train_loop);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var plus_test_loop;
 function plus_test_loopLoopBegin(plus_test_loopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   plus_test_loop = new TrialHandler({
@@ -13507,15 +12421,12 @@ function plus_test_loopLoopBegin(plus_test_loopLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function plus_test_loopLoopEnd() {
   psychoJS.experiment.removeLoop(plus_test_loop);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var minus_train_loop;
 function minus_train_loopLoopBegin(minus_train_loopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   minus_train_loop = new TrialHandler({
@@ -13545,15 +12456,12 @@ function minus_train_loopLoopBegin(minus_train_loopLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function minus_train_loopLoopEnd() {
   psychoJS.experiment.removeLoop(minus_train_loop);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var minus_test_loop;
 function minus_test_loopLoopBegin(minus_test_loopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   minus_test_loop = new TrialHandler({
@@ -13580,15 +12488,12 @@ function minus_test_loopLoopBegin(minus_test_loopLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function minus_test_loopLoopEnd() {
   psychoJS.experiment.removeLoop(minus_test_loop);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var pm_train_loop;
 function pm_train_loopLoopBegin(pm_train_loopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   pm_train_loop = new TrialHandler({
@@ -13618,15 +12523,12 @@ function pm_train_loopLoopBegin(pm_train_loopLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function pm_train_loopLoopEnd() {
   psychoJS.experiment.removeLoop(pm_train_loop);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var pm_test_loop;
 function pm_test_loopLoopBegin(pm_test_loopLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   pm_test_loop = new TrialHandler({
@@ -13653,16 +12555,12 @@ function pm_test_loopLoopBegin(pm_test_loopLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function pm_test_loopLoopEnd() {
   psychoJS.experiment.removeLoop(pm_test_loop);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var trials_correct;
-var Update_loopComponents;
 function Update_loopRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Update_loop'-------
@@ -13690,7 +12588,6 @@ function Update_loopRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Update_loopRoutineEachFrame(snapshot) {
   return function () {
@@ -13726,7 +12623,6 @@ function Update_loopRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Update_loopRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Update_loop'-------
@@ -13745,8 +12641,6 @@ function Update_loopRoutineEnd(snapshot) {
   };
 }
 
-
-var Check_practice_overComponents;
 function Check_practice_overRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Check_practice_over'-------
@@ -13773,7 +12667,6 @@ function Check_practice_overRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Check_practice_overRoutineEachFrame(snapshot) {
   return function () {
@@ -13858,7 +12751,6 @@ function Check_practice_overRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Check_practice_overRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Check_practice_over'-------
@@ -13875,8 +12767,6 @@ function Check_practice_overRoutineEnd(snapshot) {
   };
 }
 
-
-var check_first_round_practiceComponents;
 function check_first_round_practiceRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'check_first_round_practice'-------
@@ -13899,7 +12789,6 @@ function check_first_round_practiceRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function check_first_round_practiceRoutineEachFrame(snapshot) {
   return function () {
@@ -13941,7 +12830,6 @@ function check_first_round_practiceRoutineEachFrame(snapshot) {
   };
 }
 
-
 function check_first_round_practiceRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'check_first_round_practice'-------
@@ -13957,8 +12845,6 @@ function check_first_round_practiceRoutineEnd(snapshot) {
   };
 }
 
-
-var First_Circle_PresentationComponents;
 function First_Circle_PresentationRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'First_Circle_Presentation'-------
@@ -14028,7 +12914,6 @@ function First_Circle_PresentationRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function First_Circle_PresentationRoutineEachFrame(snapshot) {
   return function () {
@@ -14293,7 +13178,6 @@ function First_Circle_PresentationRoutineEachFrame(snapshot) {
   };
 }
 
-
 function First_Circle_PresentationRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'First_Circle_Presentation'-------
@@ -14306,8 +13190,6 @@ function First_Circle_PresentationRoutineEnd(snapshot) {
   };
 }
 
-
-var Second_Circle_PresentationComponents;
 function Second_Circle_PresentationRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Second_Circle_Presentation'-------
@@ -14377,7 +13259,6 @@ function Second_Circle_PresentationRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Second_Circle_PresentationRoutineEachFrame(snapshot) {
   return function () {
@@ -14642,7 +13523,6 @@ function Second_Circle_PresentationRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Second_Circle_PresentationRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Second_Circle_Presentation'-------
@@ -14655,8 +13535,6 @@ function Second_Circle_PresentationRoutineEnd(snapshot) {
   };
 }
 
-
-var Third_Circle_PresentationComponents;
 function Third_Circle_PresentationRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Third_Circle_Presentation'-------
@@ -14726,7 +13604,6 @@ function Third_Circle_PresentationRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Third_Circle_PresentationRoutineEachFrame(snapshot) {
   return function () {
@@ -14991,7 +13868,6 @@ function Third_Circle_PresentationRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Third_Circle_PresentationRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Third_Circle_Presentation'-------
@@ -15004,8 +13880,6 @@ function Third_Circle_PresentationRoutineEnd(snapshot) {
   };
 }
 
-
-var Fourth_Circle_PresentationComponents;
 function Fourth_Circle_PresentationRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Fourth_Circle_Presentation'-------
@@ -15075,7 +13949,6 @@ function Fourth_Circle_PresentationRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Fourth_Circle_PresentationRoutineEachFrame(snapshot) {
   return function () {
@@ -15341,7 +14214,6 @@ function Fourth_Circle_PresentationRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Fourth_Circle_PresentationRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Fourth_Circle_Presentation'-------
@@ -15354,8 +14226,6 @@ function Fourth_Circle_PresentationRoutineEnd(snapshot) {
   };
 }
 
-
-var Fifth_Circle_PresentationComponents;
 function Fifth_Circle_PresentationRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Fifth_Circle_Presentation'-------
@@ -15425,7 +14295,6 @@ function Fifth_Circle_PresentationRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Fifth_Circle_PresentationRoutineEachFrame(snapshot) {
   return function () {
@@ -15691,7 +14560,6 @@ function Fifth_Circle_PresentationRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Fifth_Circle_PresentationRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Fifth_Circle_Presentation'-------
@@ -15704,8 +14572,6 @@ function Fifth_Circle_PresentationRoutineEnd(snapshot) {
   };
 }
 
-
-var Sixth_Circle_PresentationComponents;
 function Sixth_Circle_PresentationRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Sixth_Circle_Presentation'-------
@@ -15775,7 +14641,6 @@ function Sixth_Circle_PresentationRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Sixth_Circle_PresentationRoutineEachFrame(snapshot) {
   return function () {
@@ -16041,7 +14906,6 @@ function Sixth_Circle_PresentationRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Sixth_Circle_PresentationRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Sixth_Circle_Presentation'-------
@@ -16054,8 +14918,6 @@ function Sixth_Circle_PresentationRoutineEnd(snapshot) {
   };
 }
 
-
-var Seventh_Circle_PresentationComponents;
 function Seventh_Circle_PresentationRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Seventh_Circle_Presentation'-------
@@ -16125,7 +14987,6 @@ function Seventh_Circle_PresentationRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Seventh_Circle_PresentationRoutineEachFrame(snapshot) {
   return function () {
@@ -16391,7 +15252,6 @@ function Seventh_Circle_PresentationRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Seventh_Circle_PresentationRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Seventh_Circle_Presentation'-------
@@ -16404,8 +15264,6 @@ function Seventh_Circle_PresentationRoutineEnd(snapshot) {
   };
 }
 
-
-var Eighth_Circle_PresentationComponents;
 function Eighth_Circle_PresentationRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Eighth_Circle_Presentation'-------
@@ -16475,7 +15333,6 @@ function Eighth_Circle_PresentationRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Eighth_Circle_PresentationRoutineEachFrame(snapshot) {
   return function () {
@@ -16741,7 +15598,6 @@ function Eighth_Circle_PresentationRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Eighth_Circle_PresentationRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Eighth_Circle_Presentation'-------
@@ -16754,8 +15610,6 @@ function Eighth_Circle_PresentationRoutineEnd(snapshot) {
   };
 }
 
-
-var Wait_for_First_responseComponents;
 function Wait_for_First_responseRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Wait_for_First_response'-------
@@ -16806,7 +15660,6 @@ function Wait_for_First_responseRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Wait_for_First_responseRoutineEachFrame(snapshot) {
   return function () {
@@ -17050,7 +15903,6 @@ function Wait_for_First_responseRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Wait_for_First_responseRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Wait_for_First_response'-------
@@ -17076,8 +15928,6 @@ function Wait_for_First_responseRoutineEnd(snapshot) {
   };
 }
 
-
-var Wait_for_Second_responseComponents;
 function Wait_for_Second_responseRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Wait_for_Second_response'-------
@@ -17128,7 +15978,6 @@ function Wait_for_Second_responseRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Wait_for_Second_responseRoutineEachFrame(snapshot) {
   return function () {
@@ -17372,7 +16221,6 @@ function Wait_for_Second_responseRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Wait_for_Second_responseRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Wait_for_Second_response'-------
@@ -17398,8 +16246,6 @@ function Wait_for_Second_responseRoutineEnd(snapshot) {
   };
 }
 
-
-var Wait_for_Third_ResponseComponents;
 function Wait_for_Third_ResponseRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Wait_for_Third_Response'-------
@@ -17450,7 +16296,6 @@ function Wait_for_Third_ResponseRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Wait_for_Third_ResponseRoutineEachFrame(snapshot) {
   return function () {
@@ -17694,7 +16539,6 @@ function Wait_for_Third_ResponseRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Wait_for_Third_ResponseRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Wait_for_Third_Response'-------
@@ -17720,8 +16564,6 @@ function Wait_for_Third_ResponseRoutineEnd(snapshot) {
   };
 }
 
-
-var Wait_for_Fourth_ResponseComponents;
 function Wait_for_Fourth_ResponseRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Wait_for_Fourth_Response'-------
@@ -17774,7 +16616,6 @@ function Wait_for_Fourth_ResponseRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Wait_for_Fourth_ResponseRoutineEachFrame(snapshot) {
   return function () {
@@ -18017,7 +16858,6 @@ function Wait_for_Fourth_ResponseRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Wait_for_Fourth_ResponseRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Wait_for_Fourth_Response'-------
@@ -18043,8 +16883,6 @@ function Wait_for_Fourth_ResponseRoutineEnd(snapshot) {
   };
 }
 
-
-var Wait_for_Fifth_ResponseComponents;
 function Wait_for_Fifth_ResponseRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Wait_for_Fifth_Response'-------
@@ -18095,7 +16933,6 @@ function Wait_for_Fifth_ResponseRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Wait_for_Fifth_ResponseRoutineEachFrame(snapshot) {
   return function () {
@@ -18339,7 +17176,6 @@ function Wait_for_Fifth_ResponseRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Wait_for_Fifth_ResponseRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Wait_for_Fifth_Response'-------
@@ -18364,8 +17200,6 @@ function Wait_for_Fifth_ResponseRoutineEnd(snapshot) {
   };
 }
 
-
-var Wait_For_Sixth_ResponseComponents;
 function Wait_For_Sixth_ResponseRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Wait_For_Sixth_Response'-------
@@ -18416,7 +17250,6 @@ function Wait_For_Sixth_ResponseRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Wait_For_Sixth_ResponseRoutineEachFrame(snapshot) {
   return function () {
@@ -18660,7 +17493,6 @@ function Wait_For_Sixth_ResponseRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Wait_For_Sixth_ResponseRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Wait_For_Sixth_Response'-------
@@ -18686,8 +17518,6 @@ function Wait_For_Sixth_ResponseRoutineEnd(snapshot) {
   };
 }
 
-
-var Wait_For_Seventh_ResponseComponents;
 function Wait_For_Seventh_ResponseRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Wait_For_Seventh_Response'-------
@@ -18738,7 +17568,6 @@ function Wait_For_Seventh_ResponseRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Wait_For_Seventh_ResponseRoutineEachFrame(snapshot) {
   return function () {
@@ -18982,7 +17811,6 @@ function Wait_For_Seventh_ResponseRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Wait_For_Seventh_ResponseRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Wait_For_Seventh_Response'-------
@@ -19008,8 +17836,6 @@ function Wait_For_Seventh_ResponseRoutineEnd(snapshot) {
   };
 }
 
-
-var Wait_For_Eighth_ResponseComponents;
 function Wait_For_Eighth_ResponseRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Wait_For_Eighth_Response'-------
@@ -19060,7 +17886,6 @@ function Wait_For_Eighth_ResponseRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Wait_For_Eighth_ResponseRoutineEachFrame(snapshot) {
   return function () {
@@ -19304,7 +18129,6 @@ function Wait_For_Eighth_ResponseRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Wait_For_Eighth_ResponseRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Wait_For_Eighth_Response'-------
@@ -19330,8 +18154,6 @@ function Wait_For_Eighth_ResponseRoutineEnd(snapshot) {
   };
 }
 
-
-var Check_outcomeComponents;
 function Check_outcomeRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Check_outcome'-------
@@ -19460,7 +18282,6 @@ function Check_outcomeRoutineBegin(snapshot) {
   };
 }
 
-
 function Check_outcomeRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'Check_outcome'-------
@@ -19505,7 +18326,6 @@ function Check_outcomeRoutineEachFrame(snapshot) {
     }
   };
 }
-
 
 function Check_outcomeRoutineEnd(snapshot) {
   return function () {
@@ -19553,8 +18373,6 @@ function Check_outcomeRoutineEnd(snapshot) {
   };
 }
 
-
-var Blank_ScreenComponents;
 function Blank_ScreenRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Blank_Screen'-------
@@ -19577,7 +18395,6 @@ function Blank_ScreenRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Blank_ScreenRoutineEachFrame(snapshot) {
   return function () {
@@ -19627,7 +18444,6 @@ function Blank_ScreenRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Blank_ScreenRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Blank_Screen'-------
@@ -19640,8 +18456,6 @@ function Blank_ScreenRoutineEnd(snapshot) {
   };
 }
 
-
-var feedbackComponents;
 function feedbackRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'feedback'-------
@@ -19665,7 +18479,6 @@ function feedbackRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function feedbackRoutineEachFrame(snapshot) {
   return function () {
@@ -19726,7 +18539,6 @@ function feedbackRoutineEachFrame(snapshot) {
   };
 }
 
-
 function feedbackRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'feedback'-------
@@ -19739,9 +18551,6 @@ function feedbackRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_allKeys;
-var Repeat_InstructionsComponents;
 function Repeat_InstructionsRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Repeat_Instructions'-------
@@ -19768,7 +18577,6 @@ function Repeat_InstructionsRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Repeat_InstructionsRoutineEachFrame(snapshot) {
   return function () {
@@ -19879,7 +18687,6 @@ function Repeat_InstructionsRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Repeat_InstructionsRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Repeat_Instructions'-------
@@ -19902,8 +18709,6 @@ function Repeat_InstructionsRoutineEnd(snapshot) {
   };
 }
 
-
-var check_end_experimentComponents;
 function check_end_experimentRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'check_end_experiment'-------
@@ -19928,7 +18733,6 @@ function check_end_experimentRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function check_end_experimentRoutineEachFrame(snapshot) {
   return function () {
@@ -19964,7 +18768,6 @@ function check_end_experimentRoutineEachFrame(snapshot) {
   };
 }
 
-
 function check_end_experimentRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'check_end_experiment'-------
@@ -19980,8 +18783,6 @@ function check_end_experimentRoutineEnd(snapshot) {
   };
 }
 
-
-var Get_ExperimenterComponents;
 function Get_ExperimenterRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Get_Experimenter'-------
@@ -20005,7 +18806,6 @@ function Get_ExperimenterRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Get_ExperimenterRoutineEachFrame(snapshot) {
   return function () {
@@ -20069,7 +18869,6 @@ function Get_ExperimenterRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Get_ExperimenterRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Get_Experimenter'-------
@@ -20078,13 +18877,12 @@ function Get_ExperimenterRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     });
+    VSWM_duration = VSWM_clock.getTime() - VSWM_start;
+    psychoJS.experiment.addData(“VSWM_duration”,  VSWM_duration);
     return Scheduler.Event.NEXT;
   };
 }
 
-
-var _key_resp_2_allKeys;
-var InstructionsComponents;
 function InstructionsRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Instructions'-------
@@ -20095,6 +18893,8 @@ function InstructionsRoutineBegin(snapshot) {
     key_resp_2.keys = undefined;
     key_resp_2.rt = undefined;
     _key_resp_2_allKeys = [];
+    Digit_clock = new util.Clock();
+    Digit_start = Digit_clock.getTime();
     // keep track of which components have finished
     InstructionsComponents = [];
     InstructionsComponents.push(instructions);
@@ -20110,7 +18910,6 @@ function InstructionsRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function InstructionsRoutineEachFrame(snapshot) {
   return function () {
@@ -20180,7 +18979,6 @@ function InstructionsRoutineEachFrame(snapshot) {
   };
 }
 
-
 function InstructionsRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Instructions'-------
@@ -20203,9 +19001,6 @@ function InstructionsRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_3_allKeys;
-var get_readyComponents;
 function get_readyRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'get_ready'-------
@@ -20232,7 +19027,6 @@ function get_readyRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function get_readyRoutineEachFrame(snapshot) {
   return function () {
@@ -20312,7 +19106,6 @@ function get_readyRoutineEachFrame(snapshot) {
   };
 }
 
-
 function get_readyRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'get_ready'-------
@@ -20335,8 +19128,6 @@ function get_readyRoutineEnd(snapshot) {
   };
 }
 
-
-var code_metaComponents;
 function code_metaRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'code_meta'-------
@@ -20357,7 +19148,6 @@ function code_metaRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function code_metaRoutineEachFrame(snapshot) {
   return function () {
@@ -20393,7 +19183,6 @@ function code_metaRoutineEachFrame(snapshot) {
   };
 }
 
-
 function code_metaRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'code_meta'-------
@@ -20409,9 +19198,6 @@ function code_metaRoutineEnd(snapshot) {
   };
 }
 
-
-var nList;
-var Presentation_practiceComponents;
 function Presentation_practiceRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Presentation_practice'-------
@@ -20444,8 +19230,6 @@ function Presentation_practiceRoutineBegin(snapshot) {
   };
 }
 
-
-var i;
 function Presentation_practiceRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'Presentation_practice'-------
@@ -20525,7 +19309,6 @@ function Presentation_practiceRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Presentation_practiceRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Presentation_practice'-------
@@ -20541,12 +19324,6 @@ function Presentation_practiceRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_4_allKeys;
-var n;
-var modify;
-var textAdd;
-var Recall_practiceComponents;
 function Recall_practiceRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Recall_practice'-------
@@ -20583,7 +19360,6 @@ function Recall_practiceRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Recall_practiceRoutineEachFrame(snapshot) {
   return function () {
@@ -20698,9 +19474,6 @@ function Recall_practiceRoutineEachFrame(snapshot) {
   };
 }
 
-
-var correct;
-var msg_color;
 function Recall_practiceRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Recall_practice'-------
@@ -20740,8 +19513,6 @@ function Recall_practiceRoutineEnd(snapshot) {
   };
 }
 
-
-var feedback_practiceComponents;
 function feedback_practiceRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'feedback_practice'-------
@@ -20766,7 +19537,6 @@ function feedback_practiceRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function feedback_practiceRoutineEachFrame(snapshot) {
   return function () {
@@ -20816,7 +19586,6 @@ function feedback_practiceRoutineEachFrame(snapshot) {
   };
 }
 
-
 function feedback_practiceRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'feedback_practice'-------
@@ -20833,8 +19602,6 @@ function feedback_practiceRoutineEnd(snapshot) {
   };
 }
 
-
-var code_endComponents;
 function code_endRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'code_end'-------
@@ -20866,7 +19633,6 @@ function code_endRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function code_endRoutineEachFrame(snapshot) {
   return function () {
@@ -20902,7 +19668,6 @@ function code_endRoutineEachFrame(snapshot) {
   };
 }
 
-
 function code_endRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'code_end'-------
@@ -20918,9 +19683,6 @@ function code_endRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_6_allKeys;
-var repeat_instructionsComponents;
 function repeat_instructionsRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'repeat_instructions'-------
@@ -20947,7 +19709,6 @@ function repeat_instructionsRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function repeat_instructionsRoutineEachFrame(snapshot) {
   return function () {
@@ -21043,7 +19804,6 @@ function repeat_instructionsRoutineEachFrame(snapshot) {
   };
 }
 
-
 function repeat_instructionsRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'repeat_instructions'-------
@@ -21066,9 +19826,6 @@ function repeat_instructionsRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_5_allKeys;
-var real_trialsComponents;
 function real_trialsRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'real_trials'-------
@@ -21095,7 +19852,6 @@ function real_trialsRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function real_trialsRoutineEachFrame(snapshot) {
   return function () {
@@ -21175,7 +19931,6 @@ function real_trialsRoutineEachFrame(snapshot) {
   };
 }
 
-
 function real_trialsRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'real_trials'-------
@@ -21198,8 +19953,6 @@ function real_trialsRoutineEnd(snapshot) {
   };
 }
 
-
-var PresentationComponents;
 function PresentationRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Presentation'-------
@@ -21224,7 +19977,6 @@ function PresentationRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function PresentationRoutineEachFrame(snapshot) {
   return function () {
@@ -21299,7 +20051,6 @@ function PresentationRoutineEachFrame(snapshot) {
   };
 }
 
-
 function PresentationRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Presentation'-------
@@ -21316,10 +20067,6 @@ function PresentationRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_7_allKeys;
-var nn;
-var RecallComponents;
 function RecallRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Recall'-------
@@ -21347,7 +20094,6 @@ function RecallRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function RecallRoutineEachFrame(snapshot) {
   return function () {
@@ -21456,7 +20202,6 @@ function RecallRoutineEachFrame(snapshot) {
   };
 }
 
-
 function RecallRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Recall'-------
@@ -21494,8 +20239,6 @@ function RecallRoutineEnd(snapshot) {
   };
 }
 
-
-var FeedbackComponents;
 function FeedbackRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Feedback'-------
@@ -21516,7 +20259,6 @@ function FeedbackRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function FeedbackRoutineEachFrame(snapshot) {
   return function () {
@@ -21551,7 +20293,6 @@ function FeedbackRoutineEachFrame(snapshot) {
     }
   };
 }
-
 
 function FeedbackRoutineEnd(snapshot) {
   return function () {
@@ -21609,8 +20350,6 @@ function FeedbackRoutineEnd(snapshot) {
   };
 }
 
-
-var EndComponents;
 function EndRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'End'-------
@@ -21634,7 +20373,6 @@ function EndRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function EndRoutineEachFrame(snapshot) {
   return function () {
@@ -21698,7 +20436,6 @@ function EndRoutineEachFrame(snapshot) {
   };
 }
 
-
 function EndRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'End'-------
@@ -21707,13 +20444,13 @@ function EndRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     });
+    Digit_duration = Digit_clock.getTime() - Digit_start;
+    psychoJS.experiment.addData(“Digit_duration”,  Digit_duration);
+    
     return Scheduler.Event.NEXT;
   };
 }
 
-
-var _key_resp_10_allKeys;
-var Welcome_2Components;
 function Welcome_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Welcome_2'-------
@@ -21724,6 +20461,8 @@ function Welcome_2RoutineBegin(snapshot) {
     key_resp_10.keys = undefined;
     key_resp_10.rt = undefined;
     _key_resp_10_allKeys = [];
+    HF_clock = new util.Clock();
+    HF_start = HF_clock.getTime();
     // keep track of which components have finished
     Welcome_2Components = [];
     Welcome_2Components.push(white_background_10);
@@ -21741,7 +20480,6 @@ function Welcome_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Welcome_2RoutineEachFrame(snapshot) {
   return function () {
@@ -21831,7 +20569,6 @@ function Welcome_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function Welcome_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Welcome_2'-------
@@ -21854,9 +20591,6 @@ function Welcome_2RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_27_allKeys;
-var IntroA_2Components;
 function IntroA_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'IntroA_2'-------
@@ -21885,7 +20619,6 @@ function IntroA_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function IntroA_2RoutineEachFrame(snapshot) {
   return function () {
@@ -21984,7 +20717,6 @@ function IntroA_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function IntroA_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'IntroA_2'-------
@@ -22000,9 +20732,6 @@ function IntroA_2RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_28_allKeys;
-var IntroB_2Components;
 function IntroB_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'IntroB_2'-------
@@ -22030,7 +20759,6 @@ function IntroB_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function IntroB_2RoutineEachFrame(snapshot) {
   return function () {
@@ -22120,7 +20848,6 @@ function IntroB_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function IntroB_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'IntroB_2'-------
@@ -22136,9 +20863,6 @@ function IntroB_2RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_11_allKeys;
-var Example1Components;
 function Example1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Example1'-------
@@ -22167,7 +20891,6 @@ function Example1RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Example1RoutineEachFrame(snapshot) {
   return function () {
@@ -22267,7 +20990,6 @@ function Example1RoutineEachFrame(snapshot) {
   };
 }
 
-
 function Example1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Example1'-------
@@ -22290,9 +21012,6 @@ function Example1RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_12_allKeys;
-var Example2Components;
 function Example2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Example2'-------
@@ -22321,7 +21040,6 @@ function Example2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Example2RoutineEachFrame(snapshot) {
   return function () {
@@ -22421,7 +21139,6 @@ function Example2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function Example2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Example2'-------
@@ -22444,9 +21161,6 @@ function Example2RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_32_allKeys;
-var Quick_ReminderComponents;
 function Quick_ReminderRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Quick_Reminder'-------
@@ -22474,7 +21188,6 @@ function Quick_ReminderRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Quick_ReminderRoutineEachFrame(snapshot) {
   return function () {
@@ -22564,7 +21277,6 @@ function Quick_ReminderRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Quick_ReminderRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Quick_Reminder'-------
@@ -22587,9 +21299,6 @@ function Quick_ReminderRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_13_allKeys;
-var Practice_congruentComponents;
 function Practice_congruentRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Practice_congruent'-------
@@ -22617,7 +21326,6 @@ function Practice_congruentRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Practice_congruentRoutineEachFrame(snapshot) {
   return function () {
@@ -22707,7 +21415,6 @@ function Practice_congruentRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Practice_congruentRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Practice_congruent'-------
@@ -22730,9 +21437,6 @@ function Practice_congruentRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_14_allKeys;
-var Practice_trial_congruentComponents;
 function Practice_trial_congruentRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Practice_trial_congruent'-------
@@ -22766,7 +21470,6 @@ function Practice_trial_congruentRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Practice_trial_congruentRoutineEachFrame(snapshot) {
   return function () {
@@ -22907,9 +21610,6 @@ function Practice_trial_congruentRoutineEachFrame(snapshot) {
   };
 }
 
-
-var msg_incongruent01;
-var color_msg_incongruent01;
 function Practice_trial_congruentRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Practice_trial_congruent'-------
@@ -22951,8 +21651,6 @@ function Practice_trial_congruentRoutineEnd(snapshot) {
   };
 }
 
-
-var feedback_hf_congruent_1Components;
 function feedback_hf_congruent_1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'feedback_hf_congruent_1'-------
@@ -22978,7 +21676,6 @@ function feedback_hf_congruent_1RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function feedback_hf_congruent_1RoutineEachFrame(snapshot) {
   return function () {
@@ -23042,7 +21739,6 @@ function feedback_hf_congruent_1RoutineEachFrame(snapshot) {
   };
 }
 
-
 function feedback_hf_congruent_1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'feedback_hf_congruent_1'-------
@@ -23055,10 +21751,6 @@ function feedback_hf_congruent_1RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_37_allKeys;
-var nCorrhf01;
-var congruent_reminderComponents;
 function congruent_reminderRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'congruent_reminder'-------
@@ -23099,7 +21791,6 @@ function congruent_reminderRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function congruent_reminderRoutineEachFrame(snapshot) {
   return function () {
@@ -23200,7 +21891,6 @@ function congruent_reminderRoutineEachFrame(snapshot) {
   };
 }
 
-
 function congruent_reminderRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'congruent_reminder'-------
@@ -23216,9 +21906,6 @@ function congruent_reminderRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_21_allKeys;
-var Practice_trial_congruent_2Components;
 function Practice_trial_congruent_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Practice_trial_congruent_2'-------
@@ -23255,7 +21942,6 @@ function Practice_trial_congruent_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Practice_trial_congruent_2RoutineEachFrame(snapshot) {
   return function () {
@@ -23408,9 +22094,6 @@ function Practice_trial_congruent_2RoutineEachFrame(snapshot) {
   };
 }
 
-
-var msg_incongruent02;
-var color_msg_incongruent02;
 function Practice_trial_congruent_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Practice_trial_congruent_2'-------
@@ -23452,8 +22135,6 @@ function Practice_trial_congruent_2RoutineEnd(snapshot) {
   };
 }
 
-
-var feedback_hf_congruent_2Components;
 function feedback_hf_congruent_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'feedback_hf_congruent_2'-------
@@ -23479,7 +22160,6 @@ function feedback_hf_congruent_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function feedback_hf_congruent_2RoutineEachFrame(snapshot) {
   return function () {
@@ -23552,7 +22232,6 @@ function feedback_hf_congruent_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function feedback_hf_congruent_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'feedback_hf_congruent_2'-------
@@ -23565,9 +22244,6 @@ function feedback_hf_congruent_2RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_15_allKeys;
-var ReadyComponents;
 function ReadyRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Ready'-------
@@ -23595,7 +22271,6 @@ function ReadyRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function ReadyRoutineEachFrame(snapshot) {
   return function () {
@@ -23685,7 +22360,6 @@ function ReadyRoutineEachFrame(snapshot) {
   };
 }
 
-
 function ReadyRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Ready'-------
@@ -23708,9 +22382,6 @@ function ReadyRoutineEnd(snapshot) {
   };
 }
 
-
-var _heart_resp_allKeys;
-var HeartsComponents;
 function HeartsRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Hearts'-------
@@ -23742,7 +22413,6 @@ function HeartsRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function HeartsRoutineEachFrame(snapshot) {
   return function () {
@@ -23883,7 +22553,6 @@ function HeartsRoutineEachFrame(snapshot) {
   };
 }
 
-
 function HeartsRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Hearts'-------
@@ -23913,9 +22582,6 @@ function HeartsRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_16_allKeys;
-var IntroA_3Components;
 function IntroA_3RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'IntroA_3'-------
@@ -23944,7 +22610,6 @@ function IntroA_3RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function IntroA_3RoutineEachFrame(snapshot) {
   return function () {
@@ -24044,7 +22709,6 @@ function IntroA_3RoutineEachFrame(snapshot) {
   };
 }
 
-
 function IntroA_3RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'IntroA_3'-------
@@ -24067,9 +22731,6 @@ function IntroA_3RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_17_allKeys;
-var IntroB_3Components;
 function IntroB_3RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'IntroB_3'-------
@@ -24097,7 +22758,6 @@ function IntroB_3RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function IntroB_3RoutineEachFrame(snapshot) {
   return function () {
@@ -24187,7 +22847,6 @@ function IntroB_3RoutineEachFrame(snapshot) {
   };
 }
 
-
 function IntroB_3RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'IntroB_3'-------
@@ -24210,9 +22869,6 @@ function IntroB_3RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_18_allKeys;
-var Example3Components;
 function Example3RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Example3'-------
@@ -24241,7 +22897,6 @@ function Example3RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Example3RoutineEachFrame(snapshot) {
   return function () {
@@ -24341,7 +22996,6 @@ function Example3RoutineEachFrame(snapshot) {
   };
 }
 
-
 function Example3RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Example3'-------
@@ -24364,9 +23018,6 @@ function Example3RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_19_allKeys;
-var Example4Components;
 function Example4RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Example4'-------
@@ -24395,7 +23046,6 @@ function Example4RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Example4RoutineEachFrame(snapshot) {
   return function () {
@@ -24495,7 +23145,6 @@ function Example4RoutineEachFrame(snapshot) {
   };
 }
 
-
 function Example4RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Example4'-------
@@ -24518,9 +23167,6 @@ function Example4RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_34_allKeys;
-var Quick_Reminder_IncongruentComponents;
 function Quick_Reminder_IncongruentRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Quick_Reminder_Incongruent'-------
@@ -24548,7 +23194,6 @@ function Quick_Reminder_IncongruentRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Quick_Reminder_IncongruentRoutineEachFrame(snapshot) {
   return function () {
@@ -24638,7 +23283,6 @@ function Quick_Reminder_IncongruentRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Quick_Reminder_IncongruentRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Quick_Reminder_Incongruent'-------
@@ -24661,9 +23305,6 @@ function Quick_Reminder_IncongruentRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_20_allKeys;
-var Practice_IncongruentComponents;
 function Practice_IncongruentRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Practice_Incongruent'-------
@@ -24691,7 +23332,6 @@ function Practice_IncongruentRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Practice_IncongruentRoutineEachFrame(snapshot) {
   return function () {
@@ -24781,7 +23421,6 @@ function Practice_IncongruentRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Practice_IncongruentRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Practice_Incongruent'-------
@@ -24804,9 +23443,6 @@ function Practice_IncongruentRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_22_allKeys;
-var Practice_trial_incongruentComponents;
 function Practice_trial_incongruentRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Practice_trial_incongruent'-------
@@ -24841,7 +23477,6 @@ function Practice_trial_incongruentRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Practice_trial_incongruentRoutineEachFrame(snapshot) {
   return function () {
@@ -24982,7 +23617,6 @@ function Practice_trial_incongruentRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Practice_trial_incongruentRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Practice_trial_incongruent'-------
@@ -25024,8 +23658,6 @@ function Practice_trial_incongruentRoutineEnd(snapshot) {
   };
 }
 
-
-var feedback_hf_incongruent_1Components;
 function feedback_hf_incongruent_1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'feedback_hf_incongruent_1'-------
@@ -25051,7 +23683,6 @@ function feedback_hf_incongruent_1RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function feedback_hf_incongruent_1RoutineEachFrame(snapshot) {
   return function () {
@@ -25115,7 +23746,6 @@ function feedback_hf_incongruent_1RoutineEachFrame(snapshot) {
   };
 }
 
-
 function feedback_hf_incongruent_1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'feedback_hf_incongruent_1'-------
@@ -25128,10 +23758,6 @@ function feedback_hf_incongruent_1RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_38_allKeys;
-var nCorrhf02;
-var incongruent_reminderComponents;
 function incongruent_reminderRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'incongruent_reminder'-------
@@ -25170,7 +23796,6 @@ function incongruent_reminderRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function incongruent_reminderRoutineEachFrame(snapshot) {
   return function () {
@@ -25273,7 +23898,6 @@ function incongruent_reminderRoutineEachFrame(snapshot) {
   };
 }
 
-
 function incongruent_reminderRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'incongruent_reminder'-------
@@ -25299,9 +23923,6 @@ function incongruent_reminderRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_23_allKeys;
-var Practice_trial_incongruent_2Components;
 function Practice_trial_incongruent_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Practice_trial_incongruent_2'-------
@@ -25339,7 +23960,6 @@ function Practice_trial_incongruent_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Practice_trial_incongruent_2RoutineEachFrame(snapshot) {
   return function () {
@@ -25487,7 +24107,6 @@ function Practice_trial_incongruent_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function Practice_trial_incongruent_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Practice_trial_incongruent_2'-------
@@ -25529,8 +24148,6 @@ function Practice_trial_incongruent_2RoutineEnd(snapshot) {
   };
 }
 
-
-var feedback_hf_incongruent_2Components;
 function feedback_hf_incongruent_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'feedback_hf_incongruent_2'-------
@@ -25559,7 +24176,6 @@ function feedback_hf_incongruent_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function feedback_hf_incongruent_2RoutineEachFrame(snapshot) {
   return function () {
@@ -25630,7 +24246,6 @@ function feedback_hf_incongruent_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function feedback_hf_incongruent_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'feedback_hf_incongruent_2'-------
@@ -25643,9 +24258,6 @@ function feedback_hf_incongruent_2RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_24_allKeys;
-var Ready2Components;
 function Ready2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Ready2'-------
@@ -25673,7 +24285,6 @@ function Ready2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Ready2RoutineEachFrame(snapshot) {
   return function () {
@@ -25763,7 +24374,6 @@ function Ready2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function Ready2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Ready2'-------
@@ -25786,9 +24396,6 @@ function Ready2RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_25_allKeys;
-var FlowersComponents;
 function FlowersRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Flowers'-------
@@ -25820,7 +24427,6 @@ function FlowersRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function FlowersRoutineEachFrame(snapshot) {
   return function () {
@@ -25961,7 +24567,6 @@ function FlowersRoutineEachFrame(snapshot) {
   };
 }
 
-
 function FlowersRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Flowers'-------
@@ -25991,9 +24596,6 @@ function FlowersRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_29_allKeys;
-var IntroB_5Components;
 function IntroB_5RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'IntroB_5'-------
@@ -26021,7 +24623,6 @@ function IntroB_5RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function IntroB_5RoutineEachFrame(snapshot) {
   return function () {
@@ -26111,7 +24712,6 @@ function IntroB_5RoutineEachFrame(snapshot) {
   };
 }
 
-
 function IntroB_5RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'IntroB_5'-------
@@ -26134,9 +24734,6 @@ function IntroB_5RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_31_allKeys;
-var IntroC_11Components;
 function IntroC_11RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'IntroC_11'-------
@@ -26164,7 +24761,6 @@ function IntroC_11RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function IntroC_11RoutineEachFrame(snapshot) {
   return function () {
@@ -26254,7 +24850,6 @@ function IntroC_11RoutineEachFrame(snapshot) {
   };
 }
 
-
 function IntroC_11RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'IntroC_11'-------
@@ -26277,9 +24872,6 @@ function IntroC_11RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_30_allKeys;
-var IntroC_2Components;
 function IntroC_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'IntroC_2'-------
@@ -26308,7 +24900,6 @@ function IntroC_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function IntroC_2RoutineEachFrame(snapshot) {
   return function () {
@@ -26398,7 +24989,6 @@ function IntroC_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function IntroC_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'IntroC_2'-------
@@ -26421,9 +25011,6 @@ function IntroC_2RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_33_allKeys;
-var Quick_Reminder_MixedComponents;
 function Quick_Reminder_MixedRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Quick_Reminder_Mixed'-------
@@ -26451,7 +25038,6 @@ function Quick_Reminder_MixedRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Quick_Reminder_MixedRoutineEachFrame(snapshot) {
   return function () {
@@ -26541,7 +25127,6 @@ function Quick_Reminder_MixedRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Quick_Reminder_MixedRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Quick_Reminder_Mixed'-------
@@ -26564,9 +25149,6 @@ function Quick_Reminder_MixedRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_35_allKeys;
-var Practice_mixedComponents;
 function Practice_mixedRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Practice_mixed'-------
@@ -26594,7 +25176,6 @@ function Practice_mixedRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Practice_mixedRoutineEachFrame(snapshot) {
   return function () {
@@ -26684,7 +25265,6 @@ function Practice_mixedRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Practice_mixedRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Practice_mixed'-------
@@ -26707,9 +25287,6 @@ function Practice_mixedRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_36_allKeys;
-var Practice_trial_mixedComponents;
 function Practice_trial_mixedRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Practice_trial_mixed'-------
@@ -26743,7 +25320,6 @@ function Practice_trial_mixedRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Practice_trial_mixedRoutineEachFrame(snapshot) {
   return function () {
@@ -26884,9 +25460,6 @@ function Practice_trial_mixedRoutineEachFrame(snapshot) {
   };
 }
 
-
-var msg_mixed01;
-var color_msg_mixed01;
 function Practice_trial_mixedRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Practice_trial_mixed'-------
@@ -26928,8 +25501,6 @@ function Practice_trial_mixedRoutineEnd(snapshot) {
   };
 }
 
-
-var feedback_hf_mixed_1Components;
 function feedback_hf_mixed_1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'feedback_hf_mixed_1'-------
@@ -26955,7 +25526,6 @@ function feedback_hf_mixed_1RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function feedback_hf_mixed_1RoutineEachFrame(snapshot) {
   return function () {
@@ -27019,7 +25589,6 @@ function feedback_hf_mixed_1RoutineEachFrame(snapshot) {
   };
 }
 
-
 function feedback_hf_mixed_1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'feedback_hf_mixed_1'-------
@@ -27032,10 +25601,6 @@ function feedback_hf_mixed_1RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_39_allKeys;
-var nCorrhf03;
-var reminder_mixedComponents;
 function reminder_mixedRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'reminder_mixed'-------
@@ -27074,7 +25639,6 @@ function reminder_mixedRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function reminder_mixedRoutineEachFrame(snapshot) {
   return function () {
@@ -27177,7 +25741,6 @@ function reminder_mixedRoutineEachFrame(snapshot) {
   };
 }
 
-
 function reminder_mixedRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'reminder_mixed'-------
@@ -27200,9 +25763,6 @@ function reminder_mixedRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_40_allKeys;
-var Practice_trial_mixed_2Components;
 function Practice_trial_mixed_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Practice_trial_mixed_2'-------
@@ -27238,7 +25798,6 @@ function Practice_trial_mixed_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Practice_trial_mixed_2RoutineEachFrame(snapshot) {
   return function () {
@@ -27388,9 +25947,6 @@ function Practice_trial_mixed_2RoutineEachFrame(snapshot) {
   };
 }
 
-
-var msg_mixed02;
-var color_msg_mixed02;
 function Practice_trial_mixed_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Practice_trial_mixed_2'-------
@@ -27432,8 +25988,6 @@ function Practice_trial_mixed_2RoutineEnd(snapshot) {
   };
 }
 
-
-var feedback_hf_mixed_2Components;
 function feedback_hf_mixed_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'feedback_hf_mixed_2'-------
@@ -27462,7 +26016,6 @@ function feedback_hf_mixed_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function feedback_hf_mixed_2RoutineEachFrame(snapshot) {
   return function () {
@@ -27533,7 +26086,6 @@ function feedback_hf_mixed_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function feedback_hf_mixed_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'feedback_hf_mixed_2'-------
@@ -27546,9 +26098,6 @@ function feedback_hf_mixed_2RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_41_allKeys;
-var Ready3Components;
 function Ready3RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Ready3'-------
@@ -27576,7 +26125,6 @@ function Ready3RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Ready3RoutineEachFrame(snapshot) {
   return function () {
@@ -27666,7 +26214,6 @@ function Ready3RoutineEachFrame(snapshot) {
   };
 }
 
-
 function Ready3RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Ready3'-------
@@ -27689,9 +26236,6 @@ function Ready3RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_42_allKeys;
-var mixed_firstComponents;
 function mixed_firstRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'mixed_first'-------
@@ -27722,7 +26266,6 @@ function mixed_firstRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function mixed_firstRoutineEachFrame(snapshot) {
   return function () {
@@ -27863,7 +26406,6 @@ function mixed_firstRoutineEachFrame(snapshot) {
   };
 }
 
-
 function mixed_firstRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'mixed_first'-------
@@ -27893,9 +26435,6 @@ function mixed_firstRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_43_allKeys;
-var MixedComponents;
 function MixedRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Mixed'-------
@@ -27927,7 +26466,6 @@ function MixedRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function MixedRoutineEachFrame(snapshot) {
   return function () {
@@ -28068,7 +26606,6 @@ function MixedRoutineEachFrame(snapshot) {
   };
 }
 
-
 function MixedRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Mixed'-------
@@ -28098,15 +26635,13 @@ function MixedRoutineEnd(snapshot) {
   };
 }
 
-
-var Thank_YouComponents;
 function Thank_YouRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Thank_You'-------
     t = 0;
     Thank_YouClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(5.000000);
+    routineTimer.add(2.500000);
     // update component parameters for each repeat
     // keep track of which components have finished
     Thank_YouComponents = [];
@@ -28123,7 +26658,6 @@ function Thank_YouRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Thank_YouRoutineEachFrame(snapshot) {
   return function () {
@@ -28143,7 +26677,7 @@ function Thank_YouRoutineEachFrame(snapshot) {
       text_92.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 2.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_92.status === PsychoJS.Status.STARTED || text_92.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_92.setAutoDraw(false);
     }
@@ -28157,7 +26691,7 @@ function Thank_YouRoutineEachFrame(snapshot) {
       text_111.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 2.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_111.status === PsychoJS.Status.STARTED || text_111.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_111.setAutoDraw(false);
     }
@@ -28187,7 +26721,6 @@ function Thank_YouRoutineEachFrame(snapshot) {
   };
 }
 
-
 function Thank_YouRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Thank_You'-------
@@ -28196,13 +26729,13 @@ function Thank_YouRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     });
+    HF_duration = HF_clock.getTime() - HF_start;
+    psychoJS.experiment.addData(“HF_duration”,  HF_duration);
+    
     return Scheduler.Event.NEXT;
   };
 }
 
-
-var _oe_welcome_key_resp_allKeys;
-var oe_welcomeComponents;
 function oe_welcomeRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'oe_welcome'-------
@@ -28213,6 +26746,8 @@ function oe_welcomeRoutineBegin(snapshot) {
     oe_welcome_key_resp.keys = undefined;
     oe_welcome_key_resp.rt = undefined;
     _oe_welcome_key_resp_allKeys = [];
+    OE_clock = new util.Clock();
+    OE_start = OE_clock.getTime();
     // keep track of which components have finished
     oe_welcomeComponents = [];
     oe_welcomeComponents.push(oe_welcome_txt_top);
@@ -28229,7 +26764,6 @@ function oe_welcomeRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function oe_welcomeRoutineEachFrame(snapshot) {
   return function () {
@@ -28309,7 +26843,6 @@ function oe_welcomeRoutineEachFrame(snapshot) {
   };
 }
 
-
 function oe_welcomeRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'oe_welcome'-------
@@ -28325,9 +26858,6 @@ function oe_welcomeRoutineEnd(snapshot) {
   };
 }
 
-
-var _even_intro_key_resp_allKeys;
-var even_introComponents;
 function even_introRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'even_intro'-------
@@ -28354,7 +26884,6 @@ function even_introRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function even_introRoutineEachFrame(snapshot) {
   return function () {
@@ -28434,7 +26963,6 @@ function even_introRoutineEachFrame(snapshot) {
   };
 }
 
-
 function even_introRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'even_intro'-------
@@ -28450,9 +26978,6 @@ function even_introRoutineEnd(snapshot) {
   };
 }
 
-
-var _even_eg1_key_resp_allKeys;
-var even_eg1Components;
 function even_eg1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'even_eg1'-------
@@ -28480,7 +27005,6 @@ function even_eg1RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function even_eg1RoutineEachFrame(snapshot) {
   return function () {
@@ -28570,7 +27094,6 @@ function even_eg1RoutineEachFrame(snapshot) {
   };
 }
 
-
 function even_eg1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'even_eg1'-------
@@ -28586,9 +27109,6 @@ function even_eg1RoutineEnd(snapshot) {
   };
 }
 
-
-var _even_eg2_key_resp_allKeys;
-var even_eg2Components;
 function even_eg2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'even_eg2'-------
@@ -28616,7 +27136,6 @@ function even_eg2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function even_eg2RoutineEachFrame(snapshot) {
   return function () {
@@ -28706,7 +27225,6 @@ function even_eg2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function even_eg2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'even_eg2'-------
@@ -28722,9 +27240,6 @@ function even_eg2RoutineEnd(snapshot) {
   };
 }
 
-
-var _oe_speed_instr_key_resp_allKeys;
-var oe_speed_instrComponents;
 function oe_speed_instrRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'oe_speed_instr'-------
@@ -28751,7 +27266,6 @@ function oe_speed_instrRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function oe_speed_instrRoutineEachFrame(snapshot) {
   return function () {
@@ -28831,7 +27345,6 @@ function oe_speed_instrRoutineEachFrame(snapshot) {
   };
 }
 
-
 function oe_speed_instrRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'oe_speed_instr'-------
@@ -28854,9 +27367,6 @@ function oe_speed_instrRoutineEnd(snapshot) {
   };
 }
 
-
-var _oe_train_start_key_resp_allKeys;
-var oe_train_startComponents;
 function oe_train_startRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'oe_train_start'-------
@@ -28882,7 +27392,6 @@ function oe_train_startRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function oe_train_startRoutineEachFrame(snapshot) {
   return function () {
@@ -28952,7 +27461,6 @@ function oe_train_startRoutineEachFrame(snapshot) {
   };
 }
 
-
 function oe_train_startRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'oe_train_start'-------
@@ -28968,9 +27476,6 @@ function oe_train_startRoutineEnd(snapshot) {
   };
 }
 
-
-var _oe_trial_key_resp_allKeys;
-var oe_trialComponents;
 function oe_trialRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'oe_trial'-------
@@ -29000,7 +27505,6 @@ function oe_trialRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function oe_trialRoutineEachFrame(snapshot) {
   return function () {
@@ -29099,9 +27603,6 @@ function oe_trialRoutineEachFrame(snapshot) {
   };
 }
 
-
-var oe_feedback_color;
-var oe_feedback_message;
 function oe_trialRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'oe_trial'-------
@@ -29144,8 +27645,6 @@ function oe_trialRoutineEnd(snapshot) {
   };
 }
 
-
-var oe_feedbackComponents;
 function oe_feedbackRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'oe_feedback'-------
@@ -29170,7 +27669,6 @@ function oe_feedbackRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function oe_feedbackRoutineEachFrame(snapshot) {
   return function () {
@@ -29220,7 +27718,6 @@ function oe_feedbackRoutineEachFrame(snapshot) {
   };
 }
 
-
 function oe_feedbackRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'oe_feedback'-------
@@ -29233,9 +27730,6 @@ function oe_feedbackRoutineEnd(snapshot) {
   };
 }
 
-
-var _even_test_start_key_resp_allKeys;
-var even_test_startComponents;
 function even_test_startRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'even_test_start'-------
@@ -29261,7 +27755,6 @@ function even_test_startRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function even_test_startRoutineEachFrame(snapshot) {
   return function () {
@@ -29331,7 +27824,6 @@ function even_test_startRoutineEachFrame(snapshot) {
   };
 }
 
-
 function even_test_startRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'even_test_start'-------
@@ -29347,9 +27839,6 @@ function even_test_startRoutineEnd(snapshot) {
   };
 }
 
-
-var _odd_intro_key_resp_allKeys;
-var odd_introComponents;
 function odd_introRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'odd_intro'-------
@@ -29376,7 +27865,6 @@ function odd_introRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function odd_introRoutineEachFrame(snapshot) {
   return function () {
@@ -29456,7 +27944,6 @@ function odd_introRoutineEachFrame(snapshot) {
   };
 }
 
-
 function odd_introRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'odd_intro'-------
@@ -29472,9 +27959,6 @@ function odd_introRoutineEnd(snapshot) {
   };
 }
 
-
-var _odd_eg1_key_resp_allKeys;
-var odd_eg1Components;
 function odd_eg1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'odd_eg1'-------
@@ -29502,7 +27986,6 @@ function odd_eg1RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function odd_eg1RoutineEachFrame(snapshot) {
   return function () {
@@ -29592,7 +28075,6 @@ function odd_eg1RoutineEachFrame(snapshot) {
   };
 }
 
-
 function odd_eg1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'odd_eg1'-------
@@ -29608,9 +28090,6 @@ function odd_eg1RoutineEnd(snapshot) {
   };
 }
 
-
-var _odd_eg2_key_resp_allKeys;
-var odd_eg2Components;
 function odd_eg2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'odd_eg2'-------
@@ -29638,7 +28117,6 @@ function odd_eg2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function odd_eg2RoutineEachFrame(snapshot) {
   return function () {
@@ -29728,7 +28206,6 @@ function odd_eg2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function odd_eg2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'odd_eg2'-------
@@ -29744,9 +28221,6 @@ function odd_eg2RoutineEnd(snapshot) {
   };
 }
 
-
-var _odd_test_start_key_resp_allKeys;
-var odd_test_startComponents;
 function odd_test_startRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'odd_test_start'-------
@@ -29772,7 +28246,6 @@ function odd_test_startRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function odd_test_startRoutineEachFrame(snapshot) {
   return function () {
@@ -29842,7 +28315,6 @@ function odd_test_startRoutineEachFrame(snapshot) {
   };
 }
 
-
 function odd_test_startRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'odd_test_start'-------
@@ -29858,9 +28330,6 @@ function odd_test_startRoutineEnd(snapshot) {
   };
 }
 
-
-var _oe_intro_key_resp_allKeys;
-var oe_introComponents;
 function oe_introRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'oe_intro'-------
@@ -29887,7 +28356,6 @@ function oe_introRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function oe_introRoutineEachFrame(snapshot) {
   return function () {
@@ -29967,7 +28435,6 @@ function oe_introRoutineEachFrame(snapshot) {
   };
 }
 
-
 function oe_introRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'oe_intro'-------
@@ -29983,9 +28450,6 @@ function oe_introRoutineEnd(snapshot) {
   };
 }
 
-
-var _oe_eg1_key_resp_allKeys;
-var oe_eg1Components;
 function oe_eg1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'oe_eg1'-------
@@ -30013,7 +28477,6 @@ function oe_eg1RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function oe_eg1RoutineEachFrame(snapshot) {
   return function () {
@@ -30103,7 +28566,6 @@ function oe_eg1RoutineEachFrame(snapshot) {
   };
 }
 
-
 function oe_eg1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'oe_eg1'-------
@@ -30119,9 +28581,6 @@ function oe_eg1RoutineEnd(snapshot) {
   };
 }
 
-
-var _oe_eg2_key_resp_allKeys;
-var oe_eg2Components;
 function oe_eg2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'oe_eg2'-------
@@ -30149,7 +28608,6 @@ function oe_eg2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function oe_eg2RoutineEachFrame(snapshot) {
   return function () {
@@ -30239,7 +28697,6 @@ function oe_eg2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function oe_eg2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'oe_eg2'-------
@@ -30255,9 +28712,6 @@ function oe_eg2RoutineEnd(snapshot) {
   };
 }
 
-
-var _oe_test_start_key_resp_allKeys;
-var oe_test_startComponents;
 function oe_test_startRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'oe_test_start'-------
@@ -30283,7 +28737,6 @@ function oe_test_startRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function oe_test_startRoutineEachFrame(snapshot) {
   return function () {
@@ -30353,7 +28806,6 @@ function oe_test_startRoutineEachFrame(snapshot) {
   };
 }
 
-
 function oe_test_startRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'oe_test_start'-------
@@ -30369,9 +28821,91 @@ function oe_test_startRoutineEnd(snapshot) {
   };
 }
 
+function end_OERoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'end_OE'-------
+    t = 0;
+    end_OEClock.reset(); // clock
+    frameN = -1;
+    routineTimer.add(2.500000);
+    // update component parameters for each repeat
+    // keep track of which components have finished
+    end_OEComponents = [];
+    end_OEComponents.push(end_OE_text);
+    
+    end_OEComponents.forEach( function(thisComponent) {
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
 
-var _key_resp_52_allKeys;
-var welcomeComponents;
+function end_OERoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'end_OE'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = end_OEClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *end_OE_text* updates
+    if (t >= 0.0 && end_OE_text.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      end_OE_text.tStart = t;  // (not accounting for frame time here)
+      end_OE_text.frameNStart = frameN;  // exact frame index
+      
+      end_OE_text.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 2.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((end_OE_text.status === PsychoJS.Status.STARTED || end_OE_text.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      end_OE_text.setAutoDraw(false);
+    }
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    end_OEComponents.forEach( function(thisComponent) {
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+      }
+    });
+    
+    // refresh the screen if continuing
+    if (continueRoutine && routineTimer.getTime() > 0) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+function end_OERoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'end_OE'-------
+    end_OEComponents.forEach( function(thisComponent) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    });
+    OE_duration = OE_clock.getTime() - OE_start;
+    psychoJS.experiment.addData(“OE_duration”,  OE_duration);
+    return Scheduler.Event.NEXT;
+  };
+}
+
 function welcomeRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'welcome'-------
@@ -30382,6 +28916,8 @@ function welcomeRoutineBegin(snapshot) {
     key_resp_52.keys = undefined;
     key_resp_52.rt = undefined;
     _key_resp_52_allKeys = [];
+    WCST_clock = new util.Clock();
+    WCST_start = WCST_clock.getTime();
     // keep track of which components have finished
     welcomeComponents = [];
     welcomeComponents.push(text_122);
@@ -30398,7 +28934,6 @@ function welcomeRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function welcomeRoutineEachFrame(snapshot) {
   return function () {
@@ -30478,7 +29013,6 @@ function welcomeRoutineEachFrame(snapshot) {
   };
 }
 
-
 function welcomeRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'welcome'-------
@@ -30501,9 +29035,6 @@ function welcomeRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_53_allKeys;
-var Instructions_3Components;
 function Instructions_3RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Instructions_3'-------
@@ -30530,7 +29061,6 @@ function Instructions_3RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Instructions_3RoutineEachFrame(snapshot) {
   return function () {
@@ -30610,7 +29140,6 @@ function Instructions_3RoutineEachFrame(snapshot) {
   };
 }
 
-
 function Instructions_3RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Instructions_3'-------
@@ -30633,9 +29162,6 @@ function Instructions_3RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_54_allKeys;
-var ExampleComponents;
 function ExampleRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Example'-------
@@ -30663,7 +29189,6 @@ function ExampleRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function ExampleRoutineEachFrame(snapshot) {
   return function () {
@@ -30753,7 +29278,6 @@ function ExampleRoutineEachFrame(snapshot) {
   };
 }
 
-
 function ExampleRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Example'-------
@@ -30776,9 +29300,6 @@ function ExampleRoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_55_allKeys;
-var lets_practiceComponents;
 function lets_practiceRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'lets_practice'-------
@@ -30805,7 +29326,6 @@ function lets_practiceRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function lets_practiceRoutineEachFrame(snapshot) {
   return function () {
@@ -30885,7 +29405,6 @@ function lets_practiceRoutineEachFrame(snapshot) {
   };
 }
 
-
 function lets_practiceRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'lets_practice'-------
@@ -30908,10 +29427,6 @@ function lets_practiceRoutineEnd(snapshot) {
   };
 }
 
-
-var timer_practice_wcst;
-var beginning_practice_wcst;
-var trials_practice_2Components;
 function trials_practice_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'trials_practice_2'-------
@@ -30946,7 +29461,6 @@ function trials_practice_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function trials_practice_2RoutineEachFrame(snapshot) {
   return function () {
@@ -31098,7 +29612,6 @@ function trials_practice_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function trials_practice_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'trials_practice_2'-------
@@ -31124,8 +29637,6 @@ function trials_practice_2RoutineEnd(snapshot) {
   };
 }
 
-
-var feedback_practice_2Components;
 function feedback_practice_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'feedback_practice_2'-------
@@ -31160,7 +29671,6 @@ function feedback_practice_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function feedback_practice_2RoutineEachFrame(snapshot) {
   return function () {
@@ -31210,7 +29720,6 @@ function feedback_practice_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function feedback_practice_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'feedback_practice_2'-------
@@ -31225,9 +29734,6 @@ function feedback_practice_2RoutineEnd(snapshot) {
   };
 }
 
-
-var _key_resp_56_allKeys;
-var readyComponents;
 function readyRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'ready'-------
@@ -31254,7 +29760,6 @@ function readyRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function readyRoutineEachFrame(snapshot) {
   return function () {
@@ -31334,7 +29839,6 @@ function readyRoutineEachFrame(snapshot) {
   };
 }
 
-
 function readyRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'ready'-------
@@ -31357,8 +29861,6 @@ function readyRoutineEnd(snapshot) {
   };
 }
 
-
-var code_meta_2Components;
 function code_meta_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'code_meta_2'-------
@@ -31379,7 +29881,6 @@ function code_meta_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function code_meta_2RoutineEachFrame(snapshot) {
   return function () {
@@ -31415,7 +29916,6 @@ function code_meta_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function code_meta_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'code_meta_2'-------
@@ -31431,10 +29931,6 @@ function code_meta_2RoutineEnd(snapshot) {
   };
 }
 
-
-var timer_wcst;
-var beginning_wcst;
-var TrialsComponents;
 function TrialsRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Trials'-------
@@ -31469,7 +29965,6 @@ function TrialsRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function TrialsRoutineEachFrame(snapshot) {
   return function () {
@@ -31622,7 +30117,6 @@ function TrialsRoutineEachFrame(snapshot) {
   };
 }
 
-
 function TrialsRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Trials'-------
@@ -31648,8 +30142,6 @@ function TrialsRoutineEnd(snapshot) {
   };
 }
 
-
-var Feedback_2Components;
 function Feedback_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Feedback_2'-------
@@ -31684,7 +30176,6 @@ function Feedback_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function Feedback_2RoutineEachFrame(snapshot) {
   return function () {
@@ -31734,7 +30225,6 @@ function Feedback_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function Feedback_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Feedback_2'-------
@@ -31783,8 +30273,6 @@ function Feedback_2RoutineEnd(snapshot) {
   };
 }
 
-
-var code_end_2Components;
 function code_end_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'code_end_2'-------
@@ -31815,7 +30303,6 @@ function code_end_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function code_end_2RoutineEachFrame(snapshot) {
   return function () {
@@ -31851,7 +30338,6 @@ function code_end_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function code_end_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'code_end_2'-------
@@ -31867,8 +30353,6 @@ function code_end_2RoutineEnd(snapshot) {
   };
 }
 
-
-var thank_you_5Components;
 function thank_you_5RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'thank_you_5'-------
@@ -31891,7 +30375,6 @@ function thank_you_5RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function thank_you_5RoutineEachFrame(snapshot) {
   return function () {
@@ -31941,7 +30424,6 @@ function thank_you_5RoutineEachFrame(snapshot) {
   };
 }
 
-
 function thank_you_5RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'thank_you_5'-------
@@ -31950,13 +30432,13 @@ function thank_you_5RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     });
+    WCST_duration = WCST_clock.getTime() - WCST_start;
+    psychoJS.experiment.addData(“WCST_duration”,  WCST_duration);
+    
     return Scheduler.Event.NEXT;
   };
 }
 
-
-var _pm_welcome_key_resp_allKeys;
-var pm_welcomeComponents;
 function pm_welcomeRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pm_welcome'-------
@@ -31967,6 +30449,8 @@ function pm_welcomeRoutineBegin(snapshot) {
     pm_welcome_key_resp.keys = undefined;
     pm_welcome_key_resp.rt = undefined;
     _pm_welcome_key_resp_allKeys = [];
+    PM_clock = new util.Clock();
+    PM_start = PM_clock.getTime();
     // keep track of which components have finished
     pm_welcomeComponents = [];
     pm_welcomeComponents.push(pm_welcome_txt_top);
@@ -31983,7 +30467,6 @@ function pm_welcomeRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function pm_welcomeRoutineEachFrame(snapshot) {
   return function () {
@@ -32063,7 +30546,6 @@ function pm_welcomeRoutineEachFrame(snapshot) {
   };
 }
 
-
 function pm_welcomeRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pm_welcome'-------
@@ -32079,9 +30561,6 @@ function pm_welcomeRoutineEnd(snapshot) {
   };
 }
 
-
-var _plus_intro_key_resp_allKeys;
-var plus_introComponents;
 function plus_introRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'plus_intro'-------
@@ -32108,7 +30587,6 @@ function plus_introRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function plus_introRoutineEachFrame(snapshot) {
   return function () {
@@ -32188,7 +30666,6 @@ function plus_introRoutineEachFrame(snapshot) {
   };
 }
 
-
 function plus_introRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'plus_intro'-------
@@ -32204,10 +30681,6 @@ function plus_introRoutineEnd(snapshot) {
   };
 }
 
-
-var frame_n;
-var _plus_eg1_key_resp_allKeys;
-var plus_eg1Components;
 function plus_eg1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'plus_eg1'-------
@@ -32239,7 +30712,6 @@ function plus_eg1RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function plus_eg1RoutineEachFrame(snapshot) {
   return function () {
@@ -32368,7 +30840,6 @@ function plus_eg1RoutineEachFrame(snapshot) {
   };
 }
 
-
 function plus_eg1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'plus_eg1'-------
@@ -32390,9 +30861,6 @@ function plus_eg1RoutineEnd(snapshot) {
   };
 }
 
-
-var _plus_eg2_key_resp_allKeys;
-var plus_eg2Components;
 function plus_eg2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'plus_eg2'-------
@@ -32424,7 +30892,6 @@ function plus_eg2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function plus_eg2RoutineEachFrame(snapshot) {
   return function () {
@@ -32552,7 +31019,6 @@ function plus_eg2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function plus_eg2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'plus_eg2'-------
@@ -32568,9 +31034,6 @@ function plus_eg2RoutineEnd(snapshot) {
   };
 }
 
-
-var _pm_train_start_key_resp_allKeys;
-var pm_train_startComponents;
 function pm_train_startRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pm_train_start'-------
@@ -32596,7 +31059,6 @@ function pm_train_startRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function pm_train_startRoutineEachFrame(snapshot) {
   return function () {
@@ -32666,8 +31128,6 @@ function pm_train_startRoutineEachFrame(snapshot) {
   };
 }
 
-
-var pm_timer;
 function pm_train_startRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pm_train_start'-------
@@ -32684,9 +31144,6 @@ function pm_train_startRoutineEnd(snapshot) {
   };
 }
 
-
-var _pm_trial_key_resp_allKeys;
-var pm_trialComponents;
 function pm_trialRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pm_trial'-------
@@ -32719,7 +31176,6 @@ function pm_trialRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function pm_trialRoutineEachFrame(snapshot) {
   return function () {
@@ -32845,9 +31301,6 @@ function pm_trialRoutineEachFrame(snapshot) {
   };
 }
 
-
-var pm_feedback_color;
-var pm_feedback_message;
 function pm_trialRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pm_trial'-------
@@ -32878,8 +31331,6 @@ function pm_trialRoutineEnd(snapshot) {
   };
 }
 
-
-var pm_feedbackComponents;
 function pm_feedbackRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pm_feedback'-------
@@ -32904,7 +31355,6 @@ function pm_feedbackRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function pm_feedbackRoutineEachFrame(snapshot) {
   return function () {
@@ -32954,7 +31404,6 @@ function pm_feedbackRoutineEachFrame(snapshot) {
   };
 }
 
-
 function pm_feedbackRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pm_feedback'-------
@@ -32967,9 +31416,6 @@ function pm_feedbackRoutineEnd(snapshot) {
   };
 }
 
-
-var _plus_test_start_key_resp_allKeys;
-var plus_test_startComponents;
 function plus_test_startRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'plus_test_start'-------
@@ -32995,7 +31441,6 @@ function plus_test_startRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function plus_test_startRoutineEachFrame(snapshot) {
   return function () {
@@ -33065,7 +31510,6 @@ function plus_test_startRoutineEachFrame(snapshot) {
   };
 }
 
-
 function plus_test_startRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'plus_test_start'-------
@@ -33082,9 +31526,6 @@ function plus_test_startRoutineEnd(snapshot) {
   };
 }
 
-
-var _minus_intro_key_resp_allKeys;
-var minus_introComponents;
 function minus_introRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'minus_intro'-------
@@ -33111,7 +31552,6 @@ function minus_introRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function minus_introRoutineEachFrame(snapshot) {
   return function () {
@@ -33191,7 +31631,6 @@ function minus_introRoutineEachFrame(snapshot) {
   };
 }
 
-
 function minus_introRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'minus_intro'-------
@@ -33207,9 +31646,6 @@ function minus_introRoutineEnd(snapshot) {
   };
 }
 
-
-var _minus_eg1_key_resp_allKeys;
-var minus_eg1Components;
 function minus_eg1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'minus_eg1'-------
@@ -33241,7 +31677,6 @@ function minus_eg1RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function minus_eg1RoutineEachFrame(snapshot) {
   return function () {
@@ -33369,7 +31804,6 @@ function minus_eg1RoutineEachFrame(snapshot) {
   };
 }
 
-
 function minus_eg1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'minus_eg1'-------
@@ -33391,9 +31825,6 @@ function minus_eg1RoutineEnd(snapshot) {
   };
 }
 
-
-var _minus_eg2_key_resp_allKeys;
-var minus_eg2Components;
 function minus_eg2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'minus_eg2'-------
@@ -33425,7 +31856,6 @@ function minus_eg2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function minus_eg2RoutineEachFrame(snapshot) {
   return function () {
@@ -33553,7 +31983,6 @@ function minus_eg2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function minus_eg2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'minus_eg2'-------
@@ -33575,9 +32004,6 @@ function minus_eg2RoutineEnd(snapshot) {
   };
 }
 
-
-var _minus_test_start_key_resp_allKeys;
-var minus_test_startComponents;
 function minus_test_startRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'minus_test_start'-------
@@ -33603,7 +32029,6 @@ function minus_test_startRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function minus_test_startRoutineEachFrame(snapshot) {
   return function () {
@@ -33673,7 +32098,6 @@ function minus_test_startRoutineEachFrame(snapshot) {
   };
 }
 
-
 function minus_test_startRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'minus_test_start'-------
@@ -33690,9 +32114,6 @@ function minus_test_startRoutineEnd(snapshot) {
   };
 }
 
-
-var _pm_intro_key_resp_allKeys;
-var pm_introComponents;
 function pm_introRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pm_intro'-------
@@ -33719,7 +32140,6 @@ function pm_introRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function pm_introRoutineEachFrame(snapshot) {
   return function () {
@@ -33799,7 +32219,6 @@ function pm_introRoutineEachFrame(snapshot) {
   };
 }
 
-
 function pm_introRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pm_intro'-------
@@ -33815,9 +32234,6 @@ function pm_introRoutineEnd(snapshot) {
   };
 }
 
-
-var _pm_eg1_key_resp_allKeys;
-var pm_eg1Components;
 function pm_eg1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pm_eg1'-------
@@ -33849,7 +32265,6 @@ function pm_eg1RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function pm_eg1RoutineEachFrame(snapshot) {
   return function () {
@@ -33977,7 +32392,6 @@ function pm_eg1RoutineEachFrame(snapshot) {
   };
 }
 
-
 function pm_eg1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pm_eg1'-------
@@ -33993,9 +32407,6 @@ function pm_eg1RoutineEnd(snapshot) {
   };
 }
 
-
-var _pm_eg2_key_resp_allKeys;
-var pm_eg2Components;
 function pm_eg2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pm_eg2'-------
@@ -34027,7 +32438,6 @@ function pm_eg2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function pm_eg2RoutineEachFrame(snapshot) {
   return function () {
@@ -34155,7 +32565,6 @@ function pm_eg2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function pm_eg2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pm_eg2'-------
@@ -34171,9 +32580,6 @@ function pm_eg2RoutineEnd(snapshot) {
   };
 }
 
-
-var _pm_test_start_key_resp_allKeys;
-var pm_test_startComponents;
 function pm_test_startRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pm_test_start'-------
@@ -34199,7 +32605,6 @@ function pm_test_startRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function pm_test_startRoutineEachFrame(snapshot) {
   return function () {
@@ -34269,7 +32674,6 @@ function pm_test_startRoutineEachFrame(snapshot) {
   };
 }
 
-
 function pm_test_startRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pm_test_start'-------
@@ -34286,8 +32690,6 @@ function pm_test_startRoutineEnd(snapshot) {
   };
 }
 
-
-var End_2Components;
 function End_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'End_2'-------
@@ -34312,7 +32714,6 @@ function End_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function End_2RoutineEachFrame(snapshot) {
   return function () {
@@ -34390,7 +32791,6 @@ function End_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function End_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'End_2'-------
@@ -34403,10 +32803,12 @@ function End_2RoutineEnd(snapshot) {
     var time_exp = (end_exp - beginning_exp2);
     console.log(time_exp);
     psychoJS.experiment.addData("totaltime_exp", time_exp);
+    PM_duration = PM_clock.getTime() - PM_start;
+    psychoJS.experiment.addData(“PM_duration”,  PM_duration);
+    
     return Scheduler.Event.NEXT;
   };
 }
-
 
 function endLoopIteration(scheduler, snapshot) {
   // ------Prepare for next entry------
@@ -34430,7 +32832,6 @@ function endLoopIteration(scheduler, snapshot) {
   };
 }
 
-
 function importConditions(currentLoop) {
   return function () {
     psychoJS.importAttributes(currentLoop.getCurrentTrial());
@@ -34438,12 +32839,33 @@ function importConditions(currentLoop) {
     };
 }
 
-
 function quitPsychoJS(message, isCompleted) {
   // Check for and save orphaned data
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
