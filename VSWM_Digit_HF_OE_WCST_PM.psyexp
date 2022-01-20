@@ -9712,7 +9712,7 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="VSWM_duration = VSWM_clock.getTime() - VSWM_start;&amp;#10;psychoJS.experiment.addData(“VSWM_duration”,  VSWM_duration);" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="VSWM_duration = VSWM_clock.getTime() - VSWM_start;&amp;#10;//psychoJS.experiment.addData(“VSWM_duration”,  VSWM_duration);" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="VSWM_end_code" valType="code"/>

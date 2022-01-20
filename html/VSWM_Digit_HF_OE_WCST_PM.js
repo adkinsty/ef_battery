@@ -18822,7 +18822,7 @@ function Get_ExperimenterRoutineEnd(snapshot) {
       }
     }
     VSWM_duration = VSWM_clock.getTime() - VSWM_start;
-    psychoJS.experiment.addData(“VSWM_duration”,  VSWM_duration);
+    //psychoJS.experiment.addData(“VSWM_duration”,  VSWM_duration);
     return Scheduler.Event.NEXT;
   };
 }
